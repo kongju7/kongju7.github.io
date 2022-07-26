@@ -153,11 +153,11 @@ yat:
 #   - tags.html
 #   - about.md
 
-Page default value
-defaults:
-  home:
-    heading: "Becoming a Data Scientist"
-    subheading: "공부하고 성장하기"
+# Page default value
+# defaults:
+#   home:
+#     heading: "Becoming a Data Scientist"
+#     subheading: "공부하고 성장하기"
 #    banner: "Your image url"
 
 # Banner default settings
