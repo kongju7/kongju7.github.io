@@ -160,10 +160,6 @@ yat:
 #     subheading: "공부하고 성장하기"
 #    banner: "Your image url"
 
-home:
-  heading: "Becoming a Data Scientist"
-  subheading: "공부하고 성장하기"
-
 # Banner default settings
 # These banner settings are for global banner default, but you can also
 # config it by the front matter for one specific post
