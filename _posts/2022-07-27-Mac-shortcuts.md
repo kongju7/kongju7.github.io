@@ -105,7 +105,7 @@ fn
 
 ## 참고
 
-[애플 홈페이지](https://support.apple.com/ko-kr/HT201236)에서도  
+[애플 홈페이지](https://support.apple.com/ko-kr/HT201236){:target="_blank"}에서도  
 기본적인 **Mac 키보드 단축키** 정보를 제공하고 있으니 참고하세요!  
 
 
