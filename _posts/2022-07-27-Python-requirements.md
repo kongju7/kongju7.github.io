@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Python requirements.txt로 라이브러리 한 번에 설치하기
+title: "[Python] requirements.txt로 라이브러리 한 번에 설치하기"
 subtitle: pip install -r requirements.txt
 categories: Python
 tags: [Python, Programming, pip, requirements.txt]
