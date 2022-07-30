@@ -2,7 +2,7 @@
 layout: post
 title: "데이터 과학 기초 강의 추천"
 subtitle: "Special Thanks To (2): 성장에 도움을 주는 선생님들께"
-categories: Data_Science
+categories: "Data Science"
 tags: [감사, Python, Data Science, 온라인 강의, 추천]
 ---
 
