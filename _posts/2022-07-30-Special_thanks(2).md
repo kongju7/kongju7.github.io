@@ -30,7 +30,7 @@ Data Scientist로 성장하는 과정에서 큰 도움 주고 계신 온라인 �
 
 * [부스트코스](https://www.boostcourse.org/){:target="_blank"} : 네이버에서 한국의 IT 교육에 정말 중요한 기여를 하고 있는 곳. 무료 강의.  
 
-  * [박조은 선생님](https://www.boostcourse.org/ds116/joinLectures/28015){:target="_blank"} : 인프런에 이어 부스트코스에서도 만난 박조은 선생님. 데이터 분야 공부를 하다보면 그래서 데이터는 대체 어디서 구할 수 있을까 고민을 할 수 밖에 없는데, 그 중에 가장 중요한 데이터 저장소 같은 [캐글(Kaggle)][1]을 이용하는 법에 대해 중요한 이해를 제공합니다.  
+  * [박조은 선생님](https://www.boostcourse.org/ds116/joinLectures/28015){:target="_blank"} : 인프런에 이어 부스트코스에서도 만난 박조은 선생님. 데이터 분야 공부를 하다보면 그래서 데이터는 대체 어디서 구할 수 있을까 고민을 할 수 밖에 없는데, 그 중에 가장 중요한 데이터 저장소 같은 [캐글(Kaggle)][1]{:target="_blank"}을 이용하는 법에 대해 중요한 이해를 제공합니다.  
 
   * [인공지능(AI)기초 다지기 team](https://www.boostcourse.org/ai100/joinLectures/218531){:target="_blank"} & [딥러닝 기초 다지기 team](https://www.boostcourse.org/ai111/joinLectures/316854){:target="_blank"} : 각 분야 전문가 선생님들께서 인공지능과 딥러닝에 대해 기초적이지만 꼭 필요한 설명을 제공해 주고 있어 기본적인 개념 잡기에 좋습니다.
 
@@ -56,4 +56,4 @@ Data Scientist로 성장하는 과정에서 큰 도움 주고 계신 온라인 �
 
 
 
-[1]: https://www.kaggle.com/{:target="_blank"}
+[1]: https://www.kaggle.com/
