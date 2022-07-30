@@ -30,8 +30,7 @@ Data Scientist로 성장하는 과정에서 큰 도움 주고 계신 온라인 �
 
 * [부스트코스](https://www.boostcourse.org/){:target="_blank"} : 네이버에서 한국의 IT 교육에 정말 중요한 기여를 하고 있는 곳. 무료 강의.  
 
-  * [박조은 선생님](https://www.boostcourse.org/ds116/joinLectures/28015){:target="_blank"} : 인프런에 이어 부스트코스에서도 만난 박조은 선생님. 데이터 분야 공부를 하다보면 그래서 데이터는 대체 어디서 구할 수 있을까 고민을 할 수 밖에 없는데, 그 중에 가장 중요한 데이터 저장소 같은 캐글(Kaggle)을 이용하는 법에 대해 중요한 이해를 제공합니다.  
-      * 참고 : [캐글][https://www.kaggle.com/]{:target="_blank"}
+  * [박조은 선생님](https://www.boostcourse.org/ds116/joinLectures/28015){:target="_blank"} : 인프런에 이어 부스트코스에서도 만난 박조은 선생님. 데이터 분야 공부를 하다보면 그래서 데이터는 대체 어디서 구할 수 있을까 고민을 할 수 밖에 없는데, 그 중에 가장 중요한 데이터 저장소 같은 [캐글(Kaggle)][1]을 이용하는 법에 대해 중요한 이해를 제공합니다.  
 
   * [인공지능(AI)기초 다지기 team](https://www.boostcourse.org/ai100/joinLectures/218531){:target="_blank"} & [딥러닝 기초 다지기 team](https://www.boostcourse.org/ai111/joinLectures/316854){:target="_blank"} : 각 분야 전문가 선생님들께서 인공지능과 딥러닝에 대해 기초적이지만 꼭 필요한 설명을 제공해 주고 있어 기본적인 개념 잡기에 좋습니다.
 
@@ -45,6 +44,7 @@ Data Scientist로 성장하는 과정에서 큰 도움 주고 계신 온라인 �
 
 개발자 문화 중에 지식을 공유하고 서로의 성장을 도모하는 문화가 가장 매력있는 것 같습니다.  
 다시 한 번 감사드립니다. 
+공부 열심히 하고 잘 성장하여 저도 다른 사람들에게 데이터 과학 분야 지식을 나누는 사람이 되겠습니다. 
 
 
 ### SQL이나 NoSQL, Tableau 강의 추천 부탁드립니다. 
@@ -52,3 +52,8 @@ Data Scientist로 성장하는 과정에서 큰 도움 주고 계신 온라인 �
 그리고 SQL이나 NoSQL, Tableau 강의도 열심히 찾아서 들어보고 있는데, 
 아직 저랑 잘 맞는 선생님을 못 만난 것 같습니다.  
 혹시 추천할 만한 강의나 선생님 있으면 추천 부탁드립니다.  
+
+
+
+
+[1]: (https://www.kaggle.com/){:target="_blank"}
