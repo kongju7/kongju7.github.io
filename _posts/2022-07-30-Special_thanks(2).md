@@ -56,4 +56,4 @@ Data Scientist로 성장하는 과정에서 큰 도움 주고 계신 온라인 �
 
 
 
-[1]: (https://www.kaggle.com/){:target="_blank"}
+[1]: https://www.kaggle.com/{:target="_blank"}
