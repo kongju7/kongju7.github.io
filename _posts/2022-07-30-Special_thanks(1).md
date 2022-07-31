@@ -2,8 +2,8 @@
 layout: post
 title: "[Diary] Special Thanks To"
 subtitle: "성장에 도움을 주는 분들께"
-categories: Dairy
-tags: [감사, 내 사람]
+categories: Diary
+tags: [감사, 내 사람, Diary]
 ---
 
 개발자(?) 블로그를 개설한 김에   
