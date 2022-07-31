@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Special Thanks To (1)"
-subtitle: 성장에 도움을 주는 분들께
+title: "[Diary] Special Thanks To"
+subtitle: "성장에 도움을 주는 분들께"
 categories: Dairy
 tags: [감사, 내 사람]
 ---
