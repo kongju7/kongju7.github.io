@@ -3,7 +3,7 @@ layout: post
 title: 내가 필요해서 정리하는 Mac 단축키 기초
 subtitle: 맥 초보자를 위한 Mac keyboard shortcuts 
 categories: Programming
-tags: [Mac, shortcuts, 맥, 단축키]
+tags: [Mac, shortcuts, 맥, 단축키, Programming]
 ---
 
 

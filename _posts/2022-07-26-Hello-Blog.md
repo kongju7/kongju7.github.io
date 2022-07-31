@@ -3,7 +3,7 @@ layout: post
 title: "[Diary] 블로그 개설과 테마 적용"
 subtitle: "Github Blog의 바다에서 헤엄치기"
 categories: Diary
-tags: [github, blog, jekyll yat theme, diary]
+tags: [github, blog, jekyll yat theme, Diary]
 ---
 
 
