@@ -9,7 +9,7 @@ tags: [Diary, Python, Data Science, 공부]
 지난 월요일에 부트캠프에서 진행하는 첫번째 개인 프로젝트가 끝났다.  
   
 첫 번째 개인 프로젝트는 4일 동안, 
-[캐글(Kaggle)의 Video Game Sales][1]{:target="_blank"} 파일을 약간 변형한 파일을 가지고  
+[캐글(Kaggle)의 Video Game Sales](https://www.kaggle.com/datasets/gregorut/videogamesales){:target="_blank"} 파일을 약간 변형한 파일을 가지고  
 **다음 분기에 출시할 게임에 대한 제언**을 목표로 분석을 진행하고  
 분석 결과에 대한 영상을 8분 안에 찍는 것이었다.  
 
@@ -47,8 +47,7 @@ tags: [Diary, Python, Data Science, 공부]
   
    
 
-덧붙이는 말: 제가 이번 개인 프로젝트에서 작성한 [코드 파일][2]{:target="_blank"}은 제 깃허브에 있습니다! 
+덧붙이는 말: 제가 이번 개인 프로젝트에서 작성한 [코드 파일](https://github.com/kongju7/my_project/blob/main/ai_15_%E1%84%80%E1%85%A9%E1%86%BC%E1%84%8C%E1%85%AE_s1_code.ipynb){:target="_blank"}은 제 깃허브에 있습니다! 
   
   
-[1] https://www.kaggle.com/datasets/gregorut/videogamesales
-[2] https://github.com/kongju7/my_project/blob/main/ai_15_%E1%84%80%E1%85%A9%E1%86%BC%E1%84%8C%E1%85%AE_s1_code.ipynb
+
