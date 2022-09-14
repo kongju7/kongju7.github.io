@@ -7,6 +7,7 @@ tags: [Diary, Python, Data Science, 공부]
 ---
 
 지난 월요일에 부트캠프에서 진행하는 첫번째 개인 프로젝트가 끝났다.  
+  
 첫 번째 개인 프로젝트는 4일 동안, 
 [캐글(Kaggle)의 Video Game Sales][1]{:target="_blank"} 파일을 약간 변형한 파일을 가지고  
 **다음 분기에 출시할 게임에 대한 제언**을 목표로 분석을 진행하고  
@@ -37,17 +38,17 @@ tags: [Diary, Python, Data Science, 공부]
 결측치 처리도 크롤링 함수를 만들어서 시도했는데,  
 리스트 범위 오류가 생겨서 이런 저런 시도를 계속 하다가 결국은 활용하지 못했다.  
 크롤링과 함수를 결합하는 공부를 더 해야겠다고 생각했다.  
-
+  
   
 하지만 그 과정 하나 하나가 재밌었고,  
 몰입해서 단계를 밟아나가는 경험도 좋았다.  
-
+  
 정말이지 실제 현장의 데이터를 분석해보고 싶다!
   
    
 
 덧붙이는 말: 제가 이번 개인 프로젝트에서 작성한 [코드 파일][2]{:target="_blank"}은 제 깃허브에 있습니다! 
-
-
+  
+  
 [1] https://www.kaggle.com/datasets/gregorut/videogamesales
 [2] https://github.com/kongju7/my_project/blob/main/ai_15_%E1%84%80%E1%85%A9%E1%86%BC%E1%84%8C%E1%85%AE_s1_code.ipynb
