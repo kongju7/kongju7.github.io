@@ -47,7 +47,8 @@ tags: [Diary, Python, Data Science, 공부]
   
    
 
-덧붙이는 말: 제가 이번 개인 프로젝트에서 작성한 [코드 파일](https://github.com/kongju7/my_project/blob/main/ai_15_%E1%84%80%E1%85%A9%E1%86%BC%E1%84%8C%E1%85%AE_s1_code.ipynb){:target="_blank"}은 제 깃허브에 있습니다! 
+### 덧붙이는 말 
+제가 이번 개인 프로젝트에서 작성한 [코드 파일](https://github.com/kongju7/my_project/blob/main/ai_15_%E1%84%80%E1%85%A9%E1%86%BC%E1%84%8C%E1%85%AE_s1_code.ipynb){:target="_blank"}은 제 깃허브에 있습니다! 
   
     
 
