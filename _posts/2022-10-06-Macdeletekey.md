@@ -34,4 +34,8 @@ tags: [Mac, shortcuts, 맥, 단축키, Delete]
 - 커서 **뒷 단어 한 단어씩** 삭제하기
 `Fn + Option + Delete`
   
+   
+      
+### 덧붙이는 말: 혹시 오류가 있다면 제보 주세요!
+
   
