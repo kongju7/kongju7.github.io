@@ -11,8 +11,8 @@ tags: [git, command, 명령어, clone, commit]
 
 ## 새로운 저장소 생성
 
-- `git init` : .git 하위 디렉토리 생성
-(* 폴더를 새롭게 만든 후, 그 안에서 명령 실행 → 새로운 git저장소 생성)
+- `git init` : .git 하위 디렉토리 생성    
+  - (* 폴더를 새롭게 만든 후, 그 안에서 명령 실행 → 새로운 git저장소 생성)
 - `git config --global user.name "<사용자명>"` : 깃 환경에서 사용자 이름을 <사용자명>으로 지정 
 - `git config --global user.email "<사용자이메일명>"` : 깃 환경에서 사용자 이메일을 <사용자이메일명>으로 지정 
 
@@ -27,8 +27,8 @@ tags: [git, command, 명령어, clone, commit]
 
 ## 추가(add) 및 확정(commit)
 
-- `git status` : 깃 상태 확인
-  **[강조] staging이나 commit 전에 깃 상태 확인을 생활화합시다**
+- `git status` : 깃 상태 확인    
+  - **[강조] staging이나 commit 전에 깃 상태 확인을 생활화합시다**
 - `git diff` : 변경사항 확인 
 - `git add <파일이름.확장자이름>` : <파일이름.확장자이름>을 스테이지에 추가 
 - `git add *` :	커밋에 단일 파일의 변경 사항을 포함(인덱스에 추가된 상태)
@@ -36,8 +36,8 @@ tags: [git, command, 명령어, clone, commit]
 - `git add ./` : 해당 폴더 내 변경 사항을 한번에 추가 
 - `git commit -m "<커밋메시지>"` : <커밋메세지>를 붙여 스테이지에 추가된 변경사항 확정 
 - `git commit -a -m "<커밋메시지>"` : <커밋메세지>를 붙여 스테이징과 커밋 동시 진행 
-- `git commit --amend` : 마지막 커밋 수정하기 
-   **[주의] 단, 이미 push한 커밋에는 사용하지 마세요!** 
+- `git commit --amend` : 마지막 커밋 수정하기  
+  - **[주의] 단, 이미 push한 커밋에는 사용하지 마세요!** 
 
 
 ## 가지치기(branch)
