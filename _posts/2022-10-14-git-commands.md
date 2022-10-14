@@ -28,7 +28,7 @@ tags: [git, command, 명령어, clone, commit]
 ## 추가(add) 및 확정(commit)
 
 - `git status` : 깃 상태 확인
-  ** * staging이나 commit 전에 깃 상태 확인을 생활화합시다**
+  **[강조] staging이나 commit 전에 깃 상태 확인을 생활화합시다**
 - `git diff` : 변경사항 확인 
 - `git add <파일이름.확장자이름>` : <파일이름.확장자이름>을 스테이지에 추가 
 - `git add *` :	커밋에 단일 파일의 변경 사항을 포함(인덱스에 추가된 상태)
@@ -37,7 +37,7 @@ tags: [git, command, 명령어, clone, commit]
 - `git commit -m "<커밋메시지>"` : <커밋메세지>를 붙여 스테이지에 추가된 변경사항 확정 
 - `git commit -a -m "<커밋메시지>"` : <커밋메세지>를 붙여 스테이징과 커밋 동시 진행 
 - `git commit --amend` : 마지막 커밋 수정하기 
-  ** * 단, 이미 push한 커밋에는 사용하지 마세요!** 
+   **[주의] 단, 이미 push한 커밋에는 사용하지 마세요!** 
 
 
 ## 가지치기(branch)
@@ -73,6 +73,7 @@ tags: [git, command, 명령어, clone, commit]
 
 - `git tag <태그이름>` : 현재 커밋에 태그 달기 
 - `git log` : 현재 위치한 브랜치 커밋 내용 및 식별자 확인  
+  - `git log --graph`: 현재 위치한 브랜치 커밋 내용 및 식별자 + 브랜치 연결 확인  
 - `git blame <파일이름>` : 파일 변경 내용, 변경자, 시간 확인 
 
 
@@ -89,9 +90,13 @@ tags: [git, command, 명령어, clone, commit]
 - `git stash` : 임시 변경사항 저장
 - `git stash pop` : 임시 변경사항 복원 
 - `git stash list` : 임시 변경사항 보기 
-
-
-
-
+  
+  
+  
+  
 ### 덧붙이는 말: 혹시 오류가 있다면 제보 주세요!
   
+  
+Special thanks to,  
+이 글은 Git을 사랑하는 개발자 **레드님**께서 검수해 주셨습니다.  
+   
