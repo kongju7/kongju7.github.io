@@ -73,7 +73,7 @@ tags: [git, command, 명령어, clone, commit]
 
 - `git tag <태그이름>` : 현재 커밋에 태그 달기 
 - `git log` : 현재 위치한 브랜치 커밋 내용 및 식별자 확인  
-  - `git log --graph`: 현재 위치한 브랜치 커밋 내용 및 식별자 + 브랜치 연결 확인  
+  - `git log --graph`: 현재 위치한 브랜치 커밋 내용 및 식별자 + 트리 구조로된 브랜치 연결 확인  
 - `git blame <파일이름>` : 파일 변경 내용, 변경자, 시간 확인 
 
 
@@ -99,4 +99,8 @@ tags: [git, command, 명령어, clone, commit]
   
 Special thanks to,  
 이 글은 Git을 사랑하는 개발자 **레드님**께서 검수해 주셨습니다.  
-   
+  
+<레드님의 추가 의견>  
+- `git fetch origin` : 원격 저장소의 변경사항 가져오기
+  → 'pull, push 직전에 반드시 fetch로 가져오고, git log로 트리 구조를 보고, merge 할건지, rebase 할건지, 내코드에 영향 없는지 파악하는 용도'이기 때문에 '취소하기' 항목보다는 별도의 항목으로 다루는 것이 바람직함.  
+     
