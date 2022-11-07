@@ -182,7 +182,7 @@ tags: [Data Science, Data Scientist, Roadmap, 데이터 과학, 데이터 과학
   
   
   
-![Github Annotations](/assets/images/Data-Science-Roadmap.png "Data Science Roadmap")  
+![Data Science Roadmap](/assets/images/Data-Science-Roadmap.png "Data Science Roadmap")  
   
   
 ### 덧붙이는 말: 혹시 오류가 있다면 제보 주세요!
