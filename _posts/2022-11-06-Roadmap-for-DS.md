@@ -120,7 +120,7 @@ tags: [Data Science, Data Scientist, Roadmap, 데이터 과학, 데이터 과학
 - 트리 기반 앙상블 부스팅 모델: 엑스지부스트(XGBoost), 라이트지비엠(LightGBM) 모델 
 - 데이터 누출(Data Leakage)
   
-## 6) 딥 러닝( Deep Learning)
+## 6) 딥 러닝(Deep Learning)
   
 - 인공 신경망(Artificial Neural Network)  
 - 합성곱 신경망(Convolutional Neural Network)  
