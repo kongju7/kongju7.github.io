@@ -42,10 +42,12 @@ tags: [Python, 파이썬, Bubble Sort, 버블 정렬]
   - 비교 횟수: (N-1) + (N-2) + (N-3) + ... + 1 = N(N-1)/2  
   
   
-### 4) 버블 정렬 파이썬 구현
-  
+### 4) 버블 정렬 파이썬 구현 
+
+먼저 기본형이라고 할 수 있는 **오름차순(Ascending, ASC)**을 파이썬 코드로 구현해 보겠습니다. 
+
 ```Python 
-# 버블 정렬 파이썬 구현
+# 버블 정렬 파이썬 구현 (기본형: 오름차순)
 def bubble_sort(li):
     for i in range(len(li)-1, 0, -1):
         for j in range(i):
@@ -53,8 +55,19 @@ def bubble_sort(li):
                 li[j], li[j + 1] = li[j + 1], li[j]  # swap
     return li
 ```
+
+다음은 버블 정렬 **내림차순(Descending, DESC)**을 파이썬 코드로 구현해 보면 다음과 같습니다. 
+
+```Python 
+# 버블 정렬 파이썬 구현 (내림차순)
+def bubble_sort_desc(li) :
+    for i in range(len(li)):
+        for j in range(len(li)-1, i, -1):
+            if li[j] > li[j - 1]:
+                li[j], li[j - 1] = li[j - 1], li[j]  # swap
+    return li
+```  
   
-  
-이어서 대표적인 정렬 알고리즘 중 2. 선택 정렬(Selection Sort)에 대해 다루겠습니다. 
+다음 포스트에서는 대표적인 정렬 알고리즘 중 2. 선택 정렬(Selection Sort)에 대해 이어서 다루겠습니다. 
     
   
