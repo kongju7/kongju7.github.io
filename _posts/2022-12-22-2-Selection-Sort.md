@@ -8,7 +8,7 @@ tags: [Python, 파이썬, Selection Sort, 선택 정렬]
 
 ## 대표적인 정렬 알고리즘  
 
-1. [버블 정렬(Bubble Sort)](https://kongju7.github.io/programming/2022/12/22/Bubble-Sort.html){:target="_blank"} 
+1. [버블 정렬(Bubble Sort)](https://kongju7.github.io/programming/2022/12/22/1-Bubble-Sort.html){:target="_blank"} 
 2. **`선택 정렬(Selection Sort)`**
 3. 삽입 정렬(Insertion Sort)
 4. 퀵 정렬(Quick Sort)
