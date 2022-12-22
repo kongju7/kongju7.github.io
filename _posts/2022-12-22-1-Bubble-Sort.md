@@ -22,6 +22,7 @@ tags: [Python, 파이썬, Bubble Sort, 버블 정렬]
 - 서로 이웃한 두 원소를 비교하여 정렬하는 알고리즘 
   - 이웃한 2개의 값을 비교하여 크기가 순서대로 되어 있지 않으면 서로 교환하는 방식으로 진행
   
+  
 ### 2) 버블 정렬의 특징  
   
 - 장점 
@@ -56,7 +57,7 @@ def bubble_sort(li):
     return li
 ```
 
-다음은 버블 정렬 **내림차순(Descending, DESC)**을 파이썬 코드로 구현해 보면 다음과 같습니다. 
+버블 정렬 **내림차순(Descending, DESC)**을 파이썬 코드로 구현해 보면 다음과 같습니다. 
 
 ```Python 
 # 버블 정렬 파이썬 구현 (내림차순)
@@ -68,6 +69,6 @@ def bubble_sort_desc(li) :
     return li
 ```  
   
-다음 포스트에서는 대표적인 정렬 알고리즘 중 2. 선택 정렬(Selection Sort)에 대해 이어서 다루겠습니다. 
+다음 포스트에서는 대표적인 정렬 알고리즘 중 2. [선택 정렬(Selection Sort)](https://kongju7.github.io/programming/2022/12/22/2-Selection-Sort.html){:target="_blank"}에 대해 이어서 다루겠습니다. 
     
   

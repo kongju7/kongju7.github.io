@@ -61,11 +61,11 @@ def selection_sort(li):
     return li
 ```
 
-다음은 선택 정렬 **내림차순(Descending, DESC)**을 파이썬 코드로 구현해 보면 다음과 같습니다. 
+선택 정렬 **내림차순(Descending, DESC)**을 파이썬 코드로 구현해 보면 다음과 같습니다. 
 
 ```Python 
 # 선택 정렬 파이썬 구현 (내림차순) - 최대값 찾기 
-def selection_sort(li) :
+def selection_sort_desc(li) :
     for i in range(len(li) - 1):
         max_idx = i
         for j in range(i + 1, len(li)):
@@ -75,5 +75,7 @@ def selection_sort(li) :
     return li
 ```  
   
-다음 포스트에서는 대표적인 정렬 알고리즘 중 3. 삽입 정렬(Insertion Sort)에 대해 이어서 다루겠습니다. 
+다음 포스트에서는 대표적인 정렬 알고리즘 중 3. [삽입 정렬(Insertion Sort)](https://kongju7.github.io/programming/2022/12/22/3-Insertion-Sort.html){:target="_blank"}에 대해 이어서 다루겠습니다. 
+     
+
      
