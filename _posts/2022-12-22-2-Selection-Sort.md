@@ -16,7 +16,7 @@ tags: [Python, 파이썬, Selection Sort, 선택 정렬]
   
   
  
-## 1. 선택 정렬(Selection Sort)
+## 2. 선택 정렬(Selection Sort)
   
 ### 1) 선택 정렬 정의 
 - 배열에 있는 값들 중 최소값을 탐색하여 정렬하는 알고리즘
