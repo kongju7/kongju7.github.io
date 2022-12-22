@@ -44,7 +44,7 @@ tags: [Python, 파이썬, Bubble Sort, 버블 정렬]
   
 ### 4) 버블 정렬 파이썬 구현
   
-```python 
+```Python 
 # 버블정렬 소스코드
 def bubble_sort(li):
     for i in range(len(li)-1, 0, -1):
