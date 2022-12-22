@@ -10,7 +10,7 @@ tags: [Python, 파이썬, Selection Sort, 선택 정렬]
 
 1. [버블 정렬(Bubble Sort)](https://kongju7.github.io/programming/2022/12/22/1-Bubble-Sort.html){:target="_blank"} 
 2. **`선택 정렬(Selection Sort)`**
-3. 삽입 정렬(Insertion Sort)
+3. [삽입 정렬(Insertion Sort)](https://kongju7.github.io/programming/2022/12/22/3-Insertion-Sort.html){:target="_blank"} 
 4. 퀵 정렬(Quick Sort)
 5. 병합 정렬(Merge Sort))
   
@@ -23,6 +23,7 @@ tags: [Python, 파이썬, Selection Sort, 선택 정렬]
   - 주어진 배열에 있는 값들 중 최소값을 찾고, 해당 최솟값을 배열의 맨 앞 위치와 교환하는 방식으로 진행 
   - 정렬한 값 이후의 나머지 배열에 대해서도 위의 절차를 반복 진행 
   
+
 ### 2) 선택 정렬의 특징  
   
 - 장점 

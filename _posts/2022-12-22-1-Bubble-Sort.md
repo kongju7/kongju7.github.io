@@ -9,8 +9,8 @@ tags: [Python, 파이썬, Bubble Sort, 버블 정렬]
 ## 대표적인 정렬 알고리즘  
 
 1. **`버블 정렬(Bubble Sort)`**
-2. 선택 정렬(Selection Sort)
-3. 삽입 정렬(Insertion Sort)
+2. [선택 정렬(Selection Sort)](https://kongju7.github.io/programming/2022/12/22/2-Selection-Sort.html){:target="_blank"} 
+3. [삽입 정렬(Insertion Sort)](https://kongju7.github.io/programming/2022/12/22/3-Insertion-Sort.html){:target="_blank"} 
 4. 퀵 정렬(Quick Sort)
 5. 병합 정렬(Merge Sort))
   
@@ -22,7 +22,7 @@ tags: [Python, 파이썬, Bubble Sort, 버블 정렬]
 - 서로 이웃한 두 원소를 비교하여 정렬하는 알고리즘 
   - 이웃한 2개의 값을 비교하여 크기가 순서대로 되어 있지 않으면 서로 교환하는 방식으로 진행
   
-  
+
 ### 2) 버블 정렬의 특징  
   
 - 장점 
