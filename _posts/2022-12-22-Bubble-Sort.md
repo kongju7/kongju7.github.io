@@ -8,7 +8,7 @@ tags: [Python, 파이썬, Bubble Sort, 버블 정렬]
 
 ## 대표적인 정렬 알고리즘  
 
-1. `버블 정렬(Bubble Sort)`
+1. **`버블 정렬(Bubble Sort)`**
 2. 선택 정렬(Selection Sort)
 3. 삽입 정렬(Insertion Sort)
 4. 퀵 정렬(Quick Sort)
@@ -45,7 +45,7 @@ tags: [Python, 파이썬, Bubble Sort, 버블 정렬]
 ### 4) 버블 정렬 파이썬 구현
   
 ```Python 
-# 버블정렬 소스코드
+# 버블 정렬 파이썬 구현
 def bubble_sort(li):
     for i in range(len(li)-1, 0, -1):
         for j in range(i):
