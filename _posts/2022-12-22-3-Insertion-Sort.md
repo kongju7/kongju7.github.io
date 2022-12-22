@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Python] 선택 정렬 특징 및 파이썬 구현"
+title: "[Python] 삽입 정렬 특징 및 파이썬 구현"
 subtitle: "정렬 알고리즘 시리즈 3. 삽입 정렬"
 categories: Programming
 tags: [Python, 파이썬, Insertion Sort, 삽입 정렬]
