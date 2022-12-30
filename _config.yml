@@ -43,9 +43,8 @@ author: Kong Ju
 copyright: "Copyright (c) 2022-{currentYear} {author}"
 
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Welcome to my blog! Here, I document my experiences and progress as I strive to become a data scientist. 
+  You'll find posts on topics such as data science, Python, and computer science as I navigate this exciting field.
 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://kongju7.github.io" # the base hostname & protocol for your site, e.g. https://example.com
