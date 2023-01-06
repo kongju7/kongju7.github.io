@@ -91,13 +91,13 @@ pip install git+https://github.com/fior-di-latte/project_graph.git
 터미널에서 명령어 project_graph 한 칸 띄우고 {파이썬 스크립트 파일명}.py를 치고 엔터를 누르면,   
 해당 스크립트 파일이 실행되면서 호출 그래프를 자동적으로 생성할 수 있습니다.    
    
-```
+```sh
 project_graph myproject.py
 ```
   
 만약 사용하는 외부 라이브러리까지 모두 포함해 그리고 싶다면 `-a` 명령어를 추가하면 됩니다.  
   
-```
+```sh
 project_graph -a myproject.py
 ```
   
