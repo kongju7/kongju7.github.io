@@ -15,15 +15,13 @@ tags: [Python, Programming, Call Graph, draw.io, graphviz, project graph]
    
 1. 한 땀 한 땀 정성껏 그린다.  
   
-  1-1. 고전적으로 Microsoft Powerpoint를 이용한다.  
-     
-  1-2. 순서도(flowchart)에 특화된 프로그램을 이용한다. 
+  1-1. 고전적으로 Microsoft Powerpoint를 이용한다.   
+  1-2. 순서도(flowchart)에 특화된 프로그램을 이용한다.  
   
 2. 파이썬 라이브러리를 이용해 자동화한다.   
   
   2-1. pycallgraph 라이브러리를 이용한다.   
-    
-  2-2. project graph 라이브러리를 이용한다. 
+  2-2. project graph 라이브러리를 이용한다.   
   
   
 이번에 저는 1-2와 2-2를 이용해서 호출 그래프를 작성하였습니다. 
