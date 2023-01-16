@@ -3,7 +3,7 @@ layout: post
 title: "[Diary] 첫번째 개인 프로젝트가 끝났다"
 subtitle: "시간 관리와의 전쟁"
 categories: Diary
-tags: [Diary, Python, Data Science, 공부]
+tags: [Diary, Python, Data Science, 개인 프로젝트, 회고]
 ---
 
 지난 월요일에 부트캠프에서 진행하는 첫번째 개인 프로젝트가 끝났다.  

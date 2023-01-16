@@ -3,7 +3,7 @@ layout: post
 title: "[Diary] 세 번째 개인 프로젝트가 끝났다"
 subtitle: "쇼핑 리뷰 자연어 처리를 위한 데이터 파이프라인 구축"
 categories: Diary
-tags: [Diary, Python, Data Science, Data Pipeline, Tensorflow, NLP, 자연어 처리, 데이터 파이프라인 구축]
+tags: [Diary, Python, Data Science, Data Pipeline, Tensorflow, NLP, 자연어 처리, 데이터 파이프라인 구축, 개인 프로젝트, 회고]
 ---
 
 지난 목요일에 4일 동안 진행한 세 번째 개인 프로젝트가 끝났다.  
