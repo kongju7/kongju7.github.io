@@ -6,13 +6,12 @@ categories: Review
 tags: [Review, AI, conference, NLP, Language Model, 언어모델]
 ---
   
-[특강 요약]   
+[AI 특강 요약]   
   
 ## **[2023 AI연구원 겨울 콜로키움]**
    
 ### 딥러닝 언어모델과 확률적 앵무새 (송상헌 / 고려대 언어학과 교수)
-   
-  - url: [https://www.youtube.com/watch?v=P5xb2qyiQRw](https://www.youtube.com/watch?v=P5xb2qyiQRw){:target="_blank"}  
+- url: [https://www.youtube.com/watch?v=P5xb2qyiQRw](https://www.youtube.com/watch?v=P5xb2qyiQRw){:target="_blank"}  
    
 - **최근 딥러닝 언어모델:** 빈도에 기반하는 기존 코퍼스 언어학과 차이. 적은 빈도의 ‘증폭’과정을 거쳐서 처리 → 성능 크게 개선
 - 하지만 여전히, **확률적 앵무새(Stochastic Parrots)**: 인공지능 언어모델은 자연 언어에 대한 실질적인 이해를 하고 있는 것이 아니라 단순히 확률에 기반하여 단어의 조합을 결과값으로 반환한다는 점에서 확률적 앵무새로 볼 수 있음
@@ -33,7 +32,7 @@ tags: [Review, AI, conference, NLP, Language Model, 언어모델]
     
 - **최근의 흐름**
     - 문면 이상의 것: 수학 풀이 등
-    - **상식:** 학습 데이터에 명시적으로 포함되어 있지 않은 내용.
+    - **상식:** 학습 데이터에 명시적으로 포함되어 있지 않은 내용
         - 세계 지식의 패턴화, 상식과 윤리, 가추 추론 → **인간의 사고 패턴을 모방할 수 있도록.**
         
 - **언어모델의 성능 개선**
