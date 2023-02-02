@@ -1,5 +1,5 @@
 
-이 레포지토리는 [제 블로그](https://kongju7.github.io) 관련 레포지토리입니다.  
+이 레포지토리는 제가 운영 중인 [**블로그 Becoming a Data Scientist** (https://kongju7.github.io)](https://kongju7.github.io) 관련 레포지토리입니다.  
 
 제 블로그에서는 **데이터 과학(Data Science)** 관련 내용과 **일상(Daily Life)**에 대한 내용을 주로 다루고 있습니다. 
 
@@ -26,7 +26,7 @@ Currently Studying Data Science and A.I. using Various Types of Big Data
 ### Skills
 
 Software  
-• Python, SQL, Stata, SPSS, Tableau
+• Python, PyTorch, MySQL, Stata, SPSS, Tableau
 
 Languages  
 • English (proficient); Korean (native)
