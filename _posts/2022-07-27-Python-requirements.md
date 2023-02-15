@@ -60,7 +60,7 @@ audioread                                         2.1.9
 
 다음 명령어를 활용하면 내 컴퓨터(혹은 특정 가상환경)에 설치되어 있는 Python 라이브러리의 목록을 requirements.txt로 생성할 수 있다.
 
-```
+```Shell
 pip freeze > requirements.txt
 ```
 
@@ -89,8 +89,8 @@ pip install에 -r 옵션과 함께 파이썬 라이브러리 목록이 들어있
 한 번에 필요로 하는 모든 라이브러리를 설치할 수 있다. 
 
 
-```
-$ pip install -r requirements.txt
+```Shell
+pip install -r requirements.txt
 ```
 
 
