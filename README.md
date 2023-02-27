@@ -19,6 +19,7 @@ Currently Studying Data Science and A.I. using Various Types of Big Data
 
 ### Related Experiencs
 
+(2022-2023) AI Bootcamp
 (2019-2022) Policy Research Fellow  
 (2018) Teaching 'Social Statistics' at Chung-Ang University, Seoul  
 (2016) Visiting Scholar at University of California, Los Angeles (UCLA)  
@@ -26,7 +27,7 @@ Currently Studying Data Science and A.I. using Various Types of Big Data
 ### Skills
 
 Software  
-• Python, PyTorch, MySQL, Stata, SPSS, Tableau
+• Python, PyTorch, Tensorflow, MySQL, BigQuery, Stata, SPSS, Tableau
 
 Languages  
 • English (proficient); Korean (native)
