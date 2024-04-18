@@ -10,7 +10,7 @@ tags: [Data Science, NLP, LLM, Large Language Model, Foundation Models, paper]
 ## 기반 모델(Foundation Models) 관련 논문 모음 
   
   
-### 1. 기반 모델(Foundation Models) 
+### 1. 기반 모델 
   
 **기반 모델 및 응용 분야**
 - [On the Opportunities and Risks of Foundation Models](https://arxiv.org/pdf/2108.07258.pdf){:target="_blank"}  
