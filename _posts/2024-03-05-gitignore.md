@@ -1,7 +1,7 @@
 ---
 layout: post
 title: ".gitignore 자동 생성하기"
-subtitle: ".gitignore 자동 생성 사이트(toptal.com)"
+subtitle: ".gitignore 자동 생성 사이트(gitignore.io)"
 categories: Programming
 tags: [Python, Programming, git, .gitignore, gitignore.io, toptal.com]
 ---
@@ -11,44 +11,45 @@ tags: [Python, Programming, git, .gitignore, gitignore.io, toptal.com]
 
   
 `.gitignore` 파일은 [git](https://git-scm.com/){:target="_blank"}을 활용한 버전 관리에서 제외할 파일 목록을 정리한 파일로,   
-[GitHub](https://github.com/){:target="_blank"}에 업로드하지 않을 파일 목록을 의미한다.   
+이 파일을 통해서 해당 파일이 [GitHub](https://github.com/){:target="_blank"}에 업로드되지 않도록 강제할 수 있습니다.   
   
-주로 API key, 개인 정보가 포함된 데이터와 같이 외부로 유출되면 안되는 정보나 가상 환경과 같이 용량이 큰 파일 등이 여기에 포함된다.   
+주로 API key, 개인 정보가 포함된 데이터와 같이 외부로 유출되면 안되는 정보나 가상 환경과 같이 용량이 큰 파일 등이 여기에 포함될 수 있습니다.   
   
   
-`.gitignore` 파일은 프로젝트별로 각각 작성할 수도 있지만,   
-`.gitignore` 파일을 자동 생성해 주는 사이트를 이용하면 쉽게 만들 수 있다.    
+`.gitignore` 파일은 프로젝트별로 각각 수동으로 작성할 수도 있지만,   
+`.gitignore` 파일을 자동 생성해 주는 사이트를 이용하면 쉽게 만들 수 있습니다.    
 
   
   
-### 1. 먼저, [toptal.com](https://www.toptal.com/developers/gitignore){:target="_blank"}사이트에 접속한다.   
+### 1. 먼저, [gitignore.io](https://www.toptal.com/developers/gitignore){:target="_blank"}사이트에 접속합니다.   
   
 ![gitignore_1](/assets/images/gitignore_1.png "gitignore_1")  
   
 
   
-### 2. 검색창에 커밋(Commit)에서 제외하고 싶은 내용을 입력한다. 
+### 2. 검색창에 깃 커밋(git commit)에서 제외하고 싶은 내용을 입력합니다. 
 
-여러 단어를 중복해서 입력할 수 있다.    
+여러 키워드를 중복해서 입력할 수도 있습니다.    
    
-이 예제에서는 'Python', 'venv', 'Git' 등을 각각 입력해 선택하였다.  
+이 예제에서는 'Python', 'venv', 'Git' 등을 각각 입력해 추가하였습니다.  
 
 ![gitignore_2](/assets/images/gitignore_2.png "gitignore_2")  
   
 
    
-### 3. 주요 단어를 입력한 후에 **생성** 버튼을 클릭한다. 
+### 3. 주요 단어를 입력한 후에 '생성' 버튼을 클릭합니다. 
 
-그러면 `.gitignore` 파일에 들어갈 내용이 자동 생성된다. 
+그러면 `.gitignore` 파일에 들어갈 내용이 자동으로로 생성됩니다. 
 
 ![gitignore_3](/assets/images/gitignore_3.png "gitignore_3")  
   
 
-생성된 내용을 그대로 복사해 현재 작업 중인 프로젝트 내 `.gitignore` 파일에 그대로 붙여넣기하면 된다. 
+생성된 내용을 그대로 복사해 현재 작업 중인 프로젝트 내 `.gitignore` 파일에 그대로 붙여넣기만 하면 됩니다.
+그 후에 환경 변수 파일이나 개인 정보가 담긴 파일 등을 추가한다면 `.gitignore` 파일을 훨씬 쉽게 관리할 수 있게 되겠죠?  
   
  
      
-참고로 위의 세 단어를 활용하여 생성된 파일은 다음과 같다. 
+참고로 위의 세 단어를 활용하여 생성된 파일은 다음과 같습니다. 
 
   
      
