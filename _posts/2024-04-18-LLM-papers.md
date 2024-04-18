@@ -1,15 +1,17 @@
 ---
 layout: post
-title: "[LLM] 기반 모델(Foundation model) 관련 논문 모음"
-subtitle: "쏟아지는 논문들"
+title: "[LLM] Foundation Models 논문 모음"
+subtitle: "쏟아지는 기반 모델 관련 논문들"
 categories: Data_Science 
-tags: [Data Science, NLP, LLM, Large Language Model, Foundation models, paper]
+tags: [Data Science, NLP, LLM, Large Language Model, Foundation Models, paper]
 ---
 
-## 대용량 언어 모델(LLM) 기반 모델(Foundation Models) 관련 논문 모음 
+## 대용량 언어 모델(Large Language Model, LLM) 
+## 기반 모델(Foundation Models) 관련 논문 모음 
 
 
-### 기반 모델(Foundation Models) 및 응용 분야
+### 1. 기반 모델(Foundation Models) 
+**기반 모델 및 응용 분야**
 - [On the Opportunities and Risks of Foundation Models](https://arxiv.org/pdf/2108.07258.pdf){:target="_blank"}  
 - [Multimodal Foundation Models: From Specialists to General-Purpose Assistants](https://arxiv.org/pdf/2309.10020.pdf){:target="_blank"}  
 - [Large Multimodal Models: Notes on CVPR 2023 Tutorial](https://arxiv.org/pdf/2306.14895.pdf){:target="_blank"}  
@@ -19,7 +21,7 @@ tags: [Data Science, NLP, LLM, Large Language Model, Foundation models, paper]
 - [Towards Reasoning in Large Language Models: A Survey](https://arxiv.org/pdf/2212.10403.pdf){:target="_blank"}  
   
   
-### 순환 신경망(RNN) 및 합성곱 신경망(CNN)
+**순환 신경망(RNN) 및 합성곱 신경망(CNN)**
 - [Recurrent Neural Networks (RNNs): A gentle Introduction and Overview](https://arxiv.org/pdf/1912.05911.pdf){:target="_blank"}  
 - [Highway Networks](https://arxiv.org/pdf/1505.00387.pdf){:target="_blank"}  
 - [Long Short-Term Memory](https://www.bioinf.jku.at/publications/older/2604.pdf){:target="_blank"}  
@@ -34,7 +36,7 @@ tags: [Data Science, NLP, LLM, Large Language Model, Foundation models, paper]
 - [A ConvNet for the 2020s](https://arxiv.org/pdf/2201.03545.pdf){:target="_blank"}  
   
   
-### 자연어 처리(NLP) 및 컴퓨터 비젼(CV)        				
+**자연어 처리(NLP) 및 컴퓨터 비전(CV)**        				
 - [Sequence to Sequence Learning with Neural Networks](https://arxiv.org/pdf/1409.3215.pdf){:target="_blank"}  
 - [Thumbs up? Sentiment Classification using Machine Learning Techniques](https://aclanthology.org/W02-1011.pdf){:target="_blank"}  
 - [A Survey of Named Entity Recognition and Classification](https://nlp.cs.nyu.edu/sekine/papers/li07.pdf){:target="_blank"}  
@@ -49,7 +51,8 @@ tags: [Data Science, NLP, LLM, Large Language Model, Foundation models, paper]
 - [Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks](https://arxiv.org/pdf/1511.06434v2.pdf){:target="_blank"}  
   
   
-### 셀프 어텐션(Self Attention) 및 트랜스포머(Transformers)
+### 2. 트랜스포머(Transformers) 아키텍쳐  
+**셀프 어텐션(Self Attention) 및 트랜스포머(Transformers)**
 - [Neural Machine Translation by Jointly Learning to Align and Translate](https://arxiv.org/pdf/1409.0473.pdf){:target="_blank"}  
 - [Show, Attend and Tell: Neural Image Caption Generation with Visual Attention](https://proceedings.mlr.press/v37/xuc15.pdf){:target="_blank"}  
 - [Attention Is All You Need](https://arxiv.org/pdf/1706.03762.pdf){:target="_blank"}  
@@ -58,7 +61,7 @@ tags: [Data Science, NLP, LLM, Large Language Model, Foundation models, paper]
 - [An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale](https://openreview.net/pdf?id=YicbFdNTTy	){:target="_blank"}  
   
   
-### 효율적인 트랜스포머(Efficient Transformers)
+**효율적인 트랜스포머**
 - [Transformers are RNNs: Fast Autoregressive Transformers with Linear Attention](https://arxiv.org/pdf/2006.16236.pdf){:target="_blank"}  
 - [Perceiver: General Perception with Iterative Attention](https://arxiv.org/pdf/2103.03206.pdf){:target="_blank"}  
 - [Random Feature Attention](https://arxiv.org/pdf/2103.02143.pdf){:target="_blank"}  
@@ -68,17 +71,16 @@ tags: [Data Science, NLP, LLM, Large Language Model, Foundation models, paper]
 - [Efficiently Modeling Long Sequences with Structured State Spaces](https://arxiv.org/pdf/2111.00396.pdf){:target="_blank"}  
   
   
-### 매개변수 효율적 튜닝(Parameter-efficient Tuning)
+**매개변수 효율적 튜닝**
 - [Parameter-Efficient Transfer Learning for NLP](https://arxiv.org/pdf/1902.00751.pdf){:target="_blank"}  
 - [LoRA: Low-Rank Adaptation of Large Language Models](https://arxiv.org/pdf/2106.09685.pdf){:target="_blank"}  
 - [The Power of Scale for Parameter-Efficient Prompt Tuning](https://arxiv.org/pdf/2104.08691.pdf){:target="_blank"}  
 - [It's Not Just Size That Matters: Small Language Models Are Also Few-Shot Learners](https://arxiv.org/pdf/2009.07118.pdf){:target="_blank"}  
-- [Making Pre-trained Language Models Better Few-shot Learners](https://aclanthology.org/2021.acl-long.295.pdf){:target="_blank"}  
+- [Making Pre-trained Language Models Better Few-shot Learners](https://aclanthology.org/2021.acl-long.295.pdf){:target="_blank"}
 - [Few-Shot Parameter-Efficient Fine-Tuning is Better and Cheaper than In-Context Learning](https://arxiv.org/pdf/2205.05638.pdf){:target="_blank"}  
 - [Towards a Unified View of Parameter-Efficient Transfer Learning](https://arxiv.org/pdf/2110.04366.pdf){:target="_blank"}  
-  
-  
-### 언어 모델 사전 학습(Language Model Pretraining)
+
+**언어 모델 사전 학습**
 - [Deep Contextualized Word Representations](https://arxiv.org/pdf/1802.05365.pdf){:target="_blank"}  
 - [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](https://arxiv.org/pdf/1810.04805.pdf){:target="_blank"}  
 - [Unified Language Model Pre-training for Natural Language Understanding and Generation](https://arxiv.org/pdf/1905.03197.pdf){:target="_blank"}  
@@ -88,7 +90,8 @@ tags: [Data Science, NLP, LLM, Large Language Model, Foundation models, paper]
 - [ELECTRA: Pre-training Text Encoders as Discriminators Rather Than Generators](https://arxiv.org/pdf/2003.10555.pdf){:target="_blank"}  
   
   
-### 대용량 언어 모델(Large Language Models)
+### 3. 대용량 언어 모델  
+**대용량 언어 모델**
 - [Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer](https://arxiv.org/pdf/1910.10683.pdf){:target="_blank"}  
 - [Language Models are Few-Shot Learners](https://arxiv.org/pdf/2005.14165.pdf){:target="_blank"}  
 - [LaMDA: Language Models for Dialog Applications](https://arxiv.org/pdf/2201.08239.pdf){:target="_blank"}  
@@ -99,7 +102,7 @@ tags: [Data Science, NLP, LLM, Large Language Model, Foundation models, paper]
 - [Mixtral of Experts](https://arxiv.org/pdf/2401.04088.pdf){:target="_blank"}  
   
   
-### 스케일링 법칙(Scaling Law)
+**스케일링 법칙(Scaling Law)**
 - [Scaling Laws for Neural Language Models](https://arxiv.org/pdf/2001.08361.pdf){:target="_blank"}  
 - [Scaling Laws for Transfer](https://arxiv.org/pdf/2102.01293.pdf){:target="_blank"}  
 - [Emergent Abilities of Large Language Models](https://arxiv.org/pdf/2206.07682.pdf){:target="_blank"}  
@@ -109,7 +112,7 @@ tags: [Data Science, NLP, LLM, Large Language Model, Foundation models, paper]
 - [Are Emergent Abilities of Large Language Models a Mirage?](https://arxiv.org/pdf/2304.15004.pdf){:target="_blank"}  
    
   
-### 지시 튜닝(Instruction Tuning) 및 인간 피드백 기반 강화학습(RLHF)
+**지시 튜닝(Instruction Tuning) 및 인간 피드백 기반 강화학습(RLHF)**
 - [Training Language Models to Follow Instructions with Human Feedback](https://arxiv.org/pdf/2203.02155.pdf){:target="_blank"}  
 - [Finetuned Language Models Are Zero-Shot Learners](https://arxiv.org/pdf/2109.01652.pdf){:target="_blank"}  
 - [Multitask Prompted Training Enables Zero-Shot Task Generalization](https://arxiv.org/pdf/2110.08207.pdf){:target="_blank"}  
@@ -118,7 +121,7 @@ tags: [Data Science, NLP, LLM, Large Language Model, Foundation models, paper]
 - [Zephyr: Direct Distillation of LM Alignment](https://arxiv.org/pdf/2310.16944.pdf){:target="_blank"}  
 	 					
   
-### 효율적인 대용량 언어모델 학습(Efficient LLM Training)
+**효율적인 대용량 언어모델 학습**
 - [Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism](https://arxiv.org/pdf/1909.08053.pdf){:target="_blank"}  
 - [ZeRO: Memory Optimizations Toward Training Trillion Parameter Models](https://arxiv.org/pdf/1910.02054.pdf){:target="_blank"}  
 - [Train Short, Test Long: Attention with Linear Biases Enables Input Length Extrapolation](https://arxiv.org/pdf/2108.12409.pdf){:target="_blank"}  
@@ -128,7 +131,7 @@ tags: [Data Science, NLP, LLM, Large Language Model, Foundation models, paper]
 - [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](https://arxiv.org/pdf/2205.14135.pdf){:target="_blank"}  
 						
   
-### 효율적인 대용량 언어모델 추론(Efficient LLM Inference)
+**효율적인 대용량 언어모델 추론(Efficient LLM Inference)**
 - [BERT Loses Patience: Fast and Robust Inference with Early Exit](https://arxiv.org/pdf/2006.04152.pdf){:target="_blank"}  
 - [Confident Adaptive Language Modeling](https://arxiv.org/pdf/2207.07061.pdf){:target="_blank"}  
 - [Fast Inference from Transformers via Speculative Decoding](https://arxiv.org/pdf/2211.17192.pdf){:target="_blank"}  
@@ -137,7 +140,7 @@ tags: [Data Science, NLP, LLM, Large Language Model, Foundation models, paper]
 - [Break the Sequential Dependency of LLM Inference Using Lookahead Decoding](https://lmsys.org/blog/2023-11-21-lookahead-decoding/){:target="_blank"}  
 						
   
-### 대용량 언어 모델 압축과 희소화(Compress and Sparsify LLM)
+**대용량 언어 모델 압축과 희소화**
 - [Efficient Large Scale Language Modeling with Mixtures of Experts](https://arxiv.org/pdf/2112.10684.pdf){:target="_blank"}  
 - [GShard: Scaling Giant Models with Conditional Computation and Automatic Sharding](https://arxiv.org/pdf/2006.16668.pdf){:target="_blank"}  
 - [CoLT5: Faster Long-Range Transformers with Conditional Computation](https://arxiv.org/pdf/2303.09752.pdf){:target="_blank"}  
@@ -147,7 +150,7 @@ tags: [Data Science, NLP, LLM, Large Language Model, Foundation models, paper]
 - [BitNet: Scaling 1-bit Transformers for Large Language Models](https://arxiv.org/pdf/2310.11453.pdf){:target="_blank"}  
 						
   
-### 대용량 언어 모델 프롬프팅(LLM Prompting)
+**대용량 언어 모델 프롬프팅(LLM Prompting)**
 - [Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](https://arxiv.org/pdf/2201.11903.pdf){:target="_blank"}  
 - [Self-Consistency Improves Chain of Thought Reasoning in Language Models](https://arxiv.org/pdf/2203.11171.pdf){:target="_blank"}  
 - [Tree of Thoughts: Deliberate Problem Solving with Large Language Models](https://arxiv.org/pdf/2305.10601.pdf){:target="_blank"}  
@@ -158,7 +161,8 @@ tags: [Data Science, NLP, LLM, Large Language Model, Foundation models, paper]
 - [Self-Refine: Iterative Refinement with Self-Feedback](https://arxiv.org/pdf/2303.17651.pdf){:target="_blank"}  
   
   
-### 비젼 트랜스포머(Vision Transformers)
+### 4. 멀티모달(Multimodal) 모델
+**비전 트랜스포머**
 - [An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale](https://openreview.net/pdf?id=YicbFdNTTy	){:target="_blank"}  
 - [Swin Transformer: Hierarchical Vision Transformer using Shifted Windows](https://arxiv.org/pdf/2103.14030.pdf){:target="_blank"}  
 - [Training data-efficient image transformers & distillation through attention](https://arxiv.org/pdf/2012.12877.pdf){:target="_blank"}  
@@ -168,7 +172,7 @@ tags: [Data Science, NLP, LLM, Large Language Model, Foundation models, paper]
 - [Masked Autoencoders Are Scalable Vision Learners](https://arxiv.org/pdf/2111.06377.pdf){:target="_blank"}  
 						
   
-### 디퓨젼 모델(Diffusion Models)
+**디퓨전(Diffusion) 모델**
 - [Maximum Likelihood Training of Score-Based Diffusion Models](https://arxiv.org/pdf/2101.09258.pdf){:target="_blank"}  
 - [Score-Based Generative Modeling through Stochastic Differential Equations](https://arxiv.org/pdf/2011.13456.pdf){:target="_blank"}  
 - [Denoising Diffusion Implicit Models](https://arxiv.org/pdf/2010.02502.pdf){:target="_blank"}  
@@ -177,7 +181,7 @@ tags: [Data Science, NLP, LLM, Large Language Model, Foundation models, paper]
 - [Consistency Models](https://arxiv.org/pdf/2303.01469.pdf){:target="_blank"}  
     
       
-### 이미지 생성(Image Generation)
+**이미지 생성**
 - [High-Resolution Image Synthesis with Latent Diffusion Models](https://arxiv.org/pdf/2112.10752.pdf){:target="_blank"}  
 - [Photorealistic Text-to-Image Diffusion Models with Deep Language Understanding](https://arxiv.org/pdf/2205.11487.pdf){:target="_blank"}  
 - [Scaling Autoregressive Models for Content-Rich Text-to-Image Generation](https://arxiv.org/pdf/2206.10789.pdf){:target="_blank"}  
@@ -186,7 +190,7 @@ tags: [Data Science, NLP, LLM, Large Language Model, Foundation models, paper]
 - [Adversarial Diffusion Distillation](https://static1.squarespace.com/static/6213c340453c3f502425776e/t/65663480a92fba51d0e1023f/1701197769659/adversarial_diffusion_distillation.pdf){:target="_blank"}  
   
   
-### 멀티모달 모델 사전 학습(Multimodal Model Pre-training)
+**멀티모달 모델 사전학습**
 - [Learning Transferable Visual Models From Natural Language Supervision](https://arxiv.org/pdf/2103.00020.pdf){:target="_blank"}  
 - [BLIP: Bootstrapping Language-Image Pre-training for Unified Vision-Language Understanding and Generation](https://arxiv.org/pdf/2201.12086.pdf){:target="_blank"}  
 - [CoCa: Contrastive Captioners are Image-Text Foundation Models](https://arxiv.org/pdf/2205.01917.pdf){:target="_blank"}  
@@ -196,7 +200,7 @@ tags: [Data Science, NLP, LLM, Large Language Model, Foundation models, paper]
 - [Sigmoid Loss for Language Image Pre-Training](https://arxiv.org/pdf/2303.15343.pdf){:target="_blank"}  
   
   
-### 대규모 멀티모달 모델(Large Multimodal Models)
+**대용량 멀티모달 모델**
 - [Flamingo: a Visual Language Model for Few-Shot Learning](https://arxiv.org/pdf/2204.14198.pdf){:target="_blank"}  
 - [Visual Instruction Tuning](https://arxiv.org/pdf/2304.08485.pdf){:target="_blank"}  
 - [InstructBLIP: Towards General-purpose Vision-Language Models with Instruction Tuning](https://arxiv.org/pdf/2305.06500.pdf){:target="_blank"}  
@@ -207,7 +211,8 @@ tags: [Data Science, NLP, LLM, Large Language Model, Foundation models, paper]
 - [Gemini: A Family of Highly Capable Multimodal Models](https://arxiv.org/pdf/2312.11805v1.pdf){:target="_blank"}  
   
   
-### 도구 증강(Tool Augmentation)
+### 5. 증강(Augmentation) 기반 모델 
+**도구(Tool) 증강**
 - [Toolformer: Language Models Can Teach Themselves to Use Tools](https://arxiv.org/pdf/2302.04761.pdf){:target="_blank"}  
 - [ART: Automatic Multi-step Reasoning and Tool-use for Large Language Models](https://arxiv.org/pdf/2303.09014.pdf){:target="_blank"}  
 - [ToolLLM: Facilitating Large Language Models to Master 16000+ Real-world APIs](https://arxiv.org/pdf/2307.16789.pdf){:target="_blank"}  
@@ -217,7 +222,7 @@ tags: [Data Science, NLP, LLM, Large Language Model, Foundation models, paper]
 - [WebArena: A Realistic Web Environment for Building Autonomous Agents](https://arxiv.org/pdf/2307.13854.pdf){:target="_blank"}  
   
   
-### 검색 증강(Retrieval Augmentation)
+**검색(Retrieval) 증강**
 - [REALM: Retrieval-Augmented Language Model Pre-Training](https://arxiv.org/pdf/2002.08909.pdf){:target="_blank"}  
 - [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks](https://arxiv.org/pdf/2005.11401.pdf){:target="_blank"}  
 - [Improving Language Models by Retrieving from Trillions of Tokens](https://arxiv.org/pdf/2112.04426.pdf){:target="_blank"}  
