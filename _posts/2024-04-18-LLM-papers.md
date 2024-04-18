@@ -6,11 +6,12 @@ categories: Data_Science
 tags: [Data Science, NLP, LLM, Large Language Model, Foundation Models, paper]
 ---
 
-## 대용량 언어 모델(Large Language Model, LLM) 
+## 대용량 언어 모델(LLM) 
 ## 기반 모델(Foundation Models) 관련 논문 모음 
-
-
+  
+  
 ### 1. 기반 모델(Foundation Models) 
+  
 **기반 모델 및 응용 분야**
 - [On the Opportunities and Risks of Foundation Models](https://arxiv.org/pdf/2108.07258.pdf){:target="_blank"}  
 - [Multimodal Foundation Models: From Specialists to General-Purpose Assistants](https://arxiv.org/pdf/2309.10020.pdf){:target="_blank"}  
@@ -52,6 +53,7 @@ tags: [Data Science, NLP, LLM, Large Language Model, Foundation Models, paper]
   
   
 ### 2. 트랜스포머(Transformers) 아키텍쳐  
+  
 **셀프 어텐션(Self Attention) 및 트랜스포머(Transformers)**
 - [Neural Machine Translation by Jointly Learning to Align and Translate](https://arxiv.org/pdf/1409.0473.pdf){:target="_blank"}  
 - [Show, Attend and Tell: Neural Image Caption Generation with Visual Attention](https://proceedings.mlr.press/v37/xuc15.pdf){:target="_blank"}  
@@ -91,6 +93,7 @@ tags: [Data Science, NLP, LLM, Large Language Model, Foundation Models, paper]
   
   
 ### 3. 대용량 언어 모델  
+  
 **대용량 언어 모델**
 - [Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer](https://arxiv.org/pdf/1910.10683.pdf){:target="_blank"}  
 - [Language Models are Few-Shot Learners](https://arxiv.org/pdf/2005.14165.pdf){:target="_blank"}  
@@ -131,7 +134,7 @@ tags: [Data Science, NLP, LLM, Large Language Model, Foundation Models, paper]
 - [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](https://arxiv.org/pdf/2205.14135.pdf){:target="_blank"}  
 						
   
-**효율적인 대용량 언어모델 추론(Efficient LLM Inference)**
+**효율적인 대용량 언어모델 추론**
 - [BERT Loses Patience: Fast and Robust Inference with Early Exit](https://arxiv.org/pdf/2006.04152.pdf){:target="_blank"}  
 - [Confident Adaptive Language Modeling](https://arxiv.org/pdf/2207.07061.pdf){:target="_blank"}  
 - [Fast Inference from Transformers via Speculative Decoding](https://arxiv.org/pdf/2211.17192.pdf){:target="_blank"}  
@@ -150,7 +153,7 @@ tags: [Data Science, NLP, LLM, Large Language Model, Foundation Models, paper]
 - [BitNet: Scaling 1-bit Transformers for Large Language Models](https://arxiv.org/pdf/2310.11453.pdf){:target="_blank"}  
 						
   
-**대용량 언어 모델 프롬프팅(LLM Prompting)**
+**대용량 언어 모델 프롬프팅(Prompting)**
 - [Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](https://arxiv.org/pdf/2201.11903.pdf){:target="_blank"}  
 - [Self-Consistency Improves Chain of Thought Reasoning in Language Models](https://arxiv.org/pdf/2203.11171.pdf){:target="_blank"}  
 - [Tree of Thoughts: Deliberate Problem Solving with Large Language Models](https://arxiv.org/pdf/2305.10601.pdf){:target="_blank"}  
@@ -162,6 +165,7 @@ tags: [Data Science, NLP, LLM, Large Language Model, Foundation Models, paper]
   
   
 ### 4. 멀티모달(Multimodal) 모델
+  
 **비전 트랜스포머**
 - [An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale](https://openreview.net/pdf?id=YicbFdNTTy	){:target="_blank"}  
 - [Swin Transformer: Hierarchical Vision Transformer using Shifted Windows](https://arxiv.org/pdf/2103.14030.pdf){:target="_blank"}  
@@ -212,6 +216,7 @@ tags: [Data Science, NLP, LLM, Large Language Model, Foundation Models, paper]
   
   
 ### 5. 증강(Augmentation) 기반 모델 
+  
 **도구(Tool) 증강**
 - [Toolformer: Language Models Can Teach Themselves to Use Tools](https://arxiv.org/pdf/2302.04761.pdf){:target="_blank"}  
 - [ART: Automatic Multi-step Reasoning and Tool-use for Large Language Models](https://arxiv.org/pdf/2303.09014.pdf){:target="_blank"}  
@@ -228,7 +233,7 @@ tags: [Data Science, NLP, LLM, Large Language Model, Foundation Models, paper]
 - [Improving Language Models by Retrieving from Trillions of Tokens](https://arxiv.org/pdf/2112.04426.pdf){:target="_blank"}  
 - [Self-RAG: Learning to Retrieve](https://arxiv.org/pdf/2310.11511.pdf){:target="_blank"}  
 - [REPLUG: Retrieval-Augmented Black-Box Language Models](https://arxiv.org/pdf/2301.12652.pdf){:target="_blank"}  
-  
-  
+    
+      
 열심히 읽자!  
   
