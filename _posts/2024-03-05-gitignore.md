@@ -39,7 +39,7 @@ tags: [Python, Programming, git, .gitignore, gitignore.io, toptal.com]
    
 ### 3. 주요 단어를 입력한 후에 '생성' 버튼을 클릭합니다. 
 
-그러면 `.gitignore` 파일에 들어갈 내용이 자동으로로 생성됩니다. 
+그러면 `.gitignore` 파일에 들어갈 내용이 자동으로 생성됩니다. 
 
 ![gitignore_3](/assets/images/gitignore_3.png "gitignore_3")  
   
