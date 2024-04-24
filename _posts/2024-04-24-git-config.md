@@ -28,7 +28,7 @@ git config --global --list
   
 ### 2. 사용자 이름과 이메일 등록 
   
-이메일은 [깃허브(GitHub)](https://github.com/){:target="_blank"} 계정에 등록한 이메일로 작성해 주세요.
+이메일은 [깃허브(GitHub)](https://github.com/){:target="_blank"} 계정에 등록한 이메일로 작성해 주세요.   
 참고로 [GitHub > Settings > Emails](https://github.com/settings/emails){:target="_blank"}에서 복수의 이메일을 등록할 수 있으니,  
 사용 개발 환경이나 용도에 따라서 이메일을 구분해 사용하는 것도 좋습니다.  
   
