@@ -1,12 +1,12 @@
 ---
 layout: post
 title: "[Git] 깃 계정 정보 등록/삭제하기"
-subtitle: "git user.name user.email 등록/삭제하기"
+subtitle: "git config user.name, user.email 등록/삭제하기"
 categories: Programming
 tags: [git, command, 명령어, git config, user.name, user.email]
 ---
 
-## git config user.name user.email 등록/삭제하기 
+## git config user.name, user.email 등록/삭제하기 
 
 오늘은 깃 계정 정보를 등록하거나 삭제하는 방법에 대해서 정리해 보도록 하겠습니다. 
 
