@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-translate-customization" content="108d9124921d80c3-80e20d618ff053c8-g4f02ec6f3dba68b7-c">
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>[요약] 데이터 사이언티스트의 비즈니스 기여 | Becoming a Data Scientist</title>
+<meta name="generator" content="Jekyll v4.3.3">
+<meta property="og:title" content="[요약] 데이터 사이언티스트의 비즈니스 기여">
+<meta name="author" content="Kong Ju">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="[발표 요약] [토스ㅣSLASH 22] Data Scientist는 어떻게 비즈니스에 기여할 수 있을까? (황동현 / 토스) url: https://www.youtube.com/watch?v=mKf1kvWXiPY 기존 역할: Silo 개별 지원 → 데이터 프로덕트 개발: 공통 니즈 반영 ‘데이터 프로덕트를 중심으로’ 전략 수립 → CDP 프로덕트 MVP 개발 → 개선 1) CVR 예측 모델 Conversion Rate: ‘10원 받기’를 클릭해 실제로 10원을 받은 유저만 전환 유저로 정의 전환 유저 수 → 성장율 대변 TUBA(메세지 발송 시스템) 활용 전환유저가 될 것 같은 유저를 예측 → (과거 전환 유저 수만 충분하다면) 모든 서비스에 적용 가능하므로 ‘확장성’이 높음 2) 결제 예측 모델 유저 소비명세를 확인하여 구매했다면 캐시백 혜택 캐시백 혜택을 자주 이용하는 유저에게 푸쉬 메세지 발송 효과 광고효과 극대화 가능 서비스 추천으로 리텐션 강화 유저 특성별 프로모션 실구매 확률이 높은 유저에게 광고 노출 ** 모델링: LightGBM 모델 활용 테이블형 데이터에 유리 유저의 인구통계학적 정보, 소비명세, 계좌 정보, 카드 정보 등 활용 → 앞으로 30일 안에 발생할 일 예측 모델 확장성 문제 최소한의 리소스로 최대한의 효과를 만들기 위해서 ‘데이터 웨어하우스’ 재탐색 유저 정보, 소비 정보, 서비스 사용 정보: 1~3달 정보 포함 → 데이터 집계기간이 짧았음 유저 행동 지표(act type) 확장: 기존 24개 → 일별 / 주별 / 월별 집계 로그 중에서 특정 타입을 ‘act type’으로 별도 보관 서비스 전환, 버튼 클릭, 페이지 진입 등이 포함 일별 / 주별 / 월별 집계: 작은 관점에서 큰 관점에서 유저의 서비스 활용 이해 가능 데이터 마트 새롭게 구성 1달~1년 데이터로 확장 기존 액티브 유저, 신규 유저 분리 집계 RFM 데이터, 소분류 대분류 브랜드 소비 이력 등 집계 → 컬럼 수 3~6천 개로 확대 파이프라인 일 단위의 작동 오프라인 서빙 목표 젠킨슨 서버: 다른 팀과 공유 컴퓨팅 리소스 문제 해결을 위해 ‘Ray Cluster’ 별도 구성 병렬 학습 및 추론 모델 학습 학습 주기적(주단위 수행), 추론은 매일 학습마다, 모델 버전마다 메트릭 확인 모델 버전 및 모니터링: mlflow 활용 - 실험 히스토리 저장 → 태그별로 모델 관리 → 과거 실험 쉽게 reproducing 가능 데이터 변경 문제 act type 집계 기준 변경, 삭제, 결제 카테고리 통합 등 → 각 파이프라인 모두에서 발생할 수 있음 데이터 정합성 문제 사전 인지 필요: slack 알람을 활용하여 사전 확인 대응 CDP 모델 런칭 Back Test 결과를 제공 → 모델 성능에 대한 의구심 해소 예측 모델의 좋은 성능 확인할 수 있었음 Silo의 추가 요청 발생: 신규 브랜드를 위한 유저 세그먼트 추출 라벨 데이터가 없는 상황이라 LightGMB으로 학습하기는 어려움 이런 니즈를 해결하기 위해 GNN 검토 중: 유저들의 소비 데이터에서 고객, 소비한 물품을 그래프로 표현하여 GNN으로 학습 → 유사도 검색을 통해서 유사한 유저나 브랜드 등을 구분할 수 있음 지속적인 모델 개선 노력 트랜스포머 모델 활용 Measure - Data - Learn 을 통해 비즈니스에 기여 목표">
+<meta property="og:description" content="[발표 요약] [토스ㅣSLASH 22] Data Scientist는 어떻게 비즈니스에 기여할 수 있을까? (황동현 / 토스) url: https://www.youtube.com/watch?v=mKf1kvWXiPY 기존 역할: Silo 개별 지원 → 데이터 프로덕트 개발: 공통 니즈 반영 ‘데이터 프로덕트를 중심으로’ 전략 수립 → CDP 프로덕트 MVP 개발 → 개선 1) CVR 예측 모델 Conversion Rate: ‘10원 받기’를 클릭해 실제로 10원을 받은 유저만 전환 유저로 정의 전환 유저 수 → 성장율 대변 TUBA(메세지 발송 시스템) 활용 전환유저가 될 것 같은 유저를 예측 → (과거 전환 유저 수만 충분하다면) 모든 서비스에 적용 가능하므로 ‘확장성’이 높음 2) 결제 예측 모델 유저 소비명세를 확인하여 구매했다면 캐시백 혜택 캐시백 혜택을 자주 이용하는 유저에게 푸쉬 메세지 발송 효과 광고효과 극대화 가능 서비스 추천으로 리텐션 강화 유저 특성별 프로모션 실구매 확률이 높은 유저에게 광고 노출 ** 모델링: LightGBM 모델 활용 테이블형 데이터에 유리 유저의 인구통계학적 정보, 소비명세, 계좌 정보, 카드 정보 등 활용 → 앞으로 30일 안에 발생할 일 예측 모델 확장성 문제 최소한의 리소스로 최대한의 효과를 만들기 위해서 ‘데이터 웨어하우스’ 재탐색 유저 정보, 소비 정보, 서비스 사용 정보: 1~3달 정보 포함 → 데이터 집계기간이 짧았음 유저 행동 지표(act type) 확장: 기존 24개 → 일별 / 주별 / 월별 집계 로그 중에서 특정 타입을 ‘act type’으로 별도 보관 서비스 전환, 버튼 클릭, 페이지 진입 등이 포함 일별 / 주별 / 월별 집계: 작은 관점에서 큰 관점에서 유저의 서비스 활용 이해 가능 데이터 마트 새롭게 구성 1달~1년 데이터로 확장 기존 액티브 유저, 신규 유저 분리 집계 RFM 데이터, 소분류 대분류 브랜드 소비 이력 등 집계 → 컬럼 수 3~6천 개로 확대 파이프라인 일 단위의 작동 오프라인 서빙 목표 젠킨슨 서버: 다른 팀과 공유 컴퓨팅 리소스 문제 해결을 위해 ‘Ray Cluster’ 별도 구성 병렬 학습 및 추론 모델 학습 학습 주기적(주단위 수행), 추론은 매일 학습마다, 모델 버전마다 메트릭 확인 모델 버전 및 모니터링: mlflow 활용 - 실험 히스토리 저장 → 태그별로 모델 관리 → 과거 실험 쉽게 reproducing 가능 데이터 변경 문제 act type 집계 기준 변경, 삭제, 결제 카테고리 통합 등 → 각 파이프라인 모두에서 발생할 수 있음 데이터 정합성 문제 사전 인지 필요: slack 알람을 활용하여 사전 확인 대응 CDP 모델 런칭 Back Test 결과를 제공 → 모델 성능에 대한 의구심 해소 예측 모델의 좋은 성능 확인할 수 있었음 Silo의 추가 요청 발생: 신규 브랜드를 위한 유저 세그먼트 추출 라벨 데이터가 없는 상황이라 LightGMB으로 학습하기는 어려움 이런 니즈를 해결하기 위해 GNN 검토 중: 유저들의 소비 데이터에서 고객, 소비한 물품을 그래프로 표현하여 GNN으로 학습 → 유사도 검색을 통해서 유사한 유저나 브랜드 등을 구분할 수 있음 지속적인 모델 개선 노력 트랜스포머 모델 활용 Measure - Data - Learn 을 통해 비즈니스에 기여 목표">
+<link rel="canonical" href="https://kongju7.github.io/jekyll-theme-yat/review/2023/02/03/Toss-Conference1.html">
+<meta property="og:url" content="https://kongju7.github.io/jekyll-theme-yat/review/2023/02/03/Toss-Conference1.html">
+<meta property="og:site_name" content="Becoming a Data Scientist">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2023-02-03T00:00:00+00:00">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="[요약] 데이터 사이언티스트의 비즈니스 기여">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Kong Ju"},"dateModified":"2023-02-03T00:00:00+00:00","datePublished":"2023-02-03T00:00:00+00:00","description":"[발표 요약] [토스ㅣSLASH 22] Data Scientist는 어떻게 비즈니스에 기여할 수 있을까? (황동현 / 토스) url: https://www.youtube.com/watch?v=mKf1kvWXiPY 기존 역할: Silo 개별 지원 → 데이터 프로덕트 개발: 공통 니즈 반영 ‘데이터 프로덕트를 중심으로’ 전략 수립 → CDP 프로덕트 MVP 개발 → 개선 1) CVR 예측 모델 Conversion Rate: ‘10원 받기’를 클릭해 실제로 10원을 받은 유저만 전환 유저로 정의 전환 유저 수 → 성장율 대변 TUBA(메세지 발송 시스템) 활용 전환유저가 될 것 같은 유저를 예측 → (과거 전환 유저 수만 충분하다면) 모든 서비스에 적용 가능하므로 ‘확장성’이 높음 2) 결제 예측 모델 유저 소비명세를 확인하여 구매했다면 캐시백 혜택 캐시백 혜택을 자주 이용하는 유저에게 푸쉬 메세지 발송 효과 광고효과 극대화 가능 서비스 추천으로 리텐션 강화 유저 특성별 프로모션 실구매 확률이 높은 유저에게 광고 노출 ** 모델링: LightGBM 모델 활용 테이블형 데이터에 유리 유저의 인구통계학적 정보, 소비명세, 계좌 정보, 카드 정보 등 활용 → 앞으로 30일 안에 발생할 일 예측 모델 확장성 문제 최소한의 리소스로 최대한의 효과를 만들기 위해서 ‘데이터 웨어하우스’ 재탐색 유저 정보, 소비 정보, 서비스 사용 정보: 1~3달 정보 포함 → 데이터 집계기간이 짧았음 유저 행동 지표(act type) 확장: 기존 24개 → 일별 / 주별 / 월별 집계 로그 중에서 특정 타입을 ‘act type’으로 별도 보관 서비스 전환, 버튼 클릭, 페이지 진입 등이 포함 일별 / 주별 / 월별 집계: 작은 관점에서 큰 관점에서 유저의 서비스 활용 이해 가능 데이터 마트 새롭게 구성 1달~1년 데이터로 확장 기존 액티브 유저, 신규 유저 분리 집계 RFM 데이터, 소분류 대분류 브랜드 소비 이력 등 집계 → 컬럼 수 3~6천 개로 확대 파이프라인 일 단위의 작동 오프라인 서빙 목표 젠킨슨 서버: 다른 팀과 공유 컴퓨팅 리소스 문제 해결을 위해 ‘Ray Cluster’ 별도 구성 병렬 학습 및 추론 모델 학습 학습 주기적(주단위 수행), 추론은 매일 학습마다, 모델 버전마다 메트릭 확인 모델 버전 및 모니터링: mlflow 활용 - 실험 히스토리 저장 → 태그별로 모델 관리 → 과거 실험 쉽게 reproducing 가능 데이터 변경 문제 act type 집계 기준 변경, 삭제, 결제 카테고리 통합 등 → 각 파이프라인 모두에서 발생할 수 있음 데이터 정합성 문제 사전 인지 필요: slack 알람을 활용하여 사전 확인 대응 CDP 모델 런칭 Back Test 결과를 제공 → 모델 성능에 대한 의구심 해소 예측 모델의 좋은 성능 확인할 수 있었음 Silo의 추가 요청 발생: 신규 브랜드를 위한 유저 세그먼트 추출 라벨 데이터가 없는 상황이라 LightGMB으로 학습하기는 어려움 이런 니즈를 해결하기 위해 GNN 검토 중: 유저들의 소비 데이터에서 고객, 소비한 물품을 그래프로 표현하여 GNN으로 학습 → 유사도 검색을 통해서 유사한 유저나 브랜드 등을 구분할 수 있음 지속적인 모델 개선 노력 트랜스포머 모델 활용 Measure - Data - Learn 을 통해 비즈니스에 기여 목표","headline":"[요약] 데이터 사이언티스트의 비즈니스 기여","mainEntityOfPage":{"@type":"WebPage","@id":"https://kongju7.github.io/jekyll-theme-yat/review/2023/02/03/Toss-Conference1.html"},"url":"https://kongju7.github.io/jekyll-theme-yat/review/2023/02/03/Toss-Conference1.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="shortcut icon" href="">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-noto-sans@0.0.72/index.min.css">
+  <link rel="stylesheet" href="/jekyll-theme-yat/assets/css/main.css">
+  <script src="/jekyll-theme-yat/assets/js/main.js"></script><link type="application/atom+xml" rel="alternate" href="https://kongju7.github.io/jekyll-theme-yat/feed.xml" title="Becoming a Data Scientist">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script>
+<!-- and it's easy to individually load additional languages -->
+<script charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/go.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+// Init highlight js
+document.addEventListener('DOMContentLoaded', function(event) {
+  var els = document.querySelectorAll('pre code')
+
+  function addLangData(block) {
+    var outer = block.parentElement.parentElement.parentElement;
+    var lang = block.getAttribute('data-lang');
+    for (var i = 0; i < outer.classList.length; i++) {
+      var cls = outer.classList[i];
+      if (cls.startsWith('language-')) {
+        lang = cls;
+        break;
+      }
+    }
+    if (!lang) {
+      cls = block.getAttribute('class');
+      lang = cls ? cls.replace('hljs ', '') : '';
+    }
+    if (lang.startsWith('language-')) {
+      lang = lang.substr(9);
+    }
+    block.setAttribute('class', 'hljs ' + lang);
+    block.parentNode.setAttribute('data-lang', lang);
+  }
+
+  function addBadge(block) {
+    var enabled = ('true' || 'true').toLowerCase();
+    if (enabled == 'true') {
+      var pre = block.parentElement;
+      pre.classList.add('badge');
+    }
+  }
+
+  function handle(block) {
+    addLangData(block);
+    addBadge(block)
+    hljs.highlightBlock(block);
+  }
+
+  for (var i = 0; i < els.length; i++) {
+    var el = els[i];
+    handle(el);
+  }
+});
+</script>
+
+<style>
+  /* code language badge */
+  pre.badge::before {
+    content: attr(data-lang);
+    color: #fff;
+    background-color: #ff4e00;
+    padding: 0 .5em;
+    border-radius: 0 2px;
+    text-transform: uppercase;
+    text-align: center;
+    min-width: 32px;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+  }
+
+  /* fix wrong badge display for firefox browser */
+  code > table pre::before {
+    display: none;
+  }
+</style>
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="site-header " role="banner">
+
+  <div class="wrapper">
+    <div class="site-header-inner">
+<span class="site-brand"><a class="site-brand-inner" rel="author" href="/jekyll-theme-yat/">
+  <img class="site-favicon" title="Becoming a Data Scientist" src="" onerror="this.style.display='none'">
+  Becoming a Data Scientist
+</a>
+</span><nav class="site-nav">
+          <input type="checkbox" id="nav-trigger" class="nav-trigger">
+          <label for="nav-trigger">
+            <span class="menu-icon">
+              <svg viewbox="0 0 18 15" width="18px" height="15px">
+                <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"></path>
+              </svg>
+            </span>
+          </label>
+
+          <div class="trigger">
+<a class="page-link" href="/jekyll-theme-yat/about.html">ABOUT</a><a class="page-link" href="/jekyll-theme-yat/archives.html">ARCHIVES</a><a class="page-link" href="/jekyll-theme-yat/categories.html">CATEGORIES</a><a class="page-link" href="/jekyll-theme-yat/">HOME</a><a class="page-link" href="/jekyll-theme-yat/tags.html">TAGS</a>
+
+
+
+
+
+
+
+
+
+<span class="page-link">
+
+
+
+<div id="google_translate_element" style="display: none;">
+</div>
+
+<span class="ct-language">
+  <ul class="list-unstyled ct-language-dropdown">
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="en">
+          
+          <img src="https://cdn.countryflags.com/thumbs/united-states-of-america/flag-400.png" title="English">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="fr">
+          
+          <img src="https://cdn.countryflags.com/thumbs/france/flag-400.png" title="French">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="zh-CN">
+          
+          <img src="https://cdn.countryflags.com/thumbs/china/flag-400.png" title="Chinese(Simple)">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="ja">
+          
+          <img src="https://cdn.countryflags.com/thumbs/japan/flag-400.png" title="Japanese">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="ko">
+          
+          <img src="https://cdn.countryflags.com/thumbs/south-korea/flag-400.png" title="Korean">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="ru">
+          
+          <img src="https://cdn.countryflags.com/thumbs/russia/flag-400.png" title="Russian">
+          
+        </a>
+      </li>
+    
+  </ul>
+</span>
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en',
+    autoDisplay: false,
+    layout: google.translate.TranslateElement.InlineLayout.VERTICAL
+  }, 'google_translate_element');
+
+  // Links to cross-origin destinations are unsafe
+  var gll = document.getElementsByClassName('goog-logo-link')[0];
+  if (gll) {
+    gll.setAttribute('rel', 'noopener');
+  }
+
+  function restoreLang() {
+    var iframe = document.getElementsByClassName('goog-te-banner-frame')[0];
+    if (!iframe) return;
+
+    var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+    var restore_el = innerDoc.getElementsByTagName("button");
+
+    for (var i = 0; i < restore_el.length; i++) {
+      if (restore_el[i].id.indexOf("restore") >= 0) {
+        restore_el[i].click();
+        var close_el = innerDoc.getElementsByClassName("goog-close-link");
+        close_el[0].click();
+        return;
+      }
+    }
+  }
+
+  function triggerHtmlEvent(element, eventName) {
+    var event;
+    if (document.createEvent) {
+      event = document.createEvent('HTMLEvents');
+      event.initEvent(eventName, true, true);
+      element.dispatchEvent(event);
+    } else {
+      event = document.createEventObject();
+      event.eventType = eventName;
+      element.fireEvent('on' + event.eventType, event);
+    }
+  }
+
+  var googleCombo = document.querySelector("select.goog-te-combo");
+  var langSelect = document.querySelector('.ct-language');
+  langSelect.addEventListener('click', function(event) {
+    if (!event.target) {
+      return;
+    }
+
+    var selected = document.querySelector('.ct-language .ct-language-selected');
+    if (selected) {
+      selected.classList.remove('ct-language-selected');
+    }
+
+    var target = event.target;
+    while (target && target !== langSelect ) {
+      if (target.matches('.lang-select')) {
+        break;
+      }
+      target = target.parentElement;
+    }
+
+    if (target && target.matches('.lang-select')) {
+      var lang = target.getAttribute('data-lang');
+      if (googleCombo.value == lang) {
+        restoreLang();
+      } else {
+        target.parentElement.classList.add('ct-language-selected');
+        googleCombo.value = lang;
+        triggerHtmlEvent(googleCombo, 'change');
+      }
+    }
+
+    event.preventDefault();
+  });
+}
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</span>
+</div>
+        </nav>
+</div>
+  </div>
+</header>
+
+<script>
+  function initHeader() {
+    var lastScrollY = getScrollPos().y;
+    var documentElement = document.documentElement;
+
+    function storeScrollData() {
+      var y = getScrollPos().y;var scrollStatus = "";
+
+      if (y <= 0) {
+        scrollStatus = "top";
+      } else if ((window.innerHeight + y) >= document.body.offsetHeight) {
+        scrollStatus = "bottom";
+      } else {
+        var isScrollDown = (y - lastScrollY > 0) ? true : false;
+        scrollStatus = isScrollDown ? "down" : "up";
+      }
+
+      lastScrollY = y;
+      documentElement.setAttribute("data-scroll-status", scrollStatus);
+    }
+
+    window.addEventListener('scroll', function(e) {
+      storeScrollData();
+    });
+
+    storeScrollData();
+  }
+  document.addEventListener('DOMContentLoaded', initHeader);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  function hashLocate(hashValue) {
+    hashValue = hashValue.replace(/^.*#h-/, '');
+    hashValue = decodeURIComponent(hashValue);
+    var element = document.getElementById(hashValue);
+
+    if (!element) {
+      return;
+    }
+
+    var header = document.querySelector('header.site-header');
+    var headerRect = header.getBoundingClientRect();
+    var headerTop = Math.floor(headerRect.top);
+    var headerHeight = Math.floor(headerRect.height);
+    var scrollPos = getScrollPos();
+    var offsetY = element.offsetTop - (headerTop + headerHeight + 20);
+
+    if (offsetY == scrollPos.y) {
+      return;
+    }
+
+    if (headerTop == 0  && offsetY > scrollPos.y) {
+      offsetY += headerHeight + 2;
+    } else if (headerTop < 0  && offsetY < scrollPos.y) {
+      offsetY -= headerHeight - 2;
+    }
+
+    smoothScrollTo(offsetY);
+  }
+
+  // The first event occurred
+  window.addEventListener('load', function(event) {
+    if (window.location.hash) {
+      hashLocate(window.location.hash);
+    }
+  });
+
+  // The first event occurred
+  window.addEventListener('click', function(event) {
+    if (event.target.tagName.toLowerCase() == 'a') {
+      hashLocate(event.target.getAttribute('href'));
+    }
+  });
+</script>
+<div class="theme-toggle">
+  <input type="checkbox" id="theme-switch">
+  <label for="theme-switch">
+    <div class="toggle"></div>
+    <div class="names">
+      <p class="light">Light</p>
+      <p class="dark">Dark</p>
+    </div>
+  </label>
+</div>
+
+
+
+
+<script>
+  (function() {
+    var sw = document.getElementById('theme-switch');
+    var html = document.getElementsByTagName('html')[0];
+    var nightModeOption = ('auto' || 'auto').toLowerCase();
+    var storage = nightModeOption === 'manual'
+        ? localStorage
+        : sessionStorage;
+    var themeData = loadThemeData();
+
+    function saveThemeData(data) {
+      storage.setItem('theme', JSON.stringify(data));
+    }
+
+    function loadThemeData() {
+      var data = storage.getItem('theme');
+      try {
+        data = JSON.parse(data ? data : '');
+      } catch(e) {
+        data = { nightShift: undefined, autoToggleAt: 0 };
+        saveThemeData(data);
+      }
+      return data;
+    }
+
+    function handleThemeToggle(nightShift) {
+      themeData.nightShift = nightShift;
+      saveThemeData(themeData);
+      html.dataset.theme = nightShift ? 'dark' : 'light';
+      setTimeout(function() {
+        sw.checked = nightShift ? true : false;
+      }, 50);
+    }
+
+    function autoThemeToggle() {
+      // Next time point of theme toggle
+      var now = new Date();
+      var toggleAt = new Date();
+      var hours = now.getHours();
+      var nightShift = hours >= 19 || hours <=7;
+
+      if (nightShift) {
+        if (hours > 7) {
+          toggleAt.setDate(toggleAt.getDate() + 1);
+        }
+        toggleAt.setHours(7);
+      } else {
+        toggleAt.setHours(19);
+      }
+
+      toggleAt.setMinutes(0);
+      toggleAt.setSeconds(0);
+      toggleAt.setMilliseconds(0)
+
+      var delay = toggleAt.getTime() - now.getTime();
+
+      // auto toggle theme mode
+      setTimeout(function() {
+        handleThemeToggle(!nightShift);
+      }, delay);
+
+      return {
+        nightShift: nightShift,
+        toggleAt: toggleAt.getTime()
+      };
+    }
+
+    // Listen the theme toggle event
+    sw.addEventListener('change', function(event) {
+      handleThemeToggle(event.target.checked);
+    });
+
+    if (nightModeOption == 'auto') {
+      var data = autoThemeToggle();
+
+      // Toggle theme by local setting
+      if (data.toggleAt > themeData.autoToggleAt) {
+        themeData.autoToggleAt = data.toggleAt;
+        handleThemeToggle(data.nightShift);
+      } else {
+        handleThemeToggle(themeData.nightShift);
+      }
+    } else if (nightModeOption == 'manual') {
+      handleThemeToggle(themeData.nightShift);
+    } else {
+      var nightShift = themeData.nightShift;
+      if (nightShift === undefined) {
+        nightShift = nightModeOption === 'on';
+      }
+      handleThemeToggle(nightShift);
+    }
+  })();
+</script>
+<div id="click-to-top" class="click-to-top">
+  <i class="fa fa-arrow-up"></i>
+</div>
+<script>
+  (function () {
+    const clickToTop = document.getElementById('click-to-top');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        clickToTop.classList.add('show')
+      }else {
+        clickToTop.classList.remove('show')
+      }
+    });
+    clickToTop.addEventListener('click', () => {
+      window.smoothScrollTo(0);
+    });
+  })();
+</script>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="framework">
+  <section class="main">
+
+     <div class="post">
+  <section>
+
+
+
+
+
+
+
+
+
+<header class="post-header">
+  <h1 class="post-title p-name" itemprop="name headline">[요약] 데이터 사이언티스트의 비즈니스 기여</h1>
+  <h2 class="post-subtitle">[토스ㅣSLASH 22] Data Scientist는 어떻게 비즈니스에 기여할 수 있을까? (황동현 / 토스)</h2>
+
+  <p class="post-meta">
+    <time class="dt-published" datetime="2023-02-03T00:00:00+00:00" itemprop="datePublished"><i class="fa fa-calendar"></i> Feb 03, 2023
+    </time>
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 2 mins</span>
+  </p>
+<div class="post-tags">
+<a class="post-tag" href="/jekyll-theme-yat/tags.html#Review">#Review</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#Toss">#Toss</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#conference">#conference</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#Data%20Scientist">#Data Scientist</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#Business">#Business</a>
+</div></header>
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+    <div class="post-content e-content" itemprop="articleBody">
+
+      <p>[발표 요약]</p>
+
+<h2 id="토스ㅣslash-22"><strong>[토스ㅣSLASH 22]</strong></h2>
+
+<h3 id="data-scientist는-어떻게-비즈니스에-기여할-수-있을까-황동현--토스">Data Scientist는 어떻게 비즈니스에 기여할 수 있을까? (황동현 / 토스)</h3>
+<ul>
+  <li>
+    <p>url: <a href="https://www.youtube.com/watch?v=mKf1kvWXiPY" target="_blank">https://www.youtube.com/watch?v=mKf1kvWXiPY</a></p>
+  </li>
+  <li>기존 역할: Silo 개별 지원</li>
+  <li>→ <strong>데이터 프로덕트 개발</strong>: 공통 니즈 반영
+    <ul>
+      <li>‘데이터 프로덕트를 중심으로’ 전략 수립 → <strong>CDP 프로덕트</strong> MVP 개발 → 개선</li>
+    </ul>
+  </li>
+  <li>
+<strong>1) CVR 예측 모델</strong>
+    <ul>
+      <li>Conversion Rate: ‘10원 받기’를 클릭해 실제로 10원을 받은 유저만 전환 유저로 정의</li>
+      <li>전환 유저 수 → 성장율 대변</li>
+      <li>TUBA(메세지 발송 시스템) 활용</li>
+      <li>전환유저가 될 것 같은 유저를 예측 → (과거 전환 유저 수만 충분하다면) 모든 서비스에 적용 가능하므로 ‘확장성’이 높음</li>
+    </ul>
+  </li>
+  <li>
+<strong>2) 결제 예측 모델</strong>
+    <ul>
+      <li>유저 소비명세를 확인하여 구매했다면 캐시백 혜택</li>
+      <li>캐시백 혜택을 자주 이용하는 유저에게 푸쉬 메세지 발송</li>
+      <li>효과
+        <ul>
+          <li>광고효과 극대화 가능</li>
+          <li>서비스 추천으로 리텐션 강화</li>
+          <li>유저 특성별 프로모션</li>
+          <li>실구매 확률이 높은 유저에게 광고 노출 <em>**</em>
+</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>모델링: <strong>LightGBM 모델 활용</strong>
+    <ul>
+      <li>테이블형 데이터에 유리</li>
+      <li>유저의 인구통계학적 정보, 소비명세, 계좌 정보, 카드 정보 등 활용</li>
+      <li><strong>→ 앞으로 30일 안에 발생할 일 예측</strong></li>
+    </ul>
+  </li>
+  <li>
+<strong>모델 확장성 문제</strong>
+    <ul>
+      <li>최소한의 리소스로 최대한의 효과를 만들기 위해서 ‘데이터 웨어하우스’ 재탐색</li>
+      <li>유저 정보, 소비 정보, 서비스 사용 정보: 1~3달 정보 포함 → 데이터 집계기간이 짧았음</li>
+      <li>
+<strong>유저 행동 지표(act type)</strong> <strong>확장:</strong> 기존 24개 → <strong>일별 / 주별 / 월별 집계</strong>
+        <ul>
+          <li>로그 중에서 특정 타입을 ‘act type’으로 별도 보관</li>
+          <li>서비스 전환, 버튼 클릭, 페이지 진입 등이 포함</li>
+          <li>일별 / 주별 / 월별 집계: 작은 관점에서 큰 관점에서 유저의 서비스 활용 이해 가능</li>
+        </ul>
+      </li>
+      <li>데이터 마트 새롭게 구성
+        <ul>
+          <li>1달~1년 데이터로 확장</li>
+          <li>기존 액티브 유저, 신규 유저 분리 집계</li>
+          <li>RFM 데이터,  소분류 대분류 브랜드 소비 이력 등 집계 → 컬럼 수 3~6천 개로 확대</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+<strong>파이프라인</strong>
+    <ul>
+      <li>일 단위의 작동 오프라인 서빙 목표</li>
+      <li>젠킨슨 서버: 다른 팀과 공유
+        <ul>
+          <li>컴퓨팅 리소스 문제 해결을 위해 ‘Ray Cluster’ 별도 구성
+            <ul>
+              <li>병렬 학습 및 추론</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+<strong>모델 학습</strong>
+    <ul>
+      <li>학습 주기적(주단위 수행), 추론은 매일</li>
+      <li>학습마다, 모델 버전마다 메트릭 확인</li>
+      <li>모델 버전 및  모니터링: <strong>mlflow 활용</strong> - 실험 히스토리 저장 → 태그별로 모델 관리 → 과거 실험 쉽게 reproducing 가능</li>
+    </ul>
+  </li>
+  <li>
+<strong>데이터 변경 문제</strong>
+    <ul>
+      <li>act type 집계 기준 변경, 삭제, 결제 카테고리 통합 등 → 각 파이프라인 모두에서 발생할 수 있음</li>
+      <li><strong>데이터 정합성 문제 사전 인지 필요: slack 알람을 활용하여 사전 확인 대응</strong></li>
+    </ul>
+  </li>
+  <li>
+<strong>CDP 모델 런칭</strong>
+    <ul>
+      <li>Back Test 결과를 제공 → 모델 성능에 대한 의구심 해소</li>
+      <li>예측 모델의 좋은 성능 확인할 수 있었음</li>
+    </ul>
+  </li>
+  <li>
+<strong>Silo의 추가 요청 발생: 신규 브랜드를 위한 유저 세그먼트 추출</strong>
+    <ul>
+      <li>라벨 데이터가 없는 상황이라 LightGMB으로 학습하기는 어려움</li>
+      <li>이런 니즈를 해결하기 위해 <strong>GNN 검토</strong> 중: 유저들의 소비 데이터에서 고객, 소비한 물품을 그래프로 표현하여 GNN으로 학습 → 유사도 검색을 통해서 유사한 유저나 브랜드 등을 구분할 수 있음</li>
+    </ul>
+  </li>
+  <li>
+<strong>지속적인 모델 개선 노력</strong>
+    <ul>
+      <li>트랜스포머 모델 활용</li>
+      <li>Measure - Data - Learn 을 통해 비즈니스에 기여 목표</li>
+    </ul>
+  </li>
+</ul>
+
+
+    </div>
+
+</article>
+<div class="post-nav">
+<a class="previous" href="/jekyll-theme-yat/review/2023/02/02/AI-Conference1.html" title="[요약] 최근 딥러닝 언어모델과 향후 발전 방향">[요약] 최근 딥러닝 언어모델과 향후 발전...</a><a class="next" href="/jekyll-theme-yat/programming/2023/02/09/Python-env.html" title="[Python] .env 설정 방법">[Python] .env 설정 방법</a>
+</div>
+<div class="post-related">
+      <div>Related Articles</div>
+      <ul>
+        <li><a class="post-link" href="/jekyll-theme-yat/programming/2022/10/06/Macdeletekey.html" title="[Python] .env 설정 방법">내가 필요해서 정리하는 Mac 삭제 단축키</a></li>
+<li><a class="post-link" href="/jekyll-theme-yat/programming/2022/07/26/Markdown.html" title="[Python] .env 설정 방법">내가 필요해서 정리하는 Markdown 기초</a></li>
+<li><a class="post-link" href="/jekyll-theme-yat/diary/2022/10/17/airpot.html" title="[Python] .env 설정 방법">[Diary] 에어팟 프로(2세대)가 온다!</a></li>
+<li><a class="post-link" href="/jekyll-theme-yat/data_science/2022/10/12/SQL1.html" title="[Python] .env 설정 방법">내가 필요해서 정리하는 SQL 쿼리 기초(1)</a></li>
+</ul>
+    </div>
+<div class="post-comments">  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'https://kongju7.github.io/jekyll-theme-yat/review/2023/02/03/Toss-Conference1.html';
+      this.page.identifier = 'https://kongju7.github.io/jekyll-theme-yat/review/2023/02/03/Toss-Conference1.html';
+    };
+
+    (function() {
+      var d = document, s = d.createElement('script');
+
+      s.src = 'https://kongju7-github-io.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+</div></section>
+</div>
+
+
+  </section>
+  <section class="sidebar" style="margin-left: 15px;">
+    <!-- Get sidebar items --><style type="text/css" media="screen">
+.post-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+</style>
+
+<div class="post-menu">
+  <div class="post-menu-title">TOC</div>
+  <div class="post-menu-content"></div>
+</div>
+
+<script>
+  function generateContent() {
+    var menu = document.querySelector(".post-menu");
+    var menuContent =  menu.querySelector(".post-menu-content");
+    var headings = document.querySelector(".post-content").querySelectorAll("h2, h3, h4, h5, h6");
+
+    // Hide menu when no headings
+    if (headings.length === 0) {
+      return menu.style.display = "none";
+    }
+
+    // Generate post menu
+    var menuHTML = '';
+    for (var i = 0; i < headings.length; i++) {
+      var h = headings[i];
+      menuHTML += (
+        '<li class="h-' + h.tagName.toLowerCase() + '">'
+        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a></li>');
+    }
+
+    menuContent.innerHTML = '<ul>' + menuHTML + '</ul>';
+
+    // The header element
+    var header = document.querySelector('header.site-header');
+
+    function doMenuCollapse(index, over_items) {
+      var items = menuContent.firstChild.children;
+
+      if (over_items == undefined) {
+        over_items = 20;
+      }
+
+      if (items.length < over_items) {
+        return;
+      }
+
+      var activeItem = items[index];
+      var beginItem = activeItem
+      var endItem = activeItem
+      var beginIndex = index;
+      var endIndex = index + 1;
+      while (beginIndex >= 0
+        && !items[beginIndex].classList.contains('h-h2')) {
+        beginIndex -= 1;
+      }
+      while (endIndex < items.length
+        && !items[endIndex].classList.contains('h-h2')) {
+        endIndex += 1;
+      }
+      for (var i = 0; i < beginIndex; i++) {
+        item = items[i]
+        if (!item.classList.contains('h-h2')) {
+          item.style.display = 'none';
+        }
+      }
+      for (var i = beginIndex + 1; i < endIndex; i++) {
+        item = items[i]
+        // if (!item.classList.contains('h-h2')) {
+          item.style.display = '';
+        // }
+      }
+      for (var i = endIndex; i < items.length; i++) {
+        item = items[i]
+        if (!item.classList.contains('h-h2')) {
+          item.style.display = 'none';
+        }
+      }
+    }
+
+    // Init menu collapsed
+    doMenuCollapse(-1);
+
+    // Active the menu item
+    window.addEventListener('scroll', function (event) {
+      var lastActive = menuContent.querySelector('.active');
+      var changed = true;
+      var activeIndex = -1;
+      for (var i = headings.length - 1; i >= 0; i--) {
+        var h = headings[i];
+        var headingRect = h.getBoundingClientRect();
+        var headerRect = header.getBoundingClientRect();
+        var headerTop = Math.floor(headerRect.top);
+        var headerHeight = Math.floor(headerRect.height);
+        var headerHeight = headerTop + headerHeight + 20;
+        if (headingRect.top <= headerHeight) {
+          var id = 'h-' + h.getAttribute('id');
+          var a = menuContent.querySelector('a[href="#' + id  + '"]');
+          var curActive = a.parentNode;
+          if (curActive) {
+            curActive.classList.add('active');
+            activeIndex = i;
+          }
+          if (lastActive == curActive) {
+            changed = false;
+          }
+          break;
+        }
+      }
+      if (changed) {
+        if (lastActive) {
+          lastActive.classList.remove('active');
+        }
+        doMenuCollapse(activeIndex);
+      }
+      event.preventDefault();
+    });
+  }
+  generateContent();
+</script>
+</section>
+</div>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/jekyll-theme-yat/"></data>
+
+  <div class="wrapper">
+    <div class="site-footer-inner">
+<div>Copyright © 2022-2024 Kong Ju</div>
+      <div>Powered by <a title="Jekyll is a simple, blog-aware, static site
+      generator." href="https://jekyllrb.com/">Jekyll</a> &amp; <a title="Yat, yet
+      another theme." href="https://github.com/jeffreytse/jekyll-theme-yat">Yat Theme</a>.</div>
+      <div class="footer-col rss-subscribe">Subscribe <a href="/jekyll-theme-yat/feed.xml">via RSS</a>
+</div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

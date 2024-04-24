@@ -1,0 +1,1 @@
+Sitemap: https://kongju7.github.io/jekyll-theme-yat/sitemap.xml

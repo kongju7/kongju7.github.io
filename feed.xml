@@ -1,0 +1,1035 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://kongju7.github.io/jekyll-theme-yat/feed.xml" rel="self" type="application/atom+xml" /><link href="https://kongju7.github.io/jekyll-theme-yat/" rel="alternate" type="text/html" /><updated>2024-04-24T02:45:51+00:00</updated><id>https://kongju7.github.io/jekyll-theme-yat/feed.xml</id><title type="html">Becoming a Data Scientist</title><subtitle>Welcome to my blog! Here, I document my experiences and progress as I strive to become a data scientist.  You&apos;ll find posts on topics such as data science, Python, and computer science as I navigate this exciting field.</subtitle><author><name>Kong Ju</name></author><entry><title type="html">[Git] 깃 계정 정보 등록/삭제하기</title><link href="https://kongju7.github.io/jekyll-theme-yat/programming/2024/04/24/git-config.html" rel="alternate" type="text/html" title="[Git] 깃 계정 정보 등록/삭제하기" /><published>2024-04-24T00:00:00+00:00</published><updated>2024-04-24T00:00:00+00:00</updated><id>https://kongju7.github.io/jekyll-theme-yat/programming/2024/04/24/git-config</id><content type="html" xml:base="https://kongju7.github.io/jekyll-theme-yat/programming/2024/04/24/git-config.html"><![CDATA[<h2 id="git-config-username-useremail-등록삭제하기">git config user.name user.email 등록/삭제하기</h2>
+
+<p>오늘은 깃 계정 정보를 등록하거나 삭제하는 방법에 대해서 정리해 보도록 하겠습니다.</p>
+
+<h3 id="1-깃-설정-확인">1. 깃 설정 확인</h3>
+
+<p>먼저 아래의 명령어를 통해서 깃 설정 상태를 확인합니다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config --global --list 
+</code></pre></div></div>
+
+<p>이 때 위 예제에서 사용한 <code class="language-plaintext highlighter-rouge">--global</code> 대신 <code class="language-plaintext highlighter-rouge">--local</code>, <code class="language-plaintext highlighter-rouge">--system</code> 옵션을 사용할 수도 있습니다.</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">--local</code>: 작업 폴더,</li>
+  <li><code class="language-plaintext highlighter-rouge">--global</code>: 전역,</li>
+  <li><code class="language-plaintext highlighter-rouge">--system</code>: 시스템 전체 를 각각 의미합니다.</li>
+</ul>
+
+<h3 id="2-사용자-이름과-이메일-등록">2. 사용자 이름과 이메일 등록</h3>
+
+<p>이메일은 <a href="https://github.com/" target="_blank">깃허브(GitHub)</a> 계정에 등록한 이메일로 작성해 주세요.
+참고로 <a href="https://github.com/settings/emails" target="_blank">GitHub &gt; Settings &gt; Emails</a>에서 복수의 이메일을 등록할 수 있으니,<br />
+사용 개발 환경이나 용도에 따라서 이메일을 구분해 사용하는 것도 좋습니다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config --global user.name "{이름}"
+git config --global user.email "{이메일}"
+</code></pre></div></div>
+
+<h3 id="3-저장된-사용자-이름과-이메일-삭제">3. 저장된 사용자 이름과 이메일 삭제</h3>
+
+<p><code class="language-plaintext highlighter-rouge">--unset</code> 명령어를 사용하면 저장된 사용자 이름과 이메일을 삭제할 수 있습니다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config --global --unset user.name
+git config --global --unset user.email
+</code></pre></div></div>
+
+<h3 id="4-저장된-자격-증명-헬퍼-삭제">4. 저장된 자격 증명 헬퍼 삭제</h3>
+
+<p>저장된 자격 증명 헬퍼까지 삭제하게 되면, 깃 푸쉬를 통해 원격 저장소에 접근할 때마다 수동으로 사용자 이름과 비밀번호를 입력해야 합니다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config --global --unset credential.helper
+</code></pre></div></div>]]></content><author><name>Kong Ju</name></author><category term="Programming" /><category term="git" /><category term="command" /><category term="명령어" /><category term="git config" /><category term="user.name" /><category term="user.email" /><summary type="html"><![CDATA[git config user.name user.email 등록/삭제하기]]></summary></entry><entry><title type="html">[LLM] Foundation Models 논문 모음</title><link href="https://kongju7.github.io/jekyll-theme-yat/data_science/2024/04/18/LLM-papers.html" rel="alternate" type="text/html" title="[LLM] Foundation Models 논문 모음" /><published>2024-04-18T00:00:00+00:00</published><updated>2024-04-18T00:00:00+00:00</updated><id>https://kongju7.github.io/jekyll-theme-yat/data_science/2024/04/18/LLM-papers</id><content type="html" xml:base="https://kongju7.github.io/jekyll-theme-yat/data_science/2024/04/18/LLM-papers.html"><![CDATA[<h2 id="대용량-언어-모델llm">대용량 언어 모델(LLM)</h2>
+<h2 id="기반-모델foundation-models-관련-논문-모음">기반 모델(Foundation Models) 관련 논문 모음</h2>
+
+<h3 id="1-기반-모델">1. 기반 모델</h3>
+
+<p><strong>기반 모델 및 응용 분야</strong></p>
+<ul>
+  <li><a href="https://arxiv.org/pdf/2108.07258.pdf" target="_blank">On the Opportunities and Risks of Foundation Models</a></li>
+  <li><a href="https://arxiv.org/pdf/2309.10020.pdf" target="_blank">Multimodal Foundation Models: From Specialists to General-Purpose Assistants</a></li>
+  <li><a href="https://arxiv.org/pdf/2306.14895.pdf" target="_blank">Large Multimodal Models: Notes on CVPR 2023 Tutorial</a></li>
+  <li><a href="https://arxiv.org/pdf/2307.14334.pdf" target="_blank">Towards Generalist Biomedical AI</a></li>
+  <li><a href="https://arxiv.org/pdf/2302.09419.pdf" target="_blank">A Comprehensive Survey on Pretrained Foundation Models: A History from BERT to ChatGPT</a></li>
+  <li><a href="https://arxiv.org/pdf/2305.13246.pdf" target="_blank">Interactive Natural Language Processing</a></li>
+  <li><a href="https://arxiv.org/pdf/2212.10403.pdf" target="_blank">Towards Reasoning in Large Language Models: A Survey</a></li>
+</ul>
+
+<p><strong>순환 신경망(RNN) 및 합성곱 신경망(CNN)</strong></p>
+<ul>
+  <li><a href="https://arxiv.org/pdf/1912.05911.pdf" target="_blank">Recurrent Neural Networks (RNNs): A gentle Introduction and Overview</a></li>
+  <li><a href="https://arxiv.org/pdf/1505.00387.pdf" target="_blank">Highway Networks</a></li>
+  <li><a href="https://www.bioinf.jku.at/publications/older/2604.pdf" target="_blank">Long Short-Term Memory</a></li>
+  <li><a href="https://arxiv.org/pdf/1412.3555.pdf" target="_blank">Empirical Evaluation of Gated Recurrent Neural Networks on Sequence Modeling</a></li>
+  <li><a href="https://arxiv.org/pdf/1508.04025.pdf" target="_blank">Effective Approaches to Attention-based Neural Machine Translation</a></li>
+  <li><a href="https://arxiv.org/pdf/1511.08458.pdf" target="_blank">An Introduction to Convolutional Neural Networks</a></li>
+  <li><a href="https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf" target="_blank">ImageNet Classification with Deep Convolutional Neural Networks</a></li>
+  <li><a href="https://arxiv.org/pdf/1505.04597.pdf" target="_blank">U-Net: Convolutional Networks for Biomedical Image Segmentation</a></li>
+  <li><a href="https://arxiv.org/pdf/1512.03385.pdf" target="_blank">Deep Residual Learning for Image Recognition</a></li>
+  <li><a href="https://arxiv.org/pdf/1608.06993.pdf" target="_blank">Densely Connected Convolutional Networks</a></li>
+  <li><a href="https://arxiv.org/pdf/1611.05431.pdf" target="_blank">Aggregated Residual Transformations for Deep Neural Networks</a></li>
+  <li><a href="https://arxiv.org/pdf/2201.03545.pdf" target="_blank">A ConvNet for the 2020s</a></li>
+</ul>
+
+<p><strong>자연어 처리(NLP) 및 컴퓨터 비전(CV)</strong></p>
+<ul>
+  <li><a href="https://arxiv.org/pdf/1409.3215.pdf" target="_blank">Sequence to Sequence Learning with Neural Networks</a></li>
+  <li><a href="https://aclanthology.org/W02-1011.pdf" target="_blank">Thumbs up? Sentiment Classification using Machine Learning Techniques</a></li>
+  <li><a href="https://nlp.cs.nyu.edu/sekine/papers/li07.pdf" target="_blank">A Survey of Named Entity Recognition and Classification</a></li>
+  <li><a href="https://arxiv.org/pdf/1506.03340.pdf" target="_blank">Teaching Machines to Read and Comprehend</a></li>
+  <li><a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=6296526" target="_blank">Deep Neural Networks for Acoustic Modeling in Speech Recognition</a></li>
+  <li><a href="https://arxiv.org/pdf/1509.00685.pdf" target="_blank">A Neural Attention Model for Sentence Summarization</a></li>
+  <li><a href="https://arxiv.org/pdf/1405.0312.pdf" target="_blank">Microsoft COCO: Common Objects in Context</a></li>
+  <li><a href="https://arxiv.org/pdf/1311.2524.pdf" target="_blank">Rich Feature Hierarchies for Accurate Object Detection and Semantic Segmentation</a></li>
+  <li><a href="https://arxiv.org/pdf/1411.4038.pdf" target="_blank">Fully Convolutional Networks for Semantic Segmentation</a></li>
+  <li><a href="https://www.cs.toronto.edu/~ranzato/publications/taigman_cvpr14.pdf" target="_blank">DeepFace: Closing the Gap to Human-Level Performance in Face Verification</a></li>
+  <li><a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=6909610" target="_blank">DeepPose: Human Pose Estimation via Deep Neural Networks</a></li>
+  <li><a href="https://arxiv.org/pdf/1511.06434v2.pdf" target="_blank">Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks</a></li>
+</ul>
+
+<h3 id="2-트랜스포머transformers-아키텍쳐">2. 트랜스포머(Transformers) 아키텍쳐</h3>
+
+<p><strong>셀프 어텐션(Self Attention) 및 트랜스포머(Transformers)</strong></p>
+<ul>
+  <li><a href="https://arxiv.org/pdf/1409.0473.pdf" target="_blank">Neural Machine Translation by Jointly Learning to Align and Translate</a></li>
+  <li><a href="https://proceedings.mlr.press/v37/xuc15.pdf" target="_blank">Show, Attend and Tell: Neural Image Caption Generation with Visual Attention</a></li>
+  <li><a href="https://arxiv.org/pdf/1706.03762.pdf" target="_blank">Attention Is All You Need</a></li>
+  <li><a href="https://nlp.seas.harvard.edu/annotated-transformer/" target="_blank">The Annotated Transformer</a></li>
+  <li><a href="https://arxiv.org/pdf/1802.05751.pdf" target="_blank">Image Transformer</a></li>
+  <li><a href="https://openreview.net/pdf?id=YicbFdNTTy" target="_blank">An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale</a></li>
+</ul>
+
+<p><strong>효율적인 트랜스포머</strong></p>
+<ul>
+  <li><a href="https://arxiv.org/pdf/2006.16236.pdf" target="_blank">Transformers are RNNs: Fast Autoregressive Transformers with Linear Attention</a></li>
+  <li><a href="https://arxiv.org/pdf/2103.03206.pdf" target="_blank">Perceiver: General Perception with Iterative Attention</a></li>
+  <li><a href="https://arxiv.org/pdf/2103.02143.pdf" target="_blank">Random Feature Attention</a></li>
+  <li><a href="https://arxiv.org/pdf/2004.05150.pdf" target="_blank">Longformer: The Long-Document Transformer</a></li>
+  <li><a href="https://arxiv.org/pdf/1904.10509.pdf" target="_blank">Generating Long Sequences with Sparse Transformers</a></li>
+  <li><a href="https://arxiv.org/pdf/2006.04768.pdf" target="_blank">Linformer: Self-Attention with Linear Complexity</a></li>
+  <li><a href="https://arxiv.org/pdf/2111.00396.pdf" target="_blank">Efficiently Modeling Long Sequences with Structured State Spaces</a></li>
+</ul>
+
+<p><strong>매개변수 효율적 튜닝</strong></p>
+<ul>
+  <li><a href="https://arxiv.org/pdf/1902.00751.pdf" target="_blank">Parameter-Efficient Transfer Learning for NLP</a></li>
+  <li><a href="https://arxiv.org/pdf/2106.09685.pdf" target="_blank">LoRA: Low-Rank Adaptation of Large Language Models</a></li>
+  <li><a href="https://arxiv.org/pdf/2104.08691.pdf" target="_blank">The Power of Scale for Parameter-Efficient Prompt Tuning</a></li>
+  <li><a href="https://arxiv.org/pdf/2009.07118.pdf" target="_blank">It’s Not Just Size That Matters: Small Language Models Are Also Few-Shot Learners</a></li>
+  <li><a href="https://aclanthology.org/2021.acl-long.295.pdf" target="_blank">Making Pre-trained Language Models Better Few-shot Learners</a></li>
+  <li><a href="https://arxiv.org/pdf/2205.05638.pdf" target="_blank">Few-Shot Parameter-Efficient Fine-Tuning is Better and Cheaper than In-Context Learning</a></li>
+  <li><a href="https://arxiv.org/pdf/2110.04366.pdf" target="_blank">Towards a Unified View of Parameter-Efficient Transfer Learning</a></li>
+</ul>
+
+<p><strong>언어 모델 사전 학습</strong></p>
+<ul>
+  <li><a href="https://arxiv.org/pdf/1802.05365.pdf" target="_blank">Deep Contextualized Word Representations</a></li>
+  <li><a href="https://arxiv.org/pdf/1810.04805.pdf" target="_blank">BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding</a></li>
+  <li><a href="https://arxiv.org/pdf/1905.03197.pdf" target="_blank">Unified Language Model Pre-training for Natural Language Understanding and Generation</a></li>
+  <li><a href="https://arxiv.org/pdf/1909.11942.pdf" target="_blank">ALBERT: A Lite BERT for Self-supervised Learning of Language Representations</a></li>
+  <li><a href="https://arxiv.org/pdf/1907.11692.pdf" target="_blank">RoBERTa: A Robustly Optimized BERT Pretraining Approach</a></li>
+  <li><a href="https://arxiv.org/pdf/1905.07129.pdf" target="_blank">ERNIE: Enhanced Language Representation with Informative Entities</a></li>
+  <li><a href="https://arxiv.org/pdf/2003.10555.pdf" target="_blank">ELECTRA: Pre-training Text Encoders as Discriminators Rather Than Generators</a></li>
+</ul>
+
+<h3 id="3-대용량-언어-모델">3. 대용량 언어 모델</h3>
+
+<p><strong>대용량 언어 모델</strong></p>
+<ul>
+  <li><a href="https://arxiv.org/pdf/1910.10683.pdf" target="_blank">Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer</a></li>
+  <li><a href="https://arxiv.org/pdf/2005.14165.pdf" target="_blank">Language Models are Few-Shot Learners</a></li>
+  <li><a href="https://arxiv.org/pdf/2201.08239.pdf" target="_blank">LaMDA: Language Models for Dialog Applications</a></li>
+  <li><a href="https://d4mucfpksywv.cloudfront.net/better-language-models/language_models_are_unsupervised_multitask_learners.pdf" target="_blank">Language Models are Unsupervised Multitask Learners</a></li>
+  <li><a href="https://arxiv.org/pdf/2107.03374.pdf" target="_blank">Evaluating Large Language Models Trained on Code</a></li>
+  <li><a href="https://arxiv.org/pdf/2204.02311.pdf" target="_blank">PaLM: Scaling Language Modeling with Pathways</a></li>
+  <li><a href="https://arxiv.org/pdf/2307.09288.pdf" target="_blank">Llama 2: Open Foundation and Fine-Tuned Chat Models</a></li>
+  <li><a href="https://arxiv.org/pdf/2401.04088.pdf" target="_blank">Mixtral of Experts</a></li>
+</ul>
+
+<p><strong>스케일링 법칙(Scaling Law)</strong></p>
+<ul>
+  <li><a href="https://arxiv.org/pdf/2001.08361.pdf" target="_blank">Scaling Laws for Neural Language Models</a></li>
+  <li><a href="https://arxiv.org/pdf/2102.01293.pdf" target="_blank">Scaling Laws for Transfer</a></li>
+  <li><a href="https://arxiv.org/pdf/2206.07682.pdf" target="_blank">Emergent Abilities of Large Language Models</a></li>
+  <li><a href="https://arxiv.org/pdf/2203.15556.pdf" target="_blank">Training Compute-Optimal Large Language Models</a></li>
+  <li><a href="https://arxiv.org/pdf/2210.11399.pdf" target="_blank">Transcending Scaling Laws with 0.1% Extra Compute</a></li>
+  <li><a href="https://arxiv.org/pdf/2211.02011.pdf" target="_blank">Inverse Scaling can become U-shaped</a></li>
+  <li><a href="https://arxiv.org/pdf/2304.15004.pdf" target="_blank">Are Emergent Abilities of Large Language Models a Mirage?</a></li>
+</ul>
+
+<p><strong>지시 튜닝(Instruction Tuning) 및 인간 피드백 기반 강화학습(RLHF)</strong></p>
+<ul>
+  <li><a href="https://arxiv.org/pdf/2203.02155.pdf" target="_blank">Training Language Models to Follow Instructions with Human Feedback</a></li>
+  <li><a href="https://arxiv.org/pdf/2109.01652.pdf" target="_blank">Finetuned Language Models Are Zero-Shot Learners</a></li>
+  <li><a href="https://arxiv.org/pdf/2110.08207.pdf" target="_blank">Multitask Prompted Training Enables Zero-Shot Task Generalization</a></li>
+  <li><a href="https://arxiv.org/pdf/2305.11206.pdf" target="_blank">LIMA: Less Is More for Alignment</a></li>
+  <li><a href="https://arxiv.org/pdf/2305.18290.pdf" target="_blank">Direct Preference Optimization: Your Language Model is Secretly a Reward Model</a></li>
+  <li><a href="https://arxiv.org/pdf/2310.16944.pdf" target="_blank">Zephyr: Direct Distillation of LM Alignment</a></li>
+</ul>
+
+<p><strong>효율적인 대용량 언어모델 학습</strong></p>
+<ul>
+  <li><a href="https://arxiv.org/pdf/1909.08053.pdf" target="_blank">Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism</a></li>
+  <li><a href="https://arxiv.org/pdf/1910.02054.pdf" target="_blank">ZeRO: Memory Optimizations Toward Training Trillion Parameter Models</a></li>
+  <li><a href="https://arxiv.org/pdf/2108.12409.pdf" target="_blank">Train Short, Test Long: Attention with Linear Biases Enables Input Length Extrapolation</a></li>
+  <li><a href="https://arxiv.org/pdf/2104.09864.pdf" target="_blank">RoFormer: Enhanced Transformer with Rotary Position Embedding</a></li>
+  <li><a href="https://arxiv.org/pdf/1911.02150.pdf" target="_blank">Fast Transformer Decoding: One Write-Head is All You Need</a></li>
+  <li><a href="https://arxiv.org/pdf/2305.13245v2.pdf" target="_blank">GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints</a></li>
+  <li><a href="https://arxiv.org/pdf/2205.14135.pdf" target="_blank">FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness</a></li>
+</ul>
+
+<p><strong>효율적인 대용량 언어모델 추론</strong></p>
+<ul>
+  <li><a href="https://arxiv.org/pdf/2006.04152.pdf" target="_blank">BERT Loses Patience: Fast and Robust Inference with Early Exit</a></li>
+  <li><a href="https://arxiv.org/pdf/2207.07061.pdf" target="_blank">Confident Adaptive Language Modeling</a></li>
+  <li><a href="https://arxiv.org/pdf/2211.17192.pdf" target="_blank">Fast Inference from Transformers via Speculative Decoding</a></li>
+  <li><a href="https://arxiv.org/pdf/2309.06180.pdf" target="_blank">Efficient Memory Management for Large Language Model Serving with PagedAttention</a></li>
+  <li><a href="https://pytorch.org/blog/flash-decoding/" target="_blank">Flash-Decoding for long-context inference</a></li>
+  <li><a href="https://lmsys.org/blog/2023-11-21-lookahead-decoding/" target="_blank">Break the Sequential Dependency of LLM Inference Using Lookahead Decoding</a></li>
+</ul>
+
+<p><strong>대용량 언어 모델 압축과 희소화</strong></p>
+<ul>
+  <li><a href="https://arxiv.org/pdf/2112.10684.pdf" target="_blank">Efficient Large Scale Language Modeling with Mixtures of Experts</a></li>
+  <li><a href="https://arxiv.org/pdf/2006.16668.pdf" target="_blank">GShard: Scaling Giant Models with Conditional Computation and Automatic Sharding</a></li>
+  <li><a href="https://arxiv.org/pdf/2303.09752.pdf" target="_blank">CoLT5: Faster Long-Range Transformers with Conditional Computation</a></li>
+  <li><a href="https://arxiv.org/pdf/2208.07339.pdf" target="_blank">LLM.int8(): 8-bit Matrix Multiplication for Transformers at Scale</a></li>
+  <li><a href="https://arxiv.org/pdf/2110.02861.pdf" target="_blank">8-bit Optimizers via Block-wise Quantization</a></li>
+  <li><a href="https://arxiv.org/pdf/2305.14314.pdf" target="_blank">QLoRA: Efficient Finetuning of Quantized LLMs</a></li>
+  <li><a href="https://arxiv.org/pdf/2310.11453.pdf" target="_blank">BitNet: Scaling 1-bit Transformers for Large Language Models</a></li>
+</ul>
+
+<p><strong>대용량 언어 모델 프롬프팅(Prompting)</strong></p>
+<ul>
+  <li><a href="https://arxiv.org/pdf/2201.11903.pdf" target="_blank">Chain-of-Thought Prompting Elicits Reasoning in Large Language Models</a></li>
+  <li><a href="https://arxiv.org/pdf/2203.11171.pdf" target="_blank">Self-Consistency Improves Chain of Thought Reasoning in Language Models</a></li>
+  <li><a href="https://arxiv.org/pdf/2305.10601.pdf" target="_blank">Tree of Thoughts: Deliberate Problem Solving with Large Language Models</a></li>
+  <li><a href="https://arxiv.org/pdf/2211.12588.pdf" target="_blank">Program of Thoughts Prompting: Disentangling Computation from Reasoning for Numerical Reasoning Tasks</a></li>
+  <li><a href="https://arxiv.org/pdf/2205.10625.pdf" target="_blank">Least-to-Most Prompting Enables Complex Reasoning in Large Language Models</a></li>
+  <li><a href="https://arxiv.org/pdf/2210.03350.pdf" target="_blank">Measuring and Narrowing the Compositionality Gap in Language Models</a></li>
+  <li><a href="https://arxiv.org/pdf/2210.03629.pdf" target="_blank">ReAct: Synergizing Reasoning and Acting in Language Models</a></li>
+  <li><a href="https://arxiv.org/pdf/2303.17651.pdf" target="_blank">Self-Refine: Iterative Refinement with Self-Feedback</a></li>
+</ul>
+
+<h3 id="4-멀티모달multimodal-모델">4. 멀티모달(Multimodal) 모델</h3>
+
+<p><strong>비전 트랜스포머</strong></p>
+<ul>
+  <li><a href="https://openreview.net/pdf?id=YicbFdNTTy" target="_blank">An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale</a></li>
+  <li><a href="https://arxiv.org/pdf/2103.14030.pdf" target="_blank">Swin Transformer: Hierarchical Vision Transformer using Shifted Windows</a></li>
+  <li><a href="https://arxiv.org/pdf/2012.12877.pdf" target="_blank">Training data-efficient image transformers &amp; distillation through attention</a></li>
+  <li><a href="https://arxiv.org/pdf/2104.14294.pdf" target="_blank">Emerging Properties in Self-Supervised Vision Transformers</a></li>
+  <li><a href="https://arxiv.org/pdf/2303.15446.pdf" target="_blank">SwiftFormer: Efficient Additive Attention for Transformer-based Real-time Mobile Vision Applications</a></li>
+  <li><a href="https://arxiv.org/pdf/2111.11418.pdf" target="_blank">MetaFormer Is Actually What You Need for Vision</a></li>
+  <li><a href="https://arxiv.org/pdf/2111.06377.pdf" target="_blank">Masked Autoencoders Are Scalable Vision Learners</a></li>
+</ul>
+
+<p><strong>디퓨전(Diffusion) 모델</strong></p>
+<ul>
+  <li><a href="https://arxiv.org/pdf/2101.09258.pdf" target="_blank">Maximum Likelihood Training of Score-Based Diffusion Models</a></li>
+  <li><a href="https://arxiv.org/pdf/2011.13456.pdf" target="_blank">Score-Based Generative Modeling through Stochastic Differential Equations</a></li>
+  <li><a href="https://arxiv.org/pdf/2010.02502.pdf" target="_blank">Denoising Diffusion Implicit Models</a></li>
+  <li><a href="https://arxiv.org/pdf/2006.11239.pdf" target="_blank">Denoising Diffusion Probabilistic Models</a></li>
+  <li><a href="https://arxiv.org/pdf/2206.00927.pdf" target="_blank">DPM-Solver: A Fast ODE Solver for Diffusion Probabilistic Model Sampling in Around 10 Steps</a></li>
+  <li><a href="https://arxiv.org/pdf/2303.01469.pdf" target="_blank">Consistency Models</a></li>
+</ul>
+
+<p><strong>이미지 생성</strong></p>
+<ul>
+  <li><a href="https://arxiv.org/pdf/2112.10752.pdf" target="_blank">High-Resolution Image Synthesis with Latent Diffusion Models</a></li>
+  <li><a href="https://arxiv.org/pdf/2205.11487.pdf" target="_blank">Photorealistic Text-to-Image Diffusion Models with Deep Language Understanding</a></li>
+  <li><a href="https://arxiv.org/pdf/2206.10789.pdf" target="_blank">Scaling Autoregressive Models for Content-Rich Text-to-Image Generation</a></li>
+  <li><a href="https://arxiv.org/pdf/2204.06125.pdf" target="_blank">Hierarchical Text-Conditional Image Generation with CLIP Latents</a></li>
+  <li><a href="https://arxiv.org/pdf/2310.00426.pdf" target="_blank">PIXART-α: Fast Training of Diffusion Transformer for Photorealistic Text-to-Image Synthesis</a></li>
+  <li><a href="https://static1.squarespace.com/static/6213c340453c3f502425776e/t/65663480a92fba51d0e1023f/1701197769659/adversarial_diffusion_distillation.pdf" target="_blank">Adversarial Diffusion Distillation</a></li>
+</ul>
+
+<p><strong>멀티모달 모델 사전학습</strong></p>
+<ul>
+  <li><a href="https://arxiv.org/pdf/2103.00020.pdf" target="_blank">Learning Transferable Visual Models From Natural Language Supervision</a></li>
+  <li><a href="https://arxiv.org/pdf/2201.12086.pdf" target="_blank">BLIP: Bootstrapping Language-Image Pre-training for Unified Vision-Language Understanding and Generation</a></li>
+  <li><a href="https://arxiv.org/pdf/2205.01917.pdf" target="_blank">CoCa: Contrastive Captioners are Image-Text Foundation Models</a></li>
+  <li><a href="https://arxiv.org/pdf/2004.06165.pdf" target="_blank">Oscar: Object-Semantics Aligned Pre-training for Vision-Language Tasks</a></li>
+  <li><a href="https://arxiv.org/pdf/2101.00529.pdf" target="_blank">VinVL: Revisiting Visual Representations in Vision-Language Models</a></li>
+  <li><a href="https://arxiv.org/pdf/2102.05918.pdf" target="_blank">Scaling Up Visual and Vision-Language Representation Learning With Noisy Text Supervision</a></li>
+  <li><a href="https://arxiv.org/pdf/2303.15343.pdf" target="_blank">Sigmoid Loss for Language Image Pre-Training</a></li>
+</ul>
+
+<p><strong>대용량 멀티모달 모델</strong></p>
+<ul>
+  <li><a href="https://arxiv.org/pdf/2204.14198.pdf" target="_blank">Flamingo: a Visual Language Model for Few-Shot Learning</a></li>
+  <li><a href="https://arxiv.org/pdf/2304.08485.pdf" target="_blank">Visual Instruction Tuning</a></li>
+  <li><a href="https://arxiv.org/pdf/2305.06500.pdf" target="_blank">InstructBLIP: Towards General-purpose Vision-Language Models with Instruction Tuning</a></li>
+  <li><a href="https://arxiv.org/pdf/2209.06794.pdf" target="_blank">PaLI: A Jointly-Scaled Multilingual Language-Image Model</a></li>
+  <li><a href="https://arxiv.org/pdf/2310.09199.pdf" target="_blank">PaLI-3 Vision Language Models: Smaller</a></li>
+  <li><a href="https://arxiv.org/pdf/2312.13286.pdf" target="_blank">Generative Multimodal Models are In-Context Learners</a></li>
+  <li><a href="https://arxiv.org/pdf/2312.14238.pdf" target="_blank">InternVL: Scaling up Vision Foundation Models and Aligning for Generic Visual-Linguistic Tasks</a></li>
+  <li><a href="https://arxiv.org/pdf/2312.11805v1.pdf" target="_blank">Gemini: A Family of Highly Capable Multimodal Models</a></li>
+</ul>
+
+<h3 id="5-증강augmentation-기반-모델">5. 증강(Augmentation) 기반 모델</h3>
+
+<p><strong>도구(Tool) 증강</strong></p>
+<ul>
+  <li><a href="https://arxiv.org/pdf/2302.04761.pdf" target="_blank">Toolformer: Language Models Can Teach Themselves to Use Tools</a></li>
+  <li><a href="https://arxiv.org/pdf/2303.09014.pdf" target="_blank">ART: Automatic Multi-step Reasoning and Tool-use for Large Language Models</a></li>
+  <li><a href="https://arxiv.org/pdf/2307.16789.pdf" target="_blank">ToolLLM: Facilitating Large Language Models to Master 16000+ Real-world APIs</a></li>
+  <li><a href="https://arxiv.org/pdf/2305.11554.pdf" target="_blank">ToolkenGPT: Augmenting Frozen Language Models with Massive Tools via Tool Embeddings</a></li>
+  <li><a href="https://arxiv.org/pdf/2308.03688.pdf" target="_blank">AgentBench: Evaluating LLMs as Agents</a></li>
+  <li><a href="https://arxiv.org/pdf/2312.08914.pdf" target="_blank">CogAgent: A Visual Language Model for GUI Agents</a></li>
+  <li><a href="https://arxiv.org/pdf/2307.13854.pdf" target="_blank">WebArena: A Realistic Web Environment for Building Autonomous Agents</a></li>
+</ul>
+
+<p><strong>검색(Retrieval) 증강</strong></p>
+<ul>
+  <li><a href="https://arxiv.org/pdf/2002.08909.pdf" target="_blank">REALM: Retrieval-Augmented Language Model Pre-Training</a></li>
+  <li><a href="https://arxiv.org/pdf/2005.11401.pdf" target="_blank">Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks</a></li>
+  <li><a href="https://arxiv.org/pdf/2112.04426.pdf" target="_blank">Improving Language Models by Retrieving from Trillions of Tokens</a></li>
+  <li><a href="https://arxiv.org/pdf/2310.11511.pdf" target="_blank">Self-RAG: Learning to Retrieve</a></li>
+  <li><a href="https://arxiv.org/pdf/2301.12652.pdf" target="_blank">REPLUG: Retrieval-Augmented Black-Box Language Models</a></li>
+</ul>
+
+<p>열심히 읽자!</p>]]></content><author><name>Kong Ju</name></author><category term="Data_Science" /><category term="Data Science" /><category term="NLP" /><category term="LLM" /><category term="Large Language Model" /><category term="Foundation Models" /><category term="paper" /><summary type="html"><![CDATA[대용량 언어 모델(LLM) 기반 모델(Foundation Models) 관련 논문 모음 1. 기반 모델 기반 모델 및 응용 분야 On the Opportunities and Risks of Foundation Models Multimodal Foundation Models: From Specialists to General-Purpose Assistants Large Multimodal Models: Notes on CVPR 2023 Tutorial Towards Generalist Biomedical AI A Comprehensive Survey on Pretrained Foundation Models: A History from BERT to ChatGPT Interactive Natural Language Processing Towards Reasoning in Large Language Models: A Survey 순환 신경망(RNN) 및 합성곱 신경망(CNN) Recurrent Neural Networks (RNNs): A gentle Introduction and Overview Highway Networks Long Short-Term Memory Empirical Evaluation of Gated Recurrent Neural Networks on Sequence Modeling Effective Approaches to Attention-based Neural Machine Translation An Introduction to Convolutional Neural Networks ImageNet Classification with Deep Convolutional Neural Networks U-Net: Convolutional Networks for Biomedical Image Segmentation Deep Residual Learning for Image Recognition Densely Connected Convolutional Networks Aggregated Residual Transformations for Deep Neural Networks A ConvNet for the 2020s 자연어 처리(NLP) 및 컴퓨터 비전(CV) Sequence to Sequence Learning with Neural Networks Thumbs up? Sentiment Classification using Machine Learning Techniques A Survey of Named Entity Recognition and Classification Teaching Machines to Read and Comprehend Deep Neural Networks for Acoustic Modeling in Speech Recognition A Neural Attention Model for Sentence Summarization Microsoft COCO: Common Objects in Context Rich Feature Hierarchies for Accurate Object Detection and Semantic Segmentation Fully Convolutional Networks for Semantic Segmentation DeepFace: Closing the Gap to Human-Level Performance in Face Verification DeepPose: Human Pose Estimation via Deep Neural Networks Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks 2. 트랜스포머(Transformers) 아키텍쳐 셀프 어텐션(Self Attention) 및 트랜스포머(Transformers) Neural Machine Translation by Jointly Learning to Align and Translate Show, Attend and Tell: Neural Image Caption Generation with Visual Attention Attention Is All You Need The Annotated Transformer Image Transformer An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale 효율적인 트랜스포머 Transformers are RNNs: Fast Autoregressive Transformers with Linear Attention Perceiver: General Perception with Iterative Attention Random Feature Attention Longformer: The Long-Document Transformer Generating Long Sequences with Sparse Transformers Linformer: Self-Attention with Linear Complexity Efficiently Modeling Long Sequences with Structured State Spaces 매개변수 효율적 튜닝 Parameter-Efficient Transfer Learning for NLP LoRA: Low-Rank Adaptation of Large Language Models The Power of Scale for Parameter-Efficient Prompt Tuning It’s Not Just Size That Matters: Small Language Models Are Also Few-Shot Learners Making Pre-trained Language Models Better Few-shot Learners Few-Shot Parameter-Efficient Fine-Tuning is Better and Cheaper than In-Context Learning Towards a Unified View of Parameter-Efficient Transfer Learning]]></summary></entry><entry><title type="html">.gitignore 자동 생성하기</title><link href="https://kongju7.github.io/jekyll-theme-yat/programming/2024/03/05/gitignore.html" rel="alternate" type="text/html" title=".gitignore 자동 생성하기" /><published>2024-03-05T00:00:00+00:00</published><updated>2024-03-05T00:00:00+00:00</updated><id>https://kongju7.github.io/jekyll-theme-yat/programming/2024/03/05/gitignore</id><content type="html" xml:base="https://kongju7.github.io/jekyll-theme-yat/programming/2024/03/05/gitignore.html"><![CDATA[<h2 id="gitignore-자동-생성하기">.gitignore 자동 생성하기</h2>
+
+<p><code class="language-plaintext highlighter-rouge">.gitignore</code> 파일은 <a href="https://git-scm.com/" target="_blank">git</a>을 활용한 버전 관리에서 제외할 파일 목록을 정리한 파일로, <br />
+이 파일을 통해서 해당 파일이 <a href="https://github.com/" target="_blank">GitHub</a>에 업로드되지 않도록 강제할 수 있습니다.</p>
+
+<p>주로 API key, 개인 정보가 포함된 데이터와 같이 외부로 유출되면 안되는 정보나 가상 환경과 같이 용량이 큰 파일 등이 여기에 포함될 수 있습니다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">.gitignore</code> 파일은 프로젝트별로 각각 수동으로 작성할 수도 있지만, <br />
+<code class="language-plaintext highlighter-rouge">.gitignore</code> 파일을 자동 생성해 주는 사이트를 이용하면 쉽게 만들 수 있습니다.</p>
+
+<h3 id="1-먼저-gitignoreio사이트에-접속합니다">1. 먼저, <a href="https://www.toptal.com/developers/gitignore" target="_blank">gitignore.io</a>사이트에 접속합니다.</h3>
+
+<p><img src="/assets/images/gitignore_1.png" alt="gitignore_1" title="gitignore_1" /></p>
+
+<h3 id="2-검색창에-깃-커밋git-commit에서-제외하고-싶은-내용을-입력합니다">2. 검색창에 깃 커밋(git commit)에서 제외하고 싶은 내용을 입력합니다.</h3>
+
+<p>여러 키워드를 중복해서 입력할 수도 있습니다.</p>
+
+<p>이 예제에서는 ‘Python’, ‘venv’, ‘Git’ 등을 각각 입력해 추가하였습니다.</p>
+
+<p><img src="/assets/images/gitignore_2.png" alt="gitignore_2" title="gitignore_2" /></p>
+
+<h3 id="3-주요-단어를-입력한-후에-생성-버튼을-클릭합니다">3. 주요 단어를 입력한 후에 ‘생성’ 버튼을 클릭합니다.</h3>
+
+<p>그러면 <code class="language-plaintext highlighter-rouge">.gitignore</code> 파일에 들어갈 내용이 자동으로 생성됩니다.</p>
+
+<p><img src="/assets/images/gitignore_3.png" alt="gitignore_3" title="gitignore_3" /></p>
+
+<p>생성된 내용을 그대로 복사해 현재 작업 중인 프로젝트 내 <code class="language-plaintext highlighter-rouge">.gitignore</code> 파일에 그대로 붙여넣기만 하면 됩니다.
+그 후에 환경 변수 파일이나 개인 정보가 담긴 파일 등을 추가한다면 <code class="language-plaintext highlighter-rouge">.gitignore</code> 파일을 훨씬 쉽게 관리할 수 있게 되겠죠?</p>
+
+<p>참고로 위의 세 단어를 활용하여 생성된 파일은 다음과 같습니다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Created by https://www.toptal.com/developers/gitignore/api/python,venv,git
+# Edit at https://www.toptal.com/developers/gitignore?templates=python,venv,git
+
+### Git ###
+# Created by git for backups. To disable backups in Git:
+# $ git config --global mergetool.keepBackup false
+*.orig
+
+# Created by git when using merge tools for conflicts
+*.BACKUP.*
+*.BASE.*
+*.LOCAL.*
+*.REMOTE.*
+*_BACKUP_*.txt
+*_BASE_*.txt
+*_LOCAL_*.txt
+*_REMOTE_*.txt
+
+### Python ###
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+.pybuilder/
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+#   For a library or package, you might want to ignore these files since the code is
+#   intended to run in multiple environments; otherwise, check them in:
+# .python-version
+
+# pipenv
+#   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
+#   However, in case of collaboration, if having platform-specific dependencies or dependencies
+#   having no cross-platform support, pipenv may install dependencies that don't work, or not
+#   install all needed dependencies.
+#Pipfile.lock
+
+# poetry
+#   Similar to Pipfile.lock, it is generally recommended to include poetry.lock in version control.
+#   This is especially recommended for binary packages to ensure reproducibility, and is more
+#   commonly ignored for libraries.
+#   https://python-poetry.org/docs/basic-usage/#commit-your-poetrylock-file-to-version-control
+#poetry.lock
+
+# pdm
+#   Similar to Pipfile.lock, it is generally recommended to include pdm.lock in version control.
+#pdm.lock
+#   pdm stores project-wide configurations in .pdm.toml, but it is recommended to not include it
+#   in version control.
+#   https://pdm.fming.dev/#use-with-ide
+.pdm.toml
+
+# PEP 582; used by e.g. github.com/David-OConnor/pyflow and github.com/pdm-project/pdm
+__pypackages__/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# pytype static type analyzer
+.pytype/
+
+# Cython debug symbols
+cython_debug/
+
+# PyCharm
+#  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
+#  be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
+#  and can be added to the global gitignore or merged into this file.  For a more nuclear
+#  option (not recommended) you can uncomment the following to ignore the entire idea folder.
+#.idea/
+
+### Python Patch ###
+# Poetry local configuration file - https://python-poetry.org/docs/configuration/#local-configuration
+poetry.toml
+
+# ruff
+.ruff_cache/
+
+# LSP config files
+pyrightconfig.json
+
+### venv ###
+# Virtualenv
+# http://iamzed.com/2009/05/07/a-primer-on-virtualenv/
+[Bb]in
+[Ii]nclude
+[Ll]ib
+[Ll]ib64
+[Ll]ocal
+[Ss]cripts
+pyvenv.cfg
+pip-selfcheck.json
+
+# End of https://www.toptal.com/developers/gitignore/api/python,venv,git
+</code></pre></div></div>]]></content><author><name>Kong Ju</name></author><category term="Programming" /><category term="Python" /><category term="Programming" /><category term="git" /><category term=".gitignore" /><category term="gitignore.io" /><category term="toptal.com" /><summary type="html"><![CDATA[.gitignore 자동 생성하기]]></summary></entry><entry><title type="html">[Python] .env 설정 방법</title><link href="https://kongju7.github.io/jekyll-theme-yat/programming/2023/02/09/Python-env.html" rel="alternate" type="text/html" title="[Python] .env 설정 방법" /><published>2023-02-09T00:00:00+00:00</published><updated>2023-02-09T00:00:00+00:00</updated><id>https://kongju7.github.io/jekyll-theme-yat/programming/2023/02/09/Python-env</id><content type="html" xml:base="https://kongju7.github.io/jekyll-theme-yat/programming/2023/02/09/Python-env.html"><![CDATA[<h2 id="python에서-env-설정-방법">Python에서 .env 설정 방법</h2>
+
+<p>코드를 깃허브 등에 공개할 때 API token을 숨김 처리해야할 때가 있다.<br />
+이 때 .env 파일을 활용하면 된다.</p>
+
+<h3 id="required-python-module--python-dotenv">Required Python module : <a href="https://github.com/theskumar/python-dotenv" target="_blank">Python-dotenv</a></h3>
+
+<p>.env 파일을 활용하기 위해서는 먼저 <code class="language-plaintext highlighter-rouge">Python-dotenv</code> 모듈을 설치해야 된다.</p>
+
+<pre><code class="language-Shell">pip install python-dotenv
+</code></pre>
+
+<h3 id="env">.env</h3>
+
+<p><code class="language-plaintext highlighter-rouge">Python-dotenv</code> 모듈의 설치가 끝나면, 작업 폴더에서 <code class="language-plaintext highlighter-rouge">.env</code> 파일을 생성한다.</p>
+
+<pre><code class="language-Shell">touch .env 
+</code></pre>
+
+<p>그리고 <code class="language-plaintext highlighter-rouge">.env</code> 파일을 연다.</p>
+
+<pre><code class="language-Shell">open .env 
+</code></pre>
+
+<p><code class="language-plaintext highlighter-rouge">.env</code> 파일 안에 숨김 처리하고 싶은 API token을 아래와 같은 형식으로 적어 넣는다.  <br />
+여기서 export 다음에 오는 변수 명(이 예제에서는 ‘api_key’)을 Python 파일에서 호출하여 사용하면 된다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export api_key = "my_secret_api_token"
+</code></pre></div></div>
+
+<h3 id="gitignore">.gitignore</h3>
+
+<p><code class="language-plaintext highlighter-rouge">.env</code> 파일이 깃허브 등에 업로드되어 API token이 공개되는 불상사(?)를 막기 위해서    <br />
+<code class="language-plaintext highlighter-rouge">.gitignore</code> 파일을 생성하여, 그 파일 안에 <code class="language-plaintext highlighter-rouge">.env</code>를 추가할 필요가 있다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.env
+</code></pre></div></div>
+
+<h3 id="python-code">Python Code</h3>
+
+<p>파이썬 파일에서는 다음과 같이 작성하면 API token을 숨김처리 할 수 있게 된다.</p>
+
+<pre><code class="language-Python">from dotenv import load_dotenv  
+import os    
+  
+# load .env  
+load_dotenv()  
+  
+api_key = os.environ.get('api_key')
+</code></pre>]]></content><author><name>Kong Ju</name></author><category term="Programming" /><category term="Python" /><category term="Programming" /><category term="Python-dotenv" /><category term=".env" /><category term="API token" /><summary type="html"><![CDATA[Python에서 .env 설정 방법 코드를 깃허브 등에 공개할 때 API token을 숨김 처리해야할 때가 있다. 이 때 .env 파일을 활용하면 된다. Required Python module : Python-dotenv .env 파일을 활용하기 위해서는 먼저 Python-dotenv 모듈을 설치해야 된다. pip install python-dotenv .env Python-dotenv 모듈의 설치가 끝나면, 작업 폴더에서 .env 파일을 생성한다. touch .env 그리고 .env 파일을 연다. open .env .env 파일 안에 숨김 처리하고 싶은 API token을 아래와 같은 형식으로 적어 넣는다. 여기서 export 다음에 오는 변수 명(이 예제에서는 ‘api_key’)을 Python 파일에서 호출하여 사용하면 된다.]]></summary></entry><entry><title type="html">[요약] 데이터 사이언티스트의 비즈니스 기여</title><link href="https://kongju7.github.io/jekyll-theme-yat/review/2023/02/03/Toss-Conference1.html" rel="alternate" type="text/html" title="[요약] 데이터 사이언티스트의 비즈니스 기여" /><published>2023-02-03T00:00:00+00:00</published><updated>2023-02-03T00:00:00+00:00</updated><id>https://kongju7.github.io/jekyll-theme-yat/review/2023/02/03/Toss-Conference1</id><content type="html" xml:base="https://kongju7.github.io/jekyll-theme-yat/review/2023/02/03/Toss-Conference1.html"><![CDATA[<p>[발표 요약]</p>
+
+<h2 id="토스ㅣslash-22"><strong>[토스ㅣSLASH 22]</strong></h2>
+
+<h3 id="data-scientist는-어떻게-비즈니스에-기여할-수-있을까-황동현--토스">Data Scientist는 어떻게 비즈니스에 기여할 수 있을까? (황동현 / 토스)</h3>
+<ul>
+  <li>
+    <p>url: <a href="https://www.youtube.com/watch?v=mKf1kvWXiPY" target="_blank">https://www.youtube.com/watch?v=mKf1kvWXiPY</a></p>
+  </li>
+  <li>기존 역할: Silo 개별 지원</li>
+  <li>→ <strong>데이터 프로덕트 개발</strong>: 공통 니즈 반영
+    <ul>
+      <li>‘데이터 프로덕트를 중심으로’ 전략 수립 → <strong>CDP 프로덕트</strong> MVP 개발 → 개선</li>
+    </ul>
+  </li>
+  <li><strong>1) CVR 예측 모델</strong>
+    <ul>
+      <li>Conversion Rate: ‘10원 받기’를 클릭해 실제로 10원을 받은 유저만 전환 유저로 정의</li>
+      <li>전환 유저 수 → 성장율 대변</li>
+      <li>TUBA(메세지 발송 시스템) 활용</li>
+      <li>전환유저가 될 것 같은 유저를 예측 → (과거 전환 유저 수만 충분하다면) 모든 서비스에 적용 가능하므로 ‘확장성’이 높음</li>
+    </ul>
+  </li>
+  <li><strong>2) 결제 예측 모델</strong>
+    <ul>
+      <li>유저 소비명세를 확인하여 구매했다면 캐시백 혜택</li>
+      <li>캐시백 혜택을 자주 이용하는 유저에게 푸쉬 메세지 발송</li>
+      <li>효과
+        <ul>
+          <li>광고효과 극대화 가능</li>
+          <li>서비스 추천으로 리텐션 강화</li>
+          <li>유저 특성별 프로모션</li>
+          <li>실구매 확률이 높은 유저에게 광고 노출 <em>**</em></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>모델링: <strong>LightGBM 모델 활용</strong>
+    <ul>
+      <li>테이블형 데이터에 유리</li>
+      <li>유저의 인구통계학적 정보, 소비명세, 계좌 정보, 카드 정보 등 활용</li>
+      <li><strong>→ 앞으로 30일 안에 발생할 일 예측</strong></li>
+    </ul>
+  </li>
+  <li><strong>모델 확장성 문제</strong>
+    <ul>
+      <li>최소한의 리소스로 최대한의 효과를 만들기 위해서 ‘데이터 웨어하우스’ 재탐색</li>
+      <li>유저 정보, 소비 정보, 서비스 사용 정보: 1~3달 정보 포함 → 데이터 집계기간이 짧았음</li>
+      <li><strong>유저 행동 지표(act type)</strong> <strong>확장:</strong> 기존 24개 → <strong>일별 / 주별 / 월별 집계</strong>
+        <ul>
+          <li>로그 중에서 특정 타입을 ‘act type’으로 별도 보관</li>
+          <li>서비스 전환, 버튼 클릭, 페이지 진입 등이 포함</li>
+          <li>일별 / 주별 / 월별 집계: 작은 관점에서 큰 관점에서 유저의 서비스 활용 이해 가능</li>
+        </ul>
+      </li>
+      <li>데이터 마트 새롭게 구성
+        <ul>
+          <li>1달~1년 데이터로 확장</li>
+          <li>기존 액티브 유저, 신규 유저 분리 집계</li>
+          <li>RFM 데이터,  소분류 대분류 브랜드 소비 이력 등 집계 → 컬럼 수 3~6천 개로 확대</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><strong>파이프라인</strong>
+    <ul>
+      <li>일 단위의 작동 오프라인 서빙 목표</li>
+      <li>젠킨슨 서버: 다른 팀과 공유
+        <ul>
+          <li>컴퓨팅 리소스 문제 해결을 위해 ‘Ray Cluster’ 별도 구성
+            <ul>
+              <li>병렬 학습 및 추론</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><strong>모델 학습</strong>
+    <ul>
+      <li>학습 주기적(주단위 수행), 추론은 매일</li>
+      <li>학습마다, 모델 버전마다 메트릭 확인</li>
+      <li>모델 버전 및  모니터링: <strong>mlflow 활용</strong> - 실험 히스토리 저장 → 태그별로 모델 관리 → 과거 실험 쉽게 reproducing 가능</li>
+    </ul>
+  </li>
+  <li><strong>데이터 변경 문제</strong>
+    <ul>
+      <li>act type 집계 기준 변경, 삭제, 결제 카테고리 통합 등 → 각 파이프라인 모두에서 발생할 수 있음</li>
+      <li><strong>데이터 정합성 문제 사전 인지 필요: slack 알람을 활용하여 사전 확인 대응</strong></li>
+    </ul>
+  </li>
+  <li><strong>CDP 모델 런칭</strong>
+    <ul>
+      <li>Back Test 결과를 제공 → 모델 성능에 대한 의구심 해소</li>
+      <li>예측 모델의 좋은 성능 확인할 수 있었음</li>
+    </ul>
+  </li>
+  <li><strong>Silo의 추가 요청 발생: 신규 브랜드를 위한 유저 세그먼트 추출</strong>
+    <ul>
+      <li>라벨 데이터가 없는 상황이라 LightGMB으로 학습하기는 어려움</li>
+      <li>이런 니즈를 해결하기 위해 <strong>GNN 검토</strong> 중: 유저들의 소비 데이터에서 고객, 소비한 물품을 그래프로 표현하여 GNN으로 학습 → 유사도 검색을 통해서 유사한 유저나 브랜드 등을 구분할 수 있음</li>
+    </ul>
+  </li>
+  <li><strong>지속적인 모델 개선 노력</strong>
+    <ul>
+      <li>트랜스포머 모델 활용</li>
+      <li>Measure - Data - Learn 을 통해 비즈니스에 기여 목표</li>
+    </ul>
+  </li>
+</ul>]]></content><author><name>Kong Ju</name></author><category term="Review" /><category term="Review" /><category term="Toss" /><category term="conference" /><category term="Data Scientist" /><category term="Business" /><summary type="html"><![CDATA[[발표 요약] [토스ㅣSLASH 22] Data Scientist는 어떻게 비즈니스에 기여할 수 있을까? (황동현 / 토스) url: https://www.youtube.com/watch?v=mKf1kvWXiPY 기존 역할: Silo 개별 지원 → 데이터 프로덕트 개발: 공통 니즈 반영 ‘데이터 프로덕트를 중심으로’ 전략 수립 → CDP 프로덕트 MVP 개발 → 개선 1) CVR 예측 모델 Conversion Rate: ‘10원 받기’를 클릭해 실제로 10원을 받은 유저만 전환 유저로 정의 전환 유저 수 → 성장율 대변 TUBA(메세지 발송 시스템) 활용 전환유저가 될 것 같은 유저를 예측 → (과거 전환 유저 수만 충분하다면) 모든 서비스에 적용 가능하므로 ‘확장성’이 높음 2) 결제 예측 모델 유저 소비명세를 확인하여 구매했다면 캐시백 혜택 캐시백 혜택을 자주 이용하는 유저에게 푸쉬 메세지 발송 효과 광고효과 극대화 가능 서비스 추천으로 리텐션 강화 유저 특성별 프로모션 실구매 확률이 높은 유저에게 광고 노출 ** 모델링: LightGBM 모델 활용 테이블형 데이터에 유리 유저의 인구통계학적 정보, 소비명세, 계좌 정보, 카드 정보 등 활용 → 앞으로 30일 안에 발생할 일 예측 모델 확장성 문제 최소한의 리소스로 최대한의 효과를 만들기 위해서 ‘데이터 웨어하우스’ 재탐색 유저 정보, 소비 정보, 서비스 사용 정보: 1~3달 정보 포함 → 데이터 집계기간이 짧았음 유저 행동 지표(act type) 확장: 기존 24개 → 일별 / 주별 / 월별 집계 로그 중에서 특정 타입을 ‘act type’으로 별도 보관 서비스 전환, 버튼 클릭, 페이지 진입 등이 포함 일별 / 주별 / 월별 집계: 작은 관점에서 큰 관점에서 유저의 서비스 활용 이해 가능 데이터 마트 새롭게 구성 1달~1년 데이터로 확장 기존 액티브 유저, 신규 유저 분리 집계 RFM 데이터, 소분류 대분류 브랜드 소비 이력 등 집계 → 컬럼 수 3~6천 개로 확대 파이프라인 일 단위의 작동 오프라인 서빙 목표 젠킨슨 서버: 다른 팀과 공유 컴퓨팅 리소스 문제 해결을 위해 ‘Ray Cluster’ 별도 구성 병렬 학습 및 추론 모델 학습 학습 주기적(주단위 수행), 추론은 매일 학습마다, 모델 버전마다 메트릭 확인 모델 버전 및 모니터링: mlflow 활용 - 실험 히스토리 저장 → 태그별로 모델 관리 → 과거 실험 쉽게 reproducing 가능 데이터 변경 문제 act type 집계 기준 변경, 삭제, 결제 카테고리 통합 등 → 각 파이프라인 모두에서 발생할 수 있음 데이터 정합성 문제 사전 인지 필요: slack 알람을 활용하여 사전 확인 대응 CDP 모델 런칭 Back Test 결과를 제공 → 모델 성능에 대한 의구심 해소 예측 모델의 좋은 성능 확인할 수 있었음 Silo의 추가 요청 발생: 신규 브랜드를 위한 유저 세그먼트 추출 라벨 데이터가 없는 상황이라 LightGMB으로 학습하기는 어려움 이런 니즈를 해결하기 위해 GNN 검토 중: 유저들의 소비 데이터에서 고객, 소비한 물품을 그래프로 표현하여 GNN으로 학습 → 유사도 검색을 통해서 유사한 유저나 브랜드 등을 구분할 수 있음 지속적인 모델 개선 노력 트랜스포머 모델 활용 Measure - Data - Learn 을 통해 비즈니스에 기여 목표]]></summary></entry><entry><title type="html">[요약] 최근 딥러닝 언어모델과 향후 발전 방향</title><link href="https://kongju7.github.io/jekyll-theme-yat/review/2023/02/02/AI-Conference1.html" rel="alternate" type="text/html" title="[요약] 최근 딥러닝 언어모델과 향후 발전 방향" /><published>2023-02-02T00:00:00+00:00</published><updated>2023-02-02T00:00:00+00:00</updated><id>https://kongju7.github.io/jekyll-theme-yat/review/2023/02/02/AI-Conference1</id><content type="html" xml:base="https://kongju7.github.io/jekyll-theme-yat/review/2023/02/02/AI-Conference1.html"><![CDATA[<p>[AI 특강 요약]</p>
+
+<h2 id="2023-ai연구원-겨울-콜로키움"><strong>[2023 AI연구원 겨울 콜로키움]</strong></h2>
+
+<h3 id="딥러닝-언어모델과-확률적-앵무새-송상헌--고려대-언어학과-교수">딥러닝 언어모델과 확률적 앵무새 (송상헌 / 고려대 언어학과 교수)</h3>
+<ul>
+  <li>
+    <p>url: <a href="https://www.youtube.com/watch?v=P5xb2qyiQRw" target="_blank">https://www.youtube.com/watch?v=P5xb2qyiQRw</a></p>
+  </li>
+  <li><strong>최근 딥러닝 언어모델:</strong> 빈도에 기반하는 기존 코퍼스 언어학과 차이. 적은 빈도의 ‘증폭’과정을 거쳐서 처리 → 성능 크게 개선</li>
+  <li>하지만 여전히, <strong>확률적 앵무새(Stochastic Parrots)</strong>: 인공지능 언어모델은 자연 언어에 대한 실질적인 이해를 하고 있는 것이 아니라 단순히 확률에 기반하여 단어의 조합을 결과값으로 반환한다는 점에서 확률적 앵무새로 볼 수 있음
+    <ul>
+      <li><strong>소통 가능성(Communicability)의 문제</strong>
+        <ul>
+          <li>학습데이터의 문제: 오래된 데이터(데이터 자체의 한계에 의존), 자극의 빈곤 문제</li>
+          <li>모라베크의 역설</li>
+          <li>아스퍼거 증후군: 행간의 의미 파악 어려움</li>
+          <li>맥락 지식: 항진 명제 (예) “역시 손흥민은 손흥민이다”</li>
+        </ul>
+      </li>
+      <li>패턴인식: 사람 vs. 컴퓨터의 차이</li>
+    </ul>
+  </li>
+  <li><strong>문면(surface form)</strong>
+    <ul>
+      <li>benchmark: 여러 가지 방법으로 측정하여 누구라도 인정할 수 있도록 표준화하는 과정
+        <ul>
+          <li>GLUE / SuperGLUE
+            <ul>
+              <li>Syntax(통사론): 수용성</li>
+              <li>Semantics(의미론): 문장간 의미적 유사도</li>
+              <li>Pragmatics(의미화용론): 추론 능력</li>
+            </ul>
+          </li>
+          <li>현황: 18개월 만에 평정자의 수행 점수를 넘어섬</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><strong>최근의 흐름</strong>
+    <ul>
+      <li>문면 이상의 것: 수학 풀이 등</li>
+      <li><strong>상식:</strong> 학습 데이터에 명시적으로 포함되어 있지 않은 내용
+        <ul>
+          <li>세계 지식의 패턴화, 상식과 윤리, 가추 추론 → <strong>인간의 사고 패턴을 모방할 수 있도록.</strong></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><strong>언어모델의 성능 개선</strong>
+    <ul>
+      <li>인공주석물 주의: 찍기 신공, 주석자의 특성 반영</li>
+      <li>적대적 사례(adversarial examples): 평가 데이터를 어렵게 만들기</li>
+      <li>한국어 특성화 모델</li>
+      <li>도메인 부합 모델</li>
+    </ul>
+  </li>
+</ul>]]></content><author><name>Kong Ju</name></author><category term="Review" /><category term="Review" /><category term="AI" /><category term="conference" /><category term="NLP" /><category term="Language Model" /><category term="언어모델" /><summary type="html"><![CDATA[[AI 특강 요약] [2023 AI연구원 겨울 콜로키움] 딥러닝 언어모델과 확률적 앵무새 (송상헌 / 고려대 언어학과 교수) url: https://www.youtube.com/watch?v=P5xb2qyiQRw 최근 딥러닝 언어모델: 빈도에 기반하는 기존 코퍼스 언어학과 차이. 적은 빈도의 ‘증폭’과정을 거쳐서 처리 → 성능 크게 개선 하지만 여전히, 확률적 앵무새(Stochastic Parrots): 인공지능 언어모델은 자연 언어에 대한 실질적인 이해를 하고 있는 것이 아니라 단순히 확률에 기반하여 단어의 조합을 결과값으로 반환한다는 점에서 확률적 앵무새로 볼 수 있음 소통 가능성(Communicability)의 문제 학습데이터의 문제: 오래된 데이터(데이터 자체의 한계에 의존), 자극의 빈곤 문제 모라베크의 역설 아스퍼거 증후군: 행간의 의미 파악 어려움 맥락 지식: 항진 명제 (예) “역시 손흥민은 손흥민이다” 패턴인식: 사람 vs. 컴퓨터의 차이 문면(surface form) benchmark: 여러 가지 방법으로 측정하여 누구라도 인정할 수 있도록 표준화하는 과정 GLUE / SuperGLUE Syntax(통사론): 수용성 Semantics(의미론): 문장간 의미적 유사도 Pragmatics(의미화용론): 추론 능력 현황: 18개월 만에 평정자의 수행 점수를 넘어섬 최근의 흐름 문면 이상의 것: 수학 풀이 등 상식: 학습 데이터에 명시적으로 포함되어 있지 않은 내용 세계 지식의 패턴화, 상식과 윤리, 가추 추론 → 인간의 사고 패턴을 모방할 수 있도록. 언어모델의 성능 개선 인공주석물 주의: 찍기 신공, 주석자의 특성 반영 적대적 사례(adversarial examples): 평가 데이터를 어렵게 만들기 한국어 특성화 모델 도메인 부합 모델]]></summary></entry><entry><title type="html">[Diary] 다섯 번째 개인 프로젝트가 끝났다</title><link href="https://kongju7.github.io/jekyll-theme-yat/diary/2023/01/16/Fifth-project-NAL.html" rel="alternate" type="text/html" title="[Diary] 다섯 번째 개인 프로젝트가 끝났다" /><published>2023-01-16T00:00:00+00:00</published><updated>2023-01-16T00:00:00+00:00</updated><id>https://kongju7.github.io/jekyll-theme-yat/diary/2023/01/16/Fifth-project-NAL</id><content type="html" xml:base="https://kongju7.github.io/jekyll-theme-yat/diary/2023/01/16/Fifth-project-NAL.html"><![CDATA[<p>지난 주에 다섯 번째 개인 프로젝트가 끝났다.</p>
+
+<p>이번에는 지정 과제가 주어졌다.  <br />
+이진 분류 인공신경망의 순전파까지 Numpy 등을 이용하여 직접 구현하는 과제였다.  <br />
+인공신경망 구조에 대해 정확하게 이해하고 있어야 구현할 수 있는 과제라고 할 수 있다.</p>
+
+<p>지정 과제를 먼저 작성하고, <br />
+역전파 과정 추가, 은닉층 추가, 은닉층 추가 모델에 지정 데이터 외 새로운 데이터에 적용, 호출 그래프 작성 등의 과정을 추가하는 방식으로 과제를 구성하였다.  <br />
+데이터 탐색 과정과 데이터의 특성(불균형 데이터)에 대한 처리도 추가하였다.</p>
+
+<p>과제 초반에는 지정 데이터에 대한 탐색과 더불어, 기능별로 함수를 분리하고 함수를 하나씩 직접 작성해 나갔다.  <br />
+지난 6개월간 공부한 내용을 확인하고 실제로 구현해 보는 의미있는 시간이었다.</p>
+
+<p>그런데 전혀 예상치도 못한 문제가 발생했다.  <br />
+내가 주로 사용하고 있는 서재의 벽면을 마주한 책장 뒤 쪽으로 곰팡이가 크게 번진 것을 발견하게 된 것이다.</p>
+
+<p>벽지를 제거하고 부분 도배를 해야하는 상황에서 이번 프로젝트에만 온전히 시간을 쏟을 수 없게 되었다.  <br />
+어떻게 이 상황을 타개해 나갈 것인지에 대한 빠른 판단이 필요했다.</p>
+
+<p>고민하다가 예전에 공부했던 ‘파이썬 날코딩으로 알고 짜는 딥러닝’(윤덕호, 2019)에서 <br />
+기초적인 함수는 참고하되 수정∙보완하고,  <br />
+데이터 탐색 및 데이터 처리, 새로운 데이터에 적용 등을 하는 것도 주어진 시간 안에서 프로젝트를 완성하는 것으로 방향을 잡았다. <br />
+대신 함수 하나 하나에 자세한 설명과 변수명에 대한 설명을 주석으로 추가하였다.</p>
+
+<p>추후에 보완할 내용은 남았지만,  <br />
+원래 계획했던 내용은 모두 담아서 기간 내에 제출까지 마칠 수 있었다.</p>
+
+<p>이번 과제를 수행하면서 주어진 조건과 자원을 고려한 빠른 선택의 중요성에 대해 고민하는 시간이 되었다.  <br />
+특히 과제의 의미를 살릴 것인가, 기한 내에 최소한의 성능을 보장하여 완성할 것인가에 대해 실질적으로 고민해보는 시간이 되었던 것 같다.</p>
+
+<h3 id="덧붙이는-말">덧붙이는 말</h3>
+<p>이번 다섯 번째 개인 프로젝트에서 작성한 <a href="https://github.com/kongju7/my_project5" target="_blank">코드와 Readme 파일</a> 등은 제 깃허브 my_project5 레포지토리에 함께 담아 두었습니다!</p>]]></content><author><name>Kong Ju</name></author><category term="Diary" /><category term="Diary" /><category term="Python" /><category term="Data Science" /><category term="Neural Network" /><category term="from Scratch" /><category term="개인 프로젝트" /><category term="회고" /><summary type="html"><![CDATA[지난 주에 다섯 번째 개인 프로젝트가 끝났다. 이번에는 지정 과제가 주어졌다. 이진 분류 인공신경망의 순전파까지 Numpy 등을 이용하여 직접 구현하는 과제였다. 인공신경망 구조에 대해 정확하게 이해하고 있어야 구현할 수 있는 과제라고 할 수 있다. 지정 과제를 먼저 작성하고, 역전파 과정 추가, 은닉층 추가, 은닉층 추가 모델에 지정 데이터 외 새로운 데이터에 적용, 호출 그래프 작성 등의 과정을 추가하는 방식으로 과제를 구성하였다. 데이터 탐색 과정과 데이터의 특성(불균형 데이터)에 대한 처리도 추가하였다. 과제 초반에는 지정 데이터에 대한 탐색과 더불어, 기능별로 함수를 분리하고 함수를 하나씩 직접 작성해 나갔다. 지난 6개월간 공부한 내용을 확인하고 실제로 구현해 보는 의미있는 시간이었다. 그런데 전혀 예상치도 못한 문제가 발생했다. 내가 주로 사용하고 있는 서재의 벽면을 마주한 책장 뒤 쪽으로 곰팡이가 크게 번진 것을 발견하게 된 것이다. 벽지를 제거하고 부분 도배를 해야하는 상황에서 이번 프로젝트에만 온전히 시간을 쏟을 수 없게 되었다. 어떻게 이 상황을 타개해 나갈 것인지에 대한 빠른 판단이 필요했다. 고민하다가 예전에 공부했던 ‘파이썬 날코딩으로 알고 짜는 딥러닝’(윤덕호, 2019)에서 기초적인 함수는 참고하되 수정∙보완하고, 데이터 탐색 및 데이터 처리, 새로운 데이터에 적용 등을 하는 것도 주어진 시간 안에서 프로젝트를 완성하는 것으로 방향을 잡았다. 대신 함수 하나 하나에 자세한 설명과 변수명에 대한 설명을 주석으로 추가하였다. 추후에 보완할 내용은 남았지만, 원래 계획했던 내용은 모두 담아서 기간 내에 제출까지 마칠 수 있었다. 이번 과제를 수행하면서 주어진 조건과 자원을 고려한 빠른 선택의 중요성에 대해 고민하는 시간이 되었다. 특히 과제의 의미를 살릴 것인가, 기한 내에 최소한의 성능을 보장하여 완성할 것인가에 대해 실질적으로 고민해보는 시간이 되었던 것 같다. 덧붙이는 말 이번 다섯 번째 개인 프로젝트에서 작성한 코드와 Readme 파일 등은 제 깃허브 my_project5 레포지토리에 함께 담아 두었습니다!]]></summary></entry><entry><title type="html">[Python] 프로젝트의 호출 그래프(Call Graph) 그리기</title><link href="https://kongju7.github.io/jekyll-theme-yat/programming/2023/01/06/Python-CallGraph.html" rel="alternate" type="text/html" title="[Python] 프로젝트의 호출 그래프(Call Graph) 그리기" /><published>2023-01-06T00:00:00+00:00</published><updated>2023-01-06T00:00:00+00:00</updated><id>https://kongju7.github.io/jekyll-theme-yat/programming/2023/01/06/Python-CallGraph</id><content type="html" xml:base="https://kongju7.github.io/jekyll-theme-yat/programming/2023/01/06/Python-CallGraph.html"><![CDATA[<h2 id="호출-그래프-그리기">호출 그래프 그리기</h2>
+
+<p>이번에 개인 프로젝트에서는 이진 분류 인공신경망 함수를 Numpy 등만을 활용해 직접 구현하고,  <br />
+호출 그래프(call graph)를 직접 작성할 일이 생겼습니다.</p>
+
+<p>호출 그래프를 그리는 방법은 크게 2가지를 생각해 볼 수 있습니다.</p>
+
+<ol>
+  <li>
+    <p>한 땀 한 땀 정성껏 그린다.<br />
+  1-1. 고전적으로 Microsoft Powerpoint를 이용한다. <br />
+  1-2. 순서도(flowchart)에 특화된 프로그램(draw.io 등)을 이용한다.</p>
+  </li>
+  <li>
+    <p>파이썬 라이브러리를 이용해 자동화한다. <br />
+  2-1. pycallgraph 라이브러리를 이용한다. <br />
+  2-2. project graph 라이브러리를 이용한다.</p>
+  </li>
+</ol>
+
+<p>이번에 저는 1-2와 2-2를 이용해서 호출 그래프를 작성하였습니다.</p>
+
+<h2 id="drawio를-이용해-그리기">draw.io를 이용해 그리기</h2>
+
+<p>1-2의 대표적인 프로그램은 <a href="https://app.diagrams.net/" target="_blank">draw.io</a>가 있습니다.</p>
+
+<p>온라인에서 바로 그릴 수도 있고,<br />
+프로그램을 다운받아서 로컬에서 설치해 사용할 수도 있습니다.</p>
+
+<p>구글 드라이버(Google Drive)와도 연동할 수 있어 인터넷 연결만 가능하면 어디에서든지 수정이 가능하다는 장점이 있습니다. <br />
+그 외에도 로컬이나 OneDrive, Dropbox, Github, GitLab 등에도 저장할 수 있으니 참고해 주세요.</p>
+
+<p><img src="/assets/images/draw.io_screenshot.png" alt="draw.io 첫 화면" title="draw.io front page" /></p>
+
+<p>draw.io는 프로그램이 직관적으로 구성되어 있어서 이용하기도 쉽고, <br />
+png, jpg, pdf 등 다양한 형식으로 내보내기도 됩니다. <br />
+(한 땀 한 땀 그리려고 집중하니까 시간도 정말 잘 가더라구요!)</p>
+
+<h2 id="project-graph-라이브러리를-이용해-그리기">project graph 라이브러리를 이용해 그리기</h2>
+
+<p>그리고 2. 파이썬 라이브러리를 이용해 자동화하는 방안도 함께 진행하였습니다. <br />
+구글에 python call graph 검색하면 제일 처음 나오는 라이브러리는 <a href="https://pycallgraph.readthedocs.io/en/master/" target="_blank">pycallgraph</a>더라구요.</p>
+
+<p>공식 문서에 따라서 설치를 시도하였는데, 설치할 수 없다는 <strong>ERROR</strong> 메세지를 만나고야 말았습니다.</p>
+
+<p>추가로 검색을 이어가다가 project graph라는 라이브러리를 소개하는 <br />
+<a href="https://www.statworx.com/en/content-hub/blog/how-to-automatically-create-project-graphs-with-call-graph/" target="_blank">이 글</a>을 확인하게 되었습니다.</p>
+
+<p>왠지 될 것만 같은 느낌이 들어서 이 글을 따라서 호출 그래프 작성을 시도했고,<br />
+제대로 작성되는 것을 확인하였습니다.</p>
+
+<h3 id="project-graph-설치-방법">project graph 설치 방법</h3>
+
+<p>(Mac OS 기준) 설치 방법은 다음과 같습니다.</p>
+
+<p>먼저 터미널에서 brew를 이용해 <strong>graphviz</strong> 라이브러리를 설치해야 합니다.  <br />
+(brew가 설치되어 있지 않은 분들은 brew부터 설치해야 겠죠?)   <br />
+시간이 다소 소요된다는 점 주의해 주세요.</p>
+
+<pre><code class="language-Shell">brew install graphviz
+</code></pre>
+
+<p>그 다음 project graph라는 라이브러리를 설치합니다.</p>
+
+<pre><code class="language-Shell">pip install git+https://github.com/fior-di-latte/project_graph.git
+</code></pre>
+
+<p>뜻 있는 분(!)께서 작성해 배포한 라이브러리로 추측되는데,  <br />
+깃허브에 README 파일을 작성하지 않으셔서 구체적인 내용을 파악하기 어렵다는 단점이 있습니다.</p>
+
+<h3 id="project-graph-사용-방법">project graph 사용 방법</h3>
+
+<p>이제 호출 그래프를 실제로 그릴 일만 남았습니다.</p>
+
+<p>먼저, 호출 그래프를 작성할 파이썬 스크립트 파일을 준비해 주세요.  <br />
+(간단한 함수를 몇 가지 작성한 파일로 실험을 해보셔도 좋을 것 같습니다.)  <br />
+그리고 파이썬 스크립트 파일 실행을 위해 해당 프로젝트 내 루트 디렉토리로 이동합니다.</p>
+
+<p>이제 모든 준비는 끝났습니다.</p>
+
+<p>터미널에서 명령어 project_graph 한 칸 띄우고 {파이썬 스크립트 파일명}.py를 치고 엔터를 누르면, <br />
+해당 스크립트 파일이 실행되면서 호출 그래프를 자동적으로 생성할 수 있습니다.</p>
+
+<pre><code class="language-Shell">project_graph myproject.py
+</code></pre>
+
+<p>만약 사용하는 외부 라이브러리까지 모두 포함해 그리고 싶다면 <code class="language-plaintext highlighter-rouge">-a</code> 명령어를 추가하면 됩니다.</p>
+
+<pre><code class="language-Shell">project_graph -a myproject.py
+</code></pre>
+
+<p>(그 외의 추가 용법에 대해서는 좀 더 연구한 다음에 업데이트를 해보도록 할께요.)</p>
+
+<h3 id="project-graph-적용-예제">project graph 적용 예제</h3>
+
+<p>다음은 제가 이번에 진행하고 있는 이진 분류 프로젝트의 호출 그래프를 <br />
+project graph로 작성한 예입니다.</p>
+
+<p><img src="/assets/images/cp1_callgraph.png" alt="이번 프로젝트 적용 호출 그래프" title="Call_Graph" /></p>
+
+<p>같은 파일을 여러 번 그려 보았는데, 
+그릴 때마다 호출 그래프의 그림이 조금씩 달랍니다.  <br />
+(마음에 드는 그래프가 나올 때까지 여러 번 해보시길 추천드립니다!)</p>]]></content><author><name>Kong Ju</name></author><category term="Programming" /><category term="Python" /><category term="Programming" /><category term="Call Graph" /><category term="draw.io" /><category term="graphviz" /><category term="project graph" /><summary type="html"><![CDATA[호출 그래프 그리기 이번에 개인 프로젝트에서는 이진 분류 인공신경망 함수를 Numpy 등만을 활용해 직접 구현하고, 호출 그래프(call graph)를 직접 작성할 일이 생겼습니다. 호출 그래프를 그리는 방법은 크게 2가지를 생각해 볼 수 있습니다. 한 땀 한 땀 정성껏 그린다. 1-1. 고전적으로 Microsoft Powerpoint를 이용한다. 1-2. 순서도(flowchart)에 특화된 프로그램(draw.io 등)을 이용한다.]]></summary></entry><entry><title type="html">[Python] 버블 정렬 특징 및 파이썬 구현</title><link href="https://kongju7.github.io/jekyll-theme-yat/programming/2022/12/22/1-Bubble-Sort.html" rel="alternate" type="text/html" title="[Python] 버블 정렬 특징 및 파이썬 구현" /><published>2022-12-22T00:00:00+00:00</published><updated>2022-12-22T00:00:00+00:00</updated><id>https://kongju7.github.io/jekyll-theme-yat/programming/2022/12/22/1-Bubble-Sort</id><content type="html" xml:base="https://kongju7.github.io/jekyll-theme-yat/programming/2022/12/22/1-Bubble-Sort.html"><![CDATA[<h2 id="대표적인-정렬-알고리즘">대표적인 정렬 알고리즘</h2>
+
+<ol>
+  <li><strong><code class="language-plaintext highlighter-rouge">버블 정렬(Bubble Sort)</code></strong></li>
+  <li><a href="https://kongju7.github.io/programming/2022/12/22/2-Selection-Sort.html" target="_blank">선택 정렬(Selection Sort)</a></li>
+  <li><a href="https://kongju7.github.io/programming/2022/12/22/3-Insertion-Sort.html" target="_blank">삽입 정렬(Insertion Sort)</a></li>
+  <li>퀵 정렬(Quick Sort)</li>
+  <li>병합 정렬(Merge Sort))</li>
+</ol>
+
+<h2 id="1-버블-정렬bubble-sort">1. 버블 정렬(Bubble Sort)</h2>
+
+<h3 id="1-버블-정렬-정의">1) 버블 정렬 정의</h3>
+<ul>
+  <li>서로 이웃한 두 원소를 비교하여 정렬하는 알고리즘
+    <ul>
+      <li>이웃한 2개의 값을 비교하여 크기가 순서대로 되어 있지 않으면 서로 교환하는 방식으로 진행</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="2-버블-정렬의-특징">2) 버블 정렬의 특징</h3>
+
+<ul>
+  <li>장점
+    <ul>
+      <li>구현이 간단</li>
+      <li><strong>안정 정렬(Stable Sort)</strong>. 즉, 배열에 중복값이 들어 있는 경우 순서를 유지함</li>
+    </ul>
+  </li>
+  <li>단점
+    <ul>
+      <li>순서에 맞지 않은 요소를 이웃한 요소와 교환</li>
+      <li>하나의 요소가 가장 왼쪽에서 가장 오른쪽으로 이동하기 위해서는 배열에서 모든 다른 요소들과 교환되어야 함</li>
+      <li>특히 특정 요소가 최종 정렬 위치에 이미 도착해 있는 경우라도 교환이 일어나기도 함</li>
+    </ul>
+  </li>
+  <li>한마디로 <strong>가장 간단한 정렬 알고리즘이지만, 매우 비효율적</strong>인 정렬 알고리즘</li>
+</ul>
+
+<h3 id="3-버블-정렬의-시간-복잡도">3) 버블 정렬의 시간 복잡도</h3>
+<ul>
+  <li>배열 전체를 살펴보는 과정을 무조건 N번 진행(이중 반복문 사용): O(N²)</li>
+  <li>옆에 있는 이웃 노드와 교환하므로 안정적임
+    <ul>
+      <li>비교 횟수: (N-1) + (N-2) + (N-3) + … + 1 = N(N-1)/2</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="4-버블-정렬-파이썬-구현">4) 버블 정렬 파이썬 구현</h3>
+
+<p>먼저 기본형이라고 할 수 있는 <strong>오름차순(Ascending, ASC)</strong>을 파이썬 코드로 구현해 보겠습니다.</p>
+
+<pre><code class="language-Python"># 버블 정렬 파이썬 구현 (기본형: 오름차순)
+def bubble_sort(li):
+    for i in range(len(li)-1, 0, -1):
+        for j in range(i):
+            if li[j] &gt; li[j + 1]:
+                li[j], li[j + 1] = li[j + 1], li[j]  # swap
+    return li
+</code></pre>
+
+<p>버블 정렬 <strong>내림차순(Descending, DESC)</strong>을 파이썬 코드로 구현해 보면 다음과 같습니다.</p>
+
+<pre><code class="language-Python"># 버블 정렬 파이썬 구현 (내림차순)
+def bubble_sort_desc(li) :
+    for i in range(len(li)):
+        for j in range(len(li)-1, i, -1):
+            if li[j] &gt; li[j - 1]:
+                li[j], li[j - 1] = li[j - 1], li[j]  # swap
+    return li
+</code></pre>
+
+<p>다음 포스트에서는 대표적인 정렬 알고리즘 중 2. <a href="https://kongju7.github.io/programming/2022/12/22/2-Selection-Sort.html" target="_blank">선택 정렬(Selection Sort)</a>에 대해 이어서 다루겠습니다.</p>]]></content><author><name>Kong Ju</name></author><category term="Programming" /><category term="Python" /><category term="파이썬" /><category term="Bubble Sort" /><category term="버블 정렬" /><summary type="html"><![CDATA[대표적인 정렬 알고리즘]]></summary></entry><entry><title type="html">[Python] 선택 정렬 특징 및 파이썬 구현</title><link href="https://kongju7.github.io/jekyll-theme-yat/programming/2022/12/22/2-Selection-Sort.html" rel="alternate" type="text/html" title="[Python] 선택 정렬 특징 및 파이썬 구현" /><published>2022-12-22T00:00:00+00:00</published><updated>2022-12-22T00:00:00+00:00</updated><id>https://kongju7.github.io/jekyll-theme-yat/programming/2022/12/22/2-Selection-Sort</id><content type="html" xml:base="https://kongju7.github.io/jekyll-theme-yat/programming/2022/12/22/2-Selection-Sort.html"><![CDATA[<h2 id="대표적인-정렬-알고리즘">대표적인 정렬 알고리즘</h2>
+
+<ol>
+  <li><a href="https://kongju7.github.io/programming/2022/12/22/1-Bubble-Sort.html" target="_blank">버블 정렬(Bubble Sort)</a></li>
+  <li><strong><code class="language-plaintext highlighter-rouge">선택 정렬(Selection Sort)</code></strong></li>
+  <li><a href="https://kongju7.github.io/programming/2022/12/22/3-Insertion-Sort.html" target="_blank">삽입 정렬(Insertion Sort)</a></li>
+  <li>퀵 정렬(Quick Sort)</li>
+  <li>병합 정렬(Merge Sort))</li>
+</ol>
+
+<h2 id="2-선택-정렬selection-sort">2. 선택 정렬(Selection Sort)</h2>
+
+<h3 id="1-선택-정렬-정의">1) 선택 정렬 정의</h3>
+<ul>
+  <li>배열에 있는 값들 중 최소값을 탐색하여 정렬하는 알고리즘
+    <ul>
+      <li>주어진 배열에 있는 값들 중 최소값을 찾고, 해당 최솟값을 배열의 맨 앞 위치와 교환하는 방식으로 진행</li>
+      <li>정렬한 값 이후의 나머지 배열에 대해서도 위의 절차를 반복 진행</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="2-선택-정렬의-특징">2) 선택 정렬의 특징</h3>
+
+<ul>
+  <li>장점
+    <ul>
+      <li>구현이 간단</li>
+      <li>정렬을 위한 비교 횟수는 많지만 실제로 교환하는 횟수는 적은 편. 따라서 교환이 많이 이루어져야 하는 자료 상태에서 가장 효율적으로 적용될 수 있음</li>
+      <li>시간 복잡도는 버블 정렬과 동일하지만, 실제로는 조금 더 빠르게 정렬 가능</li>
+      <li>역순 정렬에서 높은 효율성을 보여줌. 즉, 내림차순으로 정렬되러 있는 자료를 오름차순으로 재정렬할 때 최적의 효율을 보여 줌</li>
+    </ul>
+  </li>
+  <li>단점
+    <ul>
+      <li>시간 복잡도가 O(N²)으로 정렬 시간이 오래 걸림
+        <ul>
+          <li>이미 정렬될 산태에서 소수의 자료가 추가되어 재정렬할 때 최악의 처리 속도를 보여 줌</li>
+        </ul>
+      </li>
+      <li><strong>불안정 정렬(Unstable Sort)</strong>. 즉, 배열에 중복값이 들어 있는 경우 순서를 보장하지 않음</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="3-선택-정렬의-시간-복잡도">3) 선택 정렬의 시간 복잡도</h3>
+<ul>
+  <li>버블 정렬과 달리 서로 이웃하지 않는 노드들을 교환하기 때문에 안정적이지 않음</li>
+  <li>노드값 비교 횟수(이중 반복문 사용): O(N²)
+    <ul>
+      <li>외부 루프: (N-1)</li>
+      <li>내부 루프(최소값 찾기): (N-1), (N-2), (N-3), … , 2, 1</li>
+      <li>교환 횟수: 3(N-1)</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="4-선택-정렬-파이썬-구현">4) 선택 정렬 파이썬 구현</h3>
+
+<p>먼저 기본형이라고 할 수 있는 선택 정렬 <strong>오름차순(Ascending, ASC)</strong>을 파이썬 코드로 구현해 보겠습니다.</p>
+
+<pre><code class="language-Python"># 선택 정렬 파이썬 구현 (기본형: 오름차순) - 최소값 찾기
+def selection_sort(li):
+    for i in range(len(li) - 1):
+        min_idx = i
+        for j in range(i + 1, len(li)):
+            if li[j] &lt; li[min_idx]:
+                min_idx = j
+        li[i], li[min_idx] = li[min_idx], li[i]  # swap
+    return li
+</code></pre>
+
+<p>선택 정렬 <strong>내림차순(Descending, DESC)</strong>을 파이썬 코드로 구현해 보면 다음과 같습니다.</p>
+
+<pre><code class="language-Python"># 선택 정렬 파이썬 구현 (내림차순) - 최대값 찾기 
+def selection_sort_desc(li) :
+    for i in range(len(li) - 1):
+        max_idx = i
+        for j in range(i + 1, len(li)):
+            if li[j] &gt; li[max_idx]:
+                max_idx = j
+        li[i], li[max_idx] = li[max_idx], li[i]  # swap
+    return li
+</code></pre>
+
+<p>다음 포스트에서는 대표적인 정렬 알고리즘 중 3. <a href="https://kongju7.github.io/programming/2022/12/22/3-Insertion-Sort.html" target="_blank">삽입 정렬(Insertion Sort)</a>에 대해 이어서 다루겠습니다.</p>]]></content><author><name>Kong Ju</name></author><category term="Programming" /><category term="Python" /><category term="파이썬" /><category term="Selection Sort" /><category term="선택 정렬" /><summary type="html"><![CDATA[대표적인 정렬 알고리즘]]></summary></entry></feed>

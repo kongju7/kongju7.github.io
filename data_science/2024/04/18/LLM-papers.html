@@ -1,0 +1,1269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-translate-customization" content="108d9124921d80c3-80e20d618ff053c8-g4f02ec6f3dba68b7-c">
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>[LLM] Foundation Models 논문 모음 | Becoming a Data Scientist</title>
+<meta name="generator" content="Jekyll v4.3.3">
+<meta property="og:title" content="[LLM] Foundation Models 논문 모음">
+<meta name="author" content="Kong Ju">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="대용량 언어 모델(LLM) 기반 모델(Foundation Models) 관련 논문 모음 1. 기반 모델 기반 모델 및 응용 분야 On the Opportunities and Risks of Foundation Models Multimodal Foundation Models: From Specialists to General-Purpose Assistants Large Multimodal Models: Notes on CVPR 2023 Tutorial Towards Generalist Biomedical AI A Comprehensive Survey on Pretrained Foundation Models: A History from BERT to ChatGPT Interactive Natural Language Processing Towards Reasoning in Large Language Models: A Survey 순환 신경망(RNN) 및 합성곱 신경망(CNN) Recurrent Neural Networks (RNNs): A gentle Introduction and Overview Highway Networks Long Short-Term Memory Empirical Evaluation of Gated Recurrent Neural Networks on Sequence Modeling Effective Approaches to Attention-based Neural Machine Translation An Introduction to Convolutional Neural Networks ImageNet Classification with Deep Convolutional Neural Networks U-Net: Convolutional Networks for Biomedical Image Segmentation Deep Residual Learning for Image Recognition Densely Connected Convolutional Networks Aggregated Residual Transformations for Deep Neural Networks A ConvNet for the 2020s 자연어 처리(NLP) 및 컴퓨터 비전(CV) Sequence to Sequence Learning with Neural Networks Thumbs up? Sentiment Classification using Machine Learning Techniques A Survey of Named Entity Recognition and Classification Teaching Machines to Read and Comprehend Deep Neural Networks for Acoustic Modeling in Speech Recognition A Neural Attention Model for Sentence Summarization Microsoft COCO: Common Objects in Context Rich Feature Hierarchies for Accurate Object Detection and Semantic Segmentation Fully Convolutional Networks for Semantic Segmentation DeepFace: Closing the Gap to Human-Level Performance in Face Verification DeepPose: Human Pose Estimation via Deep Neural Networks Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks 2. 트랜스포머(Transformers) 아키텍쳐 셀프 어텐션(Self Attention) 및 트랜스포머(Transformers) Neural Machine Translation by Jointly Learning to Align and Translate Show, Attend and Tell: Neural Image Caption Generation with Visual Attention Attention Is All You Need The Annotated Transformer Image Transformer An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale 효율적인 트랜스포머 Transformers are RNNs: Fast Autoregressive Transformers with Linear Attention Perceiver: General Perception with Iterative Attention Random Feature Attention Longformer: The Long-Document Transformer Generating Long Sequences with Sparse Transformers Linformer: Self-Attention with Linear Complexity Efficiently Modeling Long Sequences with Structured State Spaces 매개변수 효율적 튜닝 Parameter-Efficient Transfer Learning for NLP LoRA: Low-Rank Adaptation of Large Language Models The Power of Scale for Parameter-Efficient Prompt Tuning It’s Not Just Size That Matters: Small Language Models Are Also Few-Shot Learners Making Pre-trained Language Models Better Few-shot Learners Few-Shot Parameter-Efficient Fine-Tuning is Better and Cheaper than In-Context Learning Towards a Unified View of Parameter-Efficient Transfer Learning">
+<meta property="og:description" content="대용량 언어 모델(LLM) 기반 모델(Foundation Models) 관련 논문 모음 1. 기반 모델 기반 모델 및 응용 분야 On the Opportunities and Risks of Foundation Models Multimodal Foundation Models: From Specialists to General-Purpose Assistants Large Multimodal Models: Notes on CVPR 2023 Tutorial Towards Generalist Biomedical AI A Comprehensive Survey on Pretrained Foundation Models: A History from BERT to ChatGPT Interactive Natural Language Processing Towards Reasoning in Large Language Models: A Survey 순환 신경망(RNN) 및 합성곱 신경망(CNN) Recurrent Neural Networks (RNNs): A gentle Introduction and Overview Highway Networks Long Short-Term Memory Empirical Evaluation of Gated Recurrent Neural Networks on Sequence Modeling Effective Approaches to Attention-based Neural Machine Translation An Introduction to Convolutional Neural Networks ImageNet Classification with Deep Convolutional Neural Networks U-Net: Convolutional Networks for Biomedical Image Segmentation Deep Residual Learning for Image Recognition Densely Connected Convolutional Networks Aggregated Residual Transformations for Deep Neural Networks A ConvNet for the 2020s 자연어 처리(NLP) 및 컴퓨터 비전(CV) Sequence to Sequence Learning with Neural Networks Thumbs up? Sentiment Classification using Machine Learning Techniques A Survey of Named Entity Recognition and Classification Teaching Machines to Read and Comprehend Deep Neural Networks for Acoustic Modeling in Speech Recognition A Neural Attention Model for Sentence Summarization Microsoft COCO: Common Objects in Context Rich Feature Hierarchies for Accurate Object Detection and Semantic Segmentation Fully Convolutional Networks for Semantic Segmentation DeepFace: Closing the Gap to Human-Level Performance in Face Verification DeepPose: Human Pose Estimation via Deep Neural Networks Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks 2. 트랜스포머(Transformers) 아키텍쳐 셀프 어텐션(Self Attention) 및 트랜스포머(Transformers) Neural Machine Translation by Jointly Learning to Align and Translate Show, Attend and Tell: Neural Image Caption Generation with Visual Attention Attention Is All You Need The Annotated Transformer Image Transformer An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale 효율적인 트랜스포머 Transformers are RNNs: Fast Autoregressive Transformers with Linear Attention Perceiver: General Perception with Iterative Attention Random Feature Attention Longformer: The Long-Document Transformer Generating Long Sequences with Sparse Transformers Linformer: Self-Attention with Linear Complexity Efficiently Modeling Long Sequences with Structured State Spaces 매개변수 효율적 튜닝 Parameter-Efficient Transfer Learning for NLP LoRA: Low-Rank Adaptation of Large Language Models The Power of Scale for Parameter-Efficient Prompt Tuning It’s Not Just Size That Matters: Small Language Models Are Also Few-Shot Learners Making Pre-trained Language Models Better Few-shot Learners Few-Shot Parameter-Efficient Fine-Tuning is Better and Cheaper than In-Context Learning Towards a Unified View of Parameter-Efficient Transfer Learning">
+<link rel="canonical" href="https://kongju7.github.io/jekyll-theme-yat/data_science/2024/04/18/LLM-papers.html">
+<meta property="og:url" content="https://kongju7.github.io/jekyll-theme-yat/data_science/2024/04/18/LLM-papers.html">
+<meta property="og:site_name" content="Becoming a Data Scientist">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2024-04-18T00:00:00+00:00">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="[LLM] Foundation Models 논문 모음">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Kong Ju"},"dateModified":"2024-04-18T00:00:00+00:00","datePublished":"2024-04-18T00:00:00+00:00","description":"대용량 언어 모델(LLM) 기반 모델(Foundation Models) 관련 논문 모음 1. 기반 모델 기반 모델 및 응용 분야 On the Opportunities and Risks of Foundation Models Multimodal Foundation Models: From Specialists to General-Purpose Assistants Large Multimodal Models: Notes on CVPR 2023 Tutorial Towards Generalist Biomedical AI A Comprehensive Survey on Pretrained Foundation Models: A History from BERT to ChatGPT Interactive Natural Language Processing Towards Reasoning in Large Language Models: A Survey 순환 신경망(RNN) 및 합성곱 신경망(CNN) Recurrent Neural Networks (RNNs): A gentle Introduction and Overview Highway Networks Long Short-Term Memory Empirical Evaluation of Gated Recurrent Neural Networks on Sequence Modeling Effective Approaches to Attention-based Neural Machine Translation An Introduction to Convolutional Neural Networks ImageNet Classification with Deep Convolutional Neural Networks U-Net: Convolutional Networks for Biomedical Image Segmentation Deep Residual Learning for Image Recognition Densely Connected Convolutional Networks Aggregated Residual Transformations for Deep Neural Networks A ConvNet for the 2020s 자연어 처리(NLP) 및 컴퓨터 비전(CV) Sequence to Sequence Learning with Neural Networks Thumbs up? Sentiment Classification using Machine Learning Techniques A Survey of Named Entity Recognition and Classification Teaching Machines to Read and Comprehend Deep Neural Networks for Acoustic Modeling in Speech Recognition A Neural Attention Model for Sentence Summarization Microsoft COCO: Common Objects in Context Rich Feature Hierarchies for Accurate Object Detection and Semantic Segmentation Fully Convolutional Networks for Semantic Segmentation DeepFace: Closing the Gap to Human-Level Performance in Face Verification DeepPose: Human Pose Estimation via Deep Neural Networks Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks 2. 트랜스포머(Transformers) 아키텍쳐 셀프 어텐션(Self Attention) 및 트랜스포머(Transformers) Neural Machine Translation by Jointly Learning to Align and Translate Show, Attend and Tell: Neural Image Caption Generation with Visual Attention Attention Is All You Need The Annotated Transformer Image Transformer An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale 효율적인 트랜스포머 Transformers are RNNs: Fast Autoregressive Transformers with Linear Attention Perceiver: General Perception with Iterative Attention Random Feature Attention Longformer: The Long-Document Transformer Generating Long Sequences with Sparse Transformers Linformer: Self-Attention with Linear Complexity Efficiently Modeling Long Sequences with Structured State Spaces 매개변수 효율적 튜닝 Parameter-Efficient Transfer Learning for NLP LoRA: Low-Rank Adaptation of Large Language Models The Power of Scale for Parameter-Efficient Prompt Tuning It’s Not Just Size That Matters: Small Language Models Are Also Few-Shot Learners Making Pre-trained Language Models Better Few-shot Learners Few-Shot Parameter-Efficient Fine-Tuning is Better and Cheaper than In-Context Learning Towards a Unified View of Parameter-Efficient Transfer Learning","headline":"[LLM] Foundation Models 논문 모음","mainEntityOfPage":{"@type":"WebPage","@id":"https://kongju7.github.io/jekyll-theme-yat/data_science/2024/04/18/LLM-papers.html"},"url":"https://kongju7.github.io/jekyll-theme-yat/data_science/2024/04/18/LLM-papers.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="shortcut icon" href="">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-noto-sans@0.0.72/index.min.css">
+  <link rel="stylesheet" href="/jekyll-theme-yat/assets/css/main.css">
+  <script src="/jekyll-theme-yat/assets/js/main.js"></script><link type="application/atom+xml" rel="alternate" href="https://kongju7.github.io/jekyll-theme-yat/feed.xml" title="Becoming a Data Scientist">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script>
+<!-- and it's easy to individually load additional languages -->
+<script charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/go.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+// Init highlight js
+document.addEventListener('DOMContentLoaded', function(event) {
+  var els = document.querySelectorAll('pre code')
+
+  function addLangData(block) {
+    var outer = block.parentElement.parentElement.parentElement;
+    var lang = block.getAttribute('data-lang');
+    for (var i = 0; i < outer.classList.length; i++) {
+      var cls = outer.classList[i];
+      if (cls.startsWith('language-')) {
+        lang = cls;
+        break;
+      }
+    }
+    if (!lang) {
+      cls = block.getAttribute('class');
+      lang = cls ? cls.replace('hljs ', '') : '';
+    }
+    if (lang.startsWith('language-')) {
+      lang = lang.substr(9);
+    }
+    block.setAttribute('class', 'hljs ' + lang);
+    block.parentNode.setAttribute('data-lang', lang);
+  }
+
+  function addBadge(block) {
+    var enabled = ('true' || 'true').toLowerCase();
+    if (enabled == 'true') {
+      var pre = block.parentElement;
+      pre.classList.add('badge');
+    }
+  }
+
+  function handle(block) {
+    addLangData(block);
+    addBadge(block)
+    hljs.highlightBlock(block);
+  }
+
+  for (var i = 0; i < els.length; i++) {
+    var el = els[i];
+    handle(el);
+  }
+});
+</script>
+
+<style>
+  /* code language badge */
+  pre.badge::before {
+    content: attr(data-lang);
+    color: #fff;
+    background-color: #ff4e00;
+    padding: 0 .5em;
+    border-radius: 0 2px;
+    text-transform: uppercase;
+    text-align: center;
+    min-width: 32px;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+  }
+
+  /* fix wrong badge display for firefox browser */
+  code > table pre::before {
+    display: none;
+  }
+</style>
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="site-header " role="banner">
+
+  <div class="wrapper">
+    <div class="site-header-inner">
+<span class="site-brand"><a class="site-brand-inner" rel="author" href="/jekyll-theme-yat/">
+  <img class="site-favicon" title="Becoming a Data Scientist" src="" onerror="this.style.display='none'">
+  Becoming a Data Scientist
+</a>
+</span><nav class="site-nav">
+          <input type="checkbox" id="nav-trigger" class="nav-trigger">
+          <label for="nav-trigger">
+            <span class="menu-icon">
+              <svg viewbox="0 0 18 15" width="18px" height="15px">
+                <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"></path>
+              </svg>
+            </span>
+          </label>
+
+          <div class="trigger">
+<a class="page-link" href="/jekyll-theme-yat/about.html">ABOUT</a><a class="page-link" href="/jekyll-theme-yat/archives.html">ARCHIVES</a><a class="page-link" href="/jekyll-theme-yat/categories.html">CATEGORIES</a><a class="page-link" href="/jekyll-theme-yat/">HOME</a><a class="page-link" href="/jekyll-theme-yat/tags.html">TAGS</a>
+
+
+
+
+
+
+
+
+
+<span class="page-link">
+
+
+
+<div id="google_translate_element" style="display: none;">
+</div>
+
+<span class="ct-language">
+  <ul class="list-unstyled ct-language-dropdown">
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="en">
+          
+          <img src="https://cdn.countryflags.com/thumbs/united-states-of-america/flag-400.png" title="English">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="fr">
+          
+          <img src="https://cdn.countryflags.com/thumbs/france/flag-400.png" title="French">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="zh-CN">
+          
+          <img src="https://cdn.countryflags.com/thumbs/china/flag-400.png" title="Chinese(Simple)">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="ja">
+          
+          <img src="https://cdn.countryflags.com/thumbs/japan/flag-400.png" title="Japanese">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="ko">
+          
+          <img src="https://cdn.countryflags.com/thumbs/south-korea/flag-400.png" title="Korean">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="ru">
+          
+          <img src="https://cdn.countryflags.com/thumbs/russia/flag-400.png" title="Russian">
+          
+        </a>
+      </li>
+    
+  </ul>
+</span>
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en',
+    autoDisplay: false,
+    layout: google.translate.TranslateElement.InlineLayout.VERTICAL
+  }, 'google_translate_element');
+
+  // Links to cross-origin destinations are unsafe
+  var gll = document.getElementsByClassName('goog-logo-link')[0];
+  if (gll) {
+    gll.setAttribute('rel', 'noopener');
+  }
+
+  function restoreLang() {
+    var iframe = document.getElementsByClassName('goog-te-banner-frame')[0];
+    if (!iframe) return;
+
+    var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+    var restore_el = innerDoc.getElementsByTagName("button");
+
+    for (var i = 0; i < restore_el.length; i++) {
+      if (restore_el[i].id.indexOf("restore") >= 0) {
+        restore_el[i].click();
+        var close_el = innerDoc.getElementsByClassName("goog-close-link");
+        close_el[0].click();
+        return;
+      }
+    }
+  }
+
+  function triggerHtmlEvent(element, eventName) {
+    var event;
+    if (document.createEvent) {
+      event = document.createEvent('HTMLEvents');
+      event.initEvent(eventName, true, true);
+      element.dispatchEvent(event);
+    } else {
+      event = document.createEventObject();
+      event.eventType = eventName;
+      element.fireEvent('on' + event.eventType, event);
+    }
+  }
+
+  var googleCombo = document.querySelector("select.goog-te-combo");
+  var langSelect = document.querySelector('.ct-language');
+  langSelect.addEventListener('click', function(event) {
+    if (!event.target) {
+      return;
+    }
+
+    var selected = document.querySelector('.ct-language .ct-language-selected');
+    if (selected) {
+      selected.classList.remove('ct-language-selected');
+    }
+
+    var target = event.target;
+    while (target && target !== langSelect ) {
+      if (target.matches('.lang-select')) {
+        break;
+      }
+      target = target.parentElement;
+    }
+
+    if (target && target.matches('.lang-select')) {
+      var lang = target.getAttribute('data-lang');
+      if (googleCombo.value == lang) {
+        restoreLang();
+      } else {
+        target.parentElement.classList.add('ct-language-selected');
+        googleCombo.value = lang;
+        triggerHtmlEvent(googleCombo, 'change');
+      }
+    }
+
+    event.preventDefault();
+  });
+}
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</span>
+</div>
+        </nav>
+</div>
+  </div>
+</header>
+
+<script>
+  function initHeader() {
+    var lastScrollY = getScrollPos().y;
+    var documentElement = document.documentElement;
+
+    function storeScrollData() {
+      var y = getScrollPos().y;var scrollStatus = "";
+
+      if (y <= 0) {
+        scrollStatus = "top";
+      } else if ((window.innerHeight + y) >= document.body.offsetHeight) {
+        scrollStatus = "bottom";
+      } else {
+        var isScrollDown = (y - lastScrollY > 0) ? true : false;
+        scrollStatus = isScrollDown ? "down" : "up";
+      }
+
+      lastScrollY = y;
+      documentElement.setAttribute("data-scroll-status", scrollStatus);
+    }
+
+    window.addEventListener('scroll', function(e) {
+      storeScrollData();
+    });
+
+    storeScrollData();
+  }
+  document.addEventListener('DOMContentLoaded', initHeader);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  function hashLocate(hashValue) {
+    hashValue = hashValue.replace(/^.*#h-/, '');
+    hashValue = decodeURIComponent(hashValue);
+    var element = document.getElementById(hashValue);
+
+    if (!element) {
+      return;
+    }
+
+    var header = document.querySelector('header.site-header');
+    var headerRect = header.getBoundingClientRect();
+    var headerTop = Math.floor(headerRect.top);
+    var headerHeight = Math.floor(headerRect.height);
+    var scrollPos = getScrollPos();
+    var offsetY = element.offsetTop - (headerTop + headerHeight + 20);
+
+    if (offsetY == scrollPos.y) {
+      return;
+    }
+
+    if (headerTop == 0  && offsetY > scrollPos.y) {
+      offsetY += headerHeight + 2;
+    } else if (headerTop < 0  && offsetY < scrollPos.y) {
+      offsetY -= headerHeight - 2;
+    }
+
+    smoothScrollTo(offsetY);
+  }
+
+  // The first event occurred
+  window.addEventListener('load', function(event) {
+    if (window.location.hash) {
+      hashLocate(window.location.hash);
+    }
+  });
+
+  // The first event occurred
+  window.addEventListener('click', function(event) {
+    if (event.target.tagName.toLowerCase() == 'a') {
+      hashLocate(event.target.getAttribute('href'));
+    }
+  });
+</script>
+<div class="theme-toggle">
+  <input type="checkbox" id="theme-switch">
+  <label for="theme-switch">
+    <div class="toggle"></div>
+    <div class="names">
+      <p class="light">Light</p>
+      <p class="dark">Dark</p>
+    </div>
+  </label>
+</div>
+
+
+
+
+<script>
+  (function() {
+    var sw = document.getElementById('theme-switch');
+    var html = document.getElementsByTagName('html')[0];
+    var nightModeOption = ('auto' || 'auto').toLowerCase();
+    var storage = nightModeOption === 'manual'
+        ? localStorage
+        : sessionStorage;
+    var themeData = loadThemeData();
+
+    function saveThemeData(data) {
+      storage.setItem('theme', JSON.stringify(data));
+    }
+
+    function loadThemeData() {
+      var data = storage.getItem('theme');
+      try {
+        data = JSON.parse(data ? data : '');
+      } catch(e) {
+        data = { nightShift: undefined, autoToggleAt: 0 };
+        saveThemeData(data);
+      }
+      return data;
+    }
+
+    function handleThemeToggle(nightShift) {
+      themeData.nightShift = nightShift;
+      saveThemeData(themeData);
+      html.dataset.theme = nightShift ? 'dark' : 'light';
+      setTimeout(function() {
+        sw.checked = nightShift ? true : false;
+      }, 50);
+    }
+
+    function autoThemeToggle() {
+      // Next time point of theme toggle
+      var now = new Date();
+      var toggleAt = new Date();
+      var hours = now.getHours();
+      var nightShift = hours >= 19 || hours <=7;
+
+      if (nightShift) {
+        if (hours > 7) {
+          toggleAt.setDate(toggleAt.getDate() + 1);
+        }
+        toggleAt.setHours(7);
+      } else {
+        toggleAt.setHours(19);
+      }
+
+      toggleAt.setMinutes(0);
+      toggleAt.setSeconds(0);
+      toggleAt.setMilliseconds(0)
+
+      var delay = toggleAt.getTime() - now.getTime();
+
+      // auto toggle theme mode
+      setTimeout(function() {
+        handleThemeToggle(!nightShift);
+      }, delay);
+
+      return {
+        nightShift: nightShift,
+        toggleAt: toggleAt.getTime()
+      };
+    }
+
+    // Listen the theme toggle event
+    sw.addEventListener('change', function(event) {
+      handleThemeToggle(event.target.checked);
+    });
+
+    if (nightModeOption == 'auto') {
+      var data = autoThemeToggle();
+
+      // Toggle theme by local setting
+      if (data.toggleAt > themeData.autoToggleAt) {
+        themeData.autoToggleAt = data.toggleAt;
+        handleThemeToggle(data.nightShift);
+      } else {
+        handleThemeToggle(themeData.nightShift);
+      }
+    } else if (nightModeOption == 'manual') {
+      handleThemeToggle(themeData.nightShift);
+    } else {
+      var nightShift = themeData.nightShift;
+      if (nightShift === undefined) {
+        nightShift = nightModeOption === 'on';
+      }
+      handleThemeToggle(nightShift);
+    }
+  })();
+</script>
+<div id="click-to-top" class="click-to-top">
+  <i class="fa fa-arrow-up"></i>
+</div>
+<script>
+  (function () {
+    const clickToTop = document.getElementById('click-to-top');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        clickToTop.classList.add('show')
+      }else {
+        clickToTop.classList.remove('show')
+      }
+    });
+    clickToTop.addEventListener('click', () => {
+      window.smoothScrollTo(0);
+    });
+  })();
+</script>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="framework">
+  <section class="main">
+
+     <div class="post">
+  <section>
+
+
+
+
+
+
+
+
+
+<header class="post-header">
+  <h1 class="post-title p-name" itemprop="name headline">[LLM] Foundation Models 논문 모음</h1>
+  <h2 class="post-subtitle">쏟아지는 기반 모델 관련 논문들</h2>
+
+  <p class="post-meta">
+    <time class="dt-published" datetime="2024-04-18T00:00:00+00:00" itemprop="datePublished"><i class="fa fa-calendar"></i> Apr 18, 2024
+    </time>
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 9 mins</span>
+  </p>
+<div class="post-tags">
+<a class="post-tag" href="/jekyll-theme-yat/tags.html#Data%20Science">#Data Science</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#NLP">#NLP</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#LLM">#LLM</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#Large%20Language%20Model">#Large Language Model</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#Foundation%20Models">#Foundation Models</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#paper">#paper</a>
+</div></header>
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+    <div class="post-content e-content" itemprop="articleBody">
+
+      <h2 id="대용량-언어-모델llm">대용량 언어 모델(LLM)</h2>
+<h2 id="기반-모델foundation-models-관련-논문-모음">기반 모델(Foundation Models) 관련 논문 모음</h2>
+
+<h3 id="1-기반-모델">1. 기반 모델</h3>
+
+<p><strong>기반 모델 및 응용 분야</strong></p>
+<ul>
+  <li><a href="https://arxiv.org/pdf/2108.07258.pdf" target="_blank">On the Opportunities and Risks of Foundation Models</a></li>
+  <li><a href="https://arxiv.org/pdf/2309.10020.pdf" target="_blank">Multimodal Foundation Models: From Specialists to General-Purpose Assistants</a></li>
+  <li><a href="https://arxiv.org/pdf/2306.14895.pdf" target="_blank">Large Multimodal Models: Notes on CVPR 2023 Tutorial</a></li>
+  <li><a href="https://arxiv.org/pdf/2307.14334.pdf" target="_blank">Towards Generalist Biomedical AI</a></li>
+  <li><a href="https://arxiv.org/pdf/2302.09419.pdf" target="_blank">A Comprehensive Survey on Pretrained Foundation Models: A History from BERT to ChatGPT</a></li>
+  <li><a href="https://arxiv.org/pdf/2305.13246.pdf" target="_blank">Interactive Natural Language Processing</a></li>
+  <li><a href="https://arxiv.org/pdf/2212.10403.pdf" target="_blank">Towards Reasoning in Large Language Models: A Survey</a></li>
+</ul>
+
+<p><strong>순환 신경망(RNN) 및 합성곱 신경망(CNN)</strong></p>
+<ul>
+  <li><a href="https://arxiv.org/pdf/1912.05911.pdf" target="_blank">Recurrent Neural Networks (RNNs): A gentle Introduction and Overview</a></li>
+  <li><a href="https://arxiv.org/pdf/1505.00387.pdf" target="_blank">Highway Networks</a></li>
+  <li><a href="https://www.bioinf.jku.at/publications/older/2604.pdf" target="_blank">Long Short-Term Memory</a></li>
+  <li><a href="https://arxiv.org/pdf/1412.3555.pdf" target="_blank">Empirical Evaluation of Gated Recurrent Neural Networks on Sequence Modeling</a></li>
+  <li><a href="https://arxiv.org/pdf/1508.04025.pdf" target="_blank">Effective Approaches to Attention-based Neural Machine Translation</a></li>
+  <li><a href="https://arxiv.org/pdf/1511.08458.pdf" target="_blank">An Introduction to Convolutional Neural Networks</a></li>
+  <li><a href="https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf" target="_blank">ImageNet Classification with Deep Convolutional Neural Networks</a></li>
+  <li><a href="https://arxiv.org/pdf/1505.04597.pdf" target="_blank">U-Net: Convolutional Networks for Biomedical Image Segmentation</a></li>
+  <li><a href="https://arxiv.org/pdf/1512.03385.pdf" target="_blank">Deep Residual Learning for Image Recognition</a></li>
+  <li><a href="https://arxiv.org/pdf/1608.06993.pdf" target="_blank">Densely Connected Convolutional Networks</a></li>
+  <li><a href="https://arxiv.org/pdf/1611.05431.pdf" target="_blank">Aggregated Residual Transformations for Deep Neural Networks</a></li>
+  <li><a href="https://arxiv.org/pdf/2201.03545.pdf" target="_blank">A ConvNet for the 2020s</a></li>
+</ul>
+
+<p><strong>자연어 처리(NLP) 및 컴퓨터 비전(CV)</strong></p>
+<ul>
+  <li><a href="https://arxiv.org/pdf/1409.3215.pdf" target="_blank">Sequence to Sequence Learning with Neural Networks</a></li>
+  <li><a href="https://aclanthology.org/W02-1011.pdf" target="_blank">Thumbs up? Sentiment Classification using Machine Learning Techniques</a></li>
+  <li><a href="https://nlp.cs.nyu.edu/sekine/papers/li07.pdf" target="_blank">A Survey of Named Entity Recognition and Classification</a></li>
+  <li><a href="https://arxiv.org/pdf/1506.03340.pdf" target="_blank">Teaching Machines to Read and Comprehend</a></li>
+  <li><a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6296526" target="_blank">Deep Neural Networks for Acoustic Modeling in Speech Recognition</a></li>
+  <li><a href="https://arxiv.org/pdf/1509.00685.pdf" target="_blank">A Neural Attention Model for Sentence Summarization</a></li>
+  <li><a href="https://arxiv.org/pdf/1405.0312.pdf" target="_blank">Microsoft COCO: Common Objects in Context</a></li>
+  <li><a href="https://arxiv.org/pdf/1311.2524.pdf" target="_blank">Rich Feature Hierarchies for Accurate Object Detection and Semantic Segmentation</a></li>
+  <li><a href="https://arxiv.org/pdf/1411.4038.pdf" target="_blank">Fully Convolutional Networks for Semantic Segmentation</a></li>
+  <li><a href="https://www.cs.toronto.edu/~ranzato/publications/taigman_cvpr14.pdf" target="_blank">DeepFace: Closing the Gap to Human-Level Performance in Face Verification</a></li>
+  <li><a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6909610" target="_blank">DeepPose: Human Pose Estimation via Deep Neural Networks</a></li>
+  <li><a href="https://arxiv.org/pdf/1511.06434v2.pdf" target="_blank">Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks</a></li>
+</ul>
+
+<h3 id="2-트랜스포머transformers-아키텍쳐">2. 트랜스포머(Transformers) 아키텍쳐</h3>
+
+<p><strong>셀프 어텐션(Self Attention) 및 트랜스포머(Transformers)</strong></p>
+<ul>
+  <li><a href="https://arxiv.org/pdf/1409.0473.pdf" target="_blank">Neural Machine Translation by Jointly Learning to Align and Translate</a></li>
+  <li><a href="https://proceedings.mlr.press/v37/xuc15.pdf" target="_blank">Show, Attend and Tell: Neural Image Caption Generation with Visual Attention</a></li>
+  <li><a href="https://arxiv.org/pdf/1706.03762.pdf" target="_blank">Attention Is All You Need</a></li>
+  <li><a href="https://nlp.seas.harvard.edu/annotated-transformer/" target="_blank">The Annotated Transformer</a></li>
+  <li><a href="https://arxiv.org/pdf/1802.05751.pdf" target="_blank">Image Transformer</a></li>
+  <li><a href="https://openreview.net/pdf?id=YicbFdNTTy" target="_blank">An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale</a></li>
+</ul>
+
+<p><strong>효율적인 트랜스포머</strong></p>
+<ul>
+  <li><a href="https://arxiv.org/pdf/2006.16236.pdf" target="_blank">Transformers are RNNs: Fast Autoregressive Transformers with Linear Attention</a></li>
+  <li><a href="https://arxiv.org/pdf/2103.03206.pdf" target="_blank">Perceiver: General Perception with Iterative Attention</a></li>
+  <li><a href="https://arxiv.org/pdf/2103.02143.pdf" target="_blank">Random Feature Attention</a></li>
+  <li><a href="https://arxiv.org/pdf/2004.05150.pdf" target="_blank">Longformer: The Long-Document Transformer</a></li>
+  <li><a href="https://arxiv.org/pdf/1904.10509.pdf" target="_blank">Generating Long Sequences with Sparse Transformers</a></li>
+  <li><a href="https://arxiv.org/pdf/2006.04768.pdf" target="_blank">Linformer: Self-Attention with Linear Complexity</a></li>
+  <li><a href="https://arxiv.org/pdf/2111.00396.pdf" target="_blank">Efficiently Modeling Long Sequences with Structured State Spaces</a></li>
+</ul>
+
+<p><strong>매개변수 효율적 튜닝</strong></p>
+<ul>
+  <li><a href="https://arxiv.org/pdf/1902.00751.pdf" target="_blank">Parameter-Efficient Transfer Learning for NLP</a></li>
+  <li><a href="https://arxiv.org/pdf/2106.09685.pdf" target="_blank">LoRA: Low-Rank Adaptation of Large Language Models</a></li>
+  <li><a href="https://arxiv.org/pdf/2104.08691.pdf" target="_blank">The Power of Scale for Parameter-Efficient Prompt Tuning</a></li>
+  <li><a href="https://arxiv.org/pdf/2009.07118.pdf" target="_blank">It’s Not Just Size That Matters: Small Language Models Are Also Few-Shot Learners</a></li>
+  <li><a href="https://aclanthology.org/2021.acl-long.295.pdf" target="_blank">Making Pre-trained Language Models Better Few-shot Learners</a></li>
+  <li><a href="https://arxiv.org/pdf/2205.05638.pdf" target="_blank">Few-Shot Parameter-Efficient Fine-Tuning is Better and Cheaper than In-Context Learning</a></li>
+  <li><a href="https://arxiv.org/pdf/2110.04366.pdf" target="_blank">Towards a Unified View of Parameter-Efficient Transfer Learning</a></li>
+</ul>
+
+<p><strong>언어 모델 사전 학습</strong></p>
+<ul>
+  <li><a href="https://arxiv.org/pdf/1802.05365.pdf" target="_blank">Deep Contextualized Word Representations</a></li>
+  <li><a href="https://arxiv.org/pdf/1810.04805.pdf" target="_blank">BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding</a></li>
+  <li><a href="https://arxiv.org/pdf/1905.03197.pdf" target="_blank">Unified Language Model Pre-training for Natural Language Understanding and Generation</a></li>
+  <li><a href="https://arxiv.org/pdf/1909.11942.pdf" target="_blank">ALBERT: A Lite BERT for Self-supervised Learning of Language Representations</a></li>
+  <li><a href="https://arxiv.org/pdf/1907.11692.pdf" target="_blank">RoBERTa: A Robustly Optimized BERT Pretraining Approach</a></li>
+  <li><a href="https://arxiv.org/pdf/1905.07129.pdf" target="_blank">ERNIE: Enhanced Language Representation with Informative Entities</a></li>
+  <li><a href="https://arxiv.org/pdf/2003.10555.pdf" target="_blank">ELECTRA: Pre-training Text Encoders as Discriminators Rather Than Generators</a></li>
+</ul>
+
+<h3 id="3-대용량-언어-모델">3. 대용량 언어 모델</h3>
+
+<p><strong>대용량 언어 모델</strong></p>
+<ul>
+  <li><a href="https://arxiv.org/pdf/1910.10683.pdf" target="_blank">Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer</a></li>
+  <li><a href="https://arxiv.org/pdf/2005.14165.pdf" target="_blank">Language Models are Few-Shot Learners</a></li>
+  <li><a href="https://arxiv.org/pdf/2201.08239.pdf" target="_blank">LaMDA: Language Models for Dialog Applications</a></li>
+  <li><a href="https://d4mucfpksywv.cloudfront.net/better-language-models/language_models_are_unsupervised_multitask_learners.pdf" target="_blank">Language Models are Unsupervised Multitask Learners</a></li>
+  <li><a href="https://arxiv.org/pdf/2107.03374.pdf" target="_blank">Evaluating Large Language Models Trained on Code</a></li>
+  <li><a href="https://arxiv.org/pdf/2204.02311.pdf" target="_blank">PaLM: Scaling Language Modeling with Pathways</a></li>
+  <li><a href="https://arxiv.org/pdf/2307.09288.pdf" target="_blank">Llama 2: Open Foundation and Fine-Tuned Chat Models</a></li>
+  <li><a href="https://arxiv.org/pdf/2401.04088.pdf" target="_blank">Mixtral of Experts</a></li>
+</ul>
+
+<p><strong>스케일링 법칙(Scaling Law)</strong></p>
+<ul>
+  <li><a href="https://arxiv.org/pdf/2001.08361.pdf" target="_blank">Scaling Laws for Neural Language Models</a></li>
+  <li><a href="https://arxiv.org/pdf/2102.01293.pdf" target="_blank">Scaling Laws for Transfer</a></li>
+  <li><a href="https://arxiv.org/pdf/2206.07682.pdf" target="_blank">Emergent Abilities of Large Language Models</a></li>
+  <li><a href="https://arxiv.org/pdf/2203.15556.pdf" target="_blank">Training Compute-Optimal Large Language Models</a></li>
+  <li><a href="https://arxiv.org/pdf/2210.11399.pdf" target="_blank">Transcending Scaling Laws with 0.1% Extra Compute</a></li>
+  <li><a href="https://arxiv.org/pdf/2211.02011.pdf" target="_blank">Inverse Scaling can become U-shaped</a></li>
+  <li><a href="https://arxiv.org/pdf/2304.15004.pdf" target="_blank">Are Emergent Abilities of Large Language Models a Mirage?</a></li>
+</ul>
+
+<p><strong>지시 튜닝(Instruction Tuning) 및 인간 피드백 기반 강화학습(RLHF)</strong></p>
+<ul>
+  <li><a href="https://arxiv.org/pdf/2203.02155.pdf" target="_blank">Training Language Models to Follow Instructions with Human Feedback</a></li>
+  <li><a href="https://arxiv.org/pdf/2109.01652.pdf" target="_blank">Finetuned Language Models Are Zero-Shot Learners</a></li>
+  <li><a href="https://arxiv.org/pdf/2110.08207.pdf" target="_blank">Multitask Prompted Training Enables Zero-Shot Task Generalization</a></li>
+  <li><a href="https://arxiv.org/pdf/2305.11206.pdf" target="_blank">LIMA: Less Is More for Alignment</a></li>
+  <li><a href="https://arxiv.org/pdf/2305.18290.pdf" target="_blank">Direct Preference Optimization: Your Language Model is Secretly a Reward Model</a></li>
+  <li><a href="https://arxiv.org/pdf/2310.16944.pdf" target="_blank">Zephyr: Direct Distillation of LM Alignment</a></li>
+</ul>
+
+<p><strong>효율적인 대용량 언어모델 학습</strong></p>
+<ul>
+  <li><a href="https://arxiv.org/pdf/1909.08053.pdf" target="_blank">Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism</a></li>
+  <li><a href="https://arxiv.org/pdf/1910.02054.pdf" target="_blank">ZeRO: Memory Optimizations Toward Training Trillion Parameter Models</a></li>
+  <li><a href="https://arxiv.org/pdf/2108.12409.pdf" target="_blank">Train Short, Test Long: Attention with Linear Biases Enables Input Length Extrapolation</a></li>
+  <li><a href="https://arxiv.org/pdf/2104.09864.pdf" target="_blank">RoFormer: Enhanced Transformer with Rotary Position Embedding</a></li>
+  <li><a href="https://arxiv.org/pdf/1911.02150.pdf" target="_blank">Fast Transformer Decoding: One Write-Head is All You Need</a></li>
+  <li><a href="https://arxiv.org/pdf/2305.13245v2.pdf" target="_blank">GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints</a></li>
+  <li><a href="https://arxiv.org/pdf/2205.14135.pdf" target="_blank">FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness</a></li>
+</ul>
+
+<p><strong>효율적인 대용량 언어모델 추론</strong></p>
+<ul>
+  <li><a href="https://arxiv.org/pdf/2006.04152.pdf" target="_blank">BERT Loses Patience: Fast and Robust Inference with Early Exit</a></li>
+  <li><a href="https://arxiv.org/pdf/2207.07061.pdf" target="_blank">Confident Adaptive Language Modeling</a></li>
+  <li><a href="https://arxiv.org/pdf/2211.17192.pdf" target="_blank">Fast Inference from Transformers via Speculative Decoding</a></li>
+  <li><a href="https://arxiv.org/pdf/2309.06180.pdf" target="_blank">Efficient Memory Management for Large Language Model Serving with PagedAttention</a></li>
+  <li><a href="https://pytorch.org/blog/flash-decoding/" target="_blank">Flash-Decoding for long-context inference</a></li>
+  <li><a href="https://lmsys.org/blog/2023-11-21-lookahead-decoding/" target="_blank">Break the Sequential Dependency of LLM Inference Using Lookahead Decoding</a></li>
+</ul>
+
+<p><strong>대용량 언어 모델 압축과 희소화</strong></p>
+<ul>
+  <li><a href="https://arxiv.org/pdf/2112.10684.pdf" target="_blank">Efficient Large Scale Language Modeling with Mixtures of Experts</a></li>
+  <li><a href="https://arxiv.org/pdf/2006.16668.pdf" target="_blank">GShard: Scaling Giant Models with Conditional Computation and Automatic Sharding</a></li>
+  <li><a href="https://arxiv.org/pdf/2303.09752.pdf" target="_blank">CoLT5: Faster Long-Range Transformers with Conditional Computation</a></li>
+  <li><a href="https://arxiv.org/pdf/2208.07339.pdf" target="_blank">LLM.int8(): 8-bit Matrix Multiplication for Transformers at Scale</a></li>
+  <li><a href="https://arxiv.org/pdf/2110.02861.pdf" target="_blank">8-bit Optimizers via Block-wise Quantization</a></li>
+  <li><a href="https://arxiv.org/pdf/2305.14314.pdf" target="_blank">QLoRA: Efficient Finetuning of Quantized LLMs</a></li>
+  <li><a href="https://arxiv.org/pdf/2310.11453.pdf" target="_blank">BitNet: Scaling 1-bit Transformers for Large Language Models</a></li>
+</ul>
+
+<p><strong>대용량 언어 모델 프롬프팅(Prompting)</strong></p>
+<ul>
+  <li><a href="https://arxiv.org/pdf/2201.11903.pdf" target="_blank">Chain-of-Thought Prompting Elicits Reasoning in Large Language Models</a></li>
+  <li><a href="https://arxiv.org/pdf/2203.11171.pdf" target="_blank">Self-Consistency Improves Chain of Thought Reasoning in Language Models</a></li>
+  <li><a href="https://arxiv.org/pdf/2305.10601.pdf" target="_blank">Tree of Thoughts: Deliberate Problem Solving with Large Language Models</a></li>
+  <li><a href="https://arxiv.org/pdf/2211.12588.pdf" target="_blank">Program of Thoughts Prompting: Disentangling Computation from Reasoning for Numerical Reasoning Tasks</a></li>
+  <li><a href="https://arxiv.org/pdf/2205.10625.pdf" target="_blank">Least-to-Most Prompting Enables Complex Reasoning in Large Language Models</a></li>
+  <li><a href="https://arxiv.org/pdf/2210.03350.pdf" target="_blank">Measuring and Narrowing the Compositionality Gap in Language Models</a></li>
+  <li><a href="https://arxiv.org/pdf/2210.03629.pdf" target="_blank">ReAct: Synergizing Reasoning and Acting in Language Models</a></li>
+  <li><a href="https://arxiv.org/pdf/2303.17651.pdf" target="_blank">Self-Refine: Iterative Refinement with Self-Feedback</a></li>
+</ul>
+
+<h3 id="4-멀티모달multimodal-모델">4. 멀티모달(Multimodal) 모델</h3>
+
+<p><strong>비전 트랜스포머</strong></p>
+<ul>
+  <li><a href="https://openreview.net/pdf?id=YicbFdNTTy" target="_blank">An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale</a></li>
+  <li><a href="https://arxiv.org/pdf/2103.14030.pdf" target="_blank">Swin Transformer: Hierarchical Vision Transformer using Shifted Windows</a></li>
+  <li><a href="https://arxiv.org/pdf/2012.12877.pdf" target="_blank">Training data-efficient image transformers &amp; distillation through attention</a></li>
+  <li><a href="https://arxiv.org/pdf/2104.14294.pdf" target="_blank">Emerging Properties in Self-Supervised Vision Transformers</a></li>
+  <li><a href="https://arxiv.org/pdf/2303.15446.pdf" target="_blank">SwiftFormer: Efficient Additive Attention for Transformer-based Real-time Mobile Vision Applications</a></li>
+  <li><a href="https://arxiv.org/pdf/2111.11418.pdf" target="_blank">MetaFormer Is Actually What You Need for Vision</a></li>
+  <li><a href="https://arxiv.org/pdf/2111.06377.pdf" target="_blank">Masked Autoencoders Are Scalable Vision Learners</a></li>
+</ul>
+
+<p><strong>디퓨전(Diffusion) 모델</strong></p>
+<ul>
+  <li><a href="https://arxiv.org/pdf/2101.09258.pdf" target="_blank">Maximum Likelihood Training of Score-Based Diffusion Models</a></li>
+  <li><a href="https://arxiv.org/pdf/2011.13456.pdf" target="_blank">Score-Based Generative Modeling through Stochastic Differential Equations</a></li>
+  <li><a href="https://arxiv.org/pdf/2010.02502.pdf" target="_blank">Denoising Diffusion Implicit Models</a></li>
+  <li><a href="https://arxiv.org/pdf/2006.11239.pdf" target="_blank">Denoising Diffusion Probabilistic Models</a></li>
+  <li><a href="https://arxiv.org/pdf/2206.00927.pdf" target="_blank">DPM-Solver: A Fast ODE Solver for Diffusion Probabilistic Model Sampling in Around 10 Steps</a></li>
+  <li><a href="https://arxiv.org/pdf/2303.01469.pdf" target="_blank">Consistency Models</a></li>
+</ul>
+
+<p><strong>이미지 생성</strong></p>
+<ul>
+  <li><a href="https://arxiv.org/pdf/2112.10752.pdf" target="_blank">High-Resolution Image Synthesis with Latent Diffusion Models</a></li>
+  <li><a href="https://arxiv.org/pdf/2205.11487.pdf" target="_blank">Photorealistic Text-to-Image Diffusion Models with Deep Language Understanding</a></li>
+  <li><a href="https://arxiv.org/pdf/2206.10789.pdf" target="_blank">Scaling Autoregressive Models for Content-Rich Text-to-Image Generation</a></li>
+  <li><a href="https://arxiv.org/pdf/2204.06125.pdf" target="_blank">Hierarchical Text-Conditional Image Generation with CLIP Latents</a></li>
+  <li><a href="https://arxiv.org/pdf/2310.00426.pdf" target="_blank">PIXART-α: Fast Training of Diffusion Transformer for Photorealistic Text-to-Image Synthesis</a></li>
+  <li><a href="https://static1.squarespace.com/static/6213c340453c3f502425776e/t/65663480a92fba51d0e1023f/1701197769659/adversarial_diffusion_distillation.pdf" target="_blank">Adversarial Diffusion Distillation</a></li>
+</ul>
+
+<p><strong>멀티모달 모델 사전학습</strong></p>
+<ul>
+  <li><a href="https://arxiv.org/pdf/2103.00020.pdf" target="_blank">Learning Transferable Visual Models From Natural Language Supervision</a></li>
+  <li><a href="https://arxiv.org/pdf/2201.12086.pdf" target="_blank">BLIP: Bootstrapping Language-Image Pre-training for Unified Vision-Language Understanding and Generation</a></li>
+  <li><a href="https://arxiv.org/pdf/2205.01917.pdf" target="_blank">CoCa: Contrastive Captioners are Image-Text Foundation Models</a></li>
+  <li><a href="https://arxiv.org/pdf/2004.06165.pdf" target="_blank">Oscar: Object-Semantics Aligned Pre-training for Vision-Language Tasks</a></li>
+  <li><a href="https://arxiv.org/pdf/2101.00529.pdf" target="_blank">VinVL: Revisiting Visual Representations in Vision-Language Models</a></li>
+  <li><a href="https://arxiv.org/pdf/2102.05918.pdf" target="_blank">Scaling Up Visual and Vision-Language Representation Learning With Noisy Text Supervision</a></li>
+  <li><a href="https://arxiv.org/pdf/2303.15343.pdf" target="_blank">Sigmoid Loss for Language Image Pre-Training</a></li>
+</ul>
+
+<p><strong>대용량 멀티모달 모델</strong></p>
+<ul>
+  <li><a href="https://arxiv.org/pdf/2204.14198.pdf" target="_blank">Flamingo: a Visual Language Model for Few-Shot Learning</a></li>
+  <li><a href="https://arxiv.org/pdf/2304.08485.pdf" target="_blank">Visual Instruction Tuning</a></li>
+  <li><a href="https://arxiv.org/pdf/2305.06500.pdf" target="_blank">InstructBLIP: Towards General-purpose Vision-Language Models with Instruction Tuning</a></li>
+  <li><a href="https://arxiv.org/pdf/2209.06794.pdf" target="_blank">PaLI: A Jointly-Scaled Multilingual Language-Image Model</a></li>
+  <li><a href="https://arxiv.org/pdf/2310.09199.pdf" target="_blank">PaLI-3 Vision Language Models: Smaller</a></li>
+  <li><a href="https://arxiv.org/pdf/2312.13286.pdf" target="_blank">Generative Multimodal Models are In-Context Learners</a></li>
+  <li><a href="https://arxiv.org/pdf/2312.14238.pdf" target="_blank">InternVL: Scaling up Vision Foundation Models and Aligning for Generic Visual-Linguistic Tasks</a></li>
+  <li><a href="https://arxiv.org/pdf/2312.11805v1.pdf" target="_blank">Gemini: A Family of Highly Capable Multimodal Models</a></li>
+</ul>
+
+<h3 id="5-증강augmentation-기반-모델">5. 증강(Augmentation) 기반 모델</h3>
+
+<p><strong>도구(Tool) 증강</strong></p>
+<ul>
+  <li><a href="https://arxiv.org/pdf/2302.04761.pdf" target="_blank">Toolformer: Language Models Can Teach Themselves to Use Tools</a></li>
+  <li><a href="https://arxiv.org/pdf/2303.09014.pdf" target="_blank">ART: Automatic Multi-step Reasoning and Tool-use for Large Language Models</a></li>
+  <li><a href="https://arxiv.org/pdf/2307.16789.pdf" target="_blank">ToolLLM: Facilitating Large Language Models to Master 16000+ Real-world APIs</a></li>
+  <li><a href="https://arxiv.org/pdf/2305.11554.pdf" target="_blank">ToolkenGPT: Augmenting Frozen Language Models with Massive Tools via Tool Embeddings</a></li>
+  <li><a href="https://arxiv.org/pdf/2308.03688.pdf" target="_blank">AgentBench: Evaluating LLMs as Agents</a></li>
+  <li><a href="https://arxiv.org/pdf/2312.08914.pdf" target="_blank">CogAgent: A Visual Language Model for GUI Agents</a></li>
+  <li><a href="https://arxiv.org/pdf/2307.13854.pdf" target="_blank">WebArena: A Realistic Web Environment for Building Autonomous Agents</a></li>
+</ul>
+
+<p><strong>검색(Retrieval) 증강</strong></p>
+<ul>
+  <li><a href="https://arxiv.org/pdf/2002.08909.pdf" target="_blank">REALM: Retrieval-Augmented Language Model Pre-Training</a></li>
+  <li><a href="https://arxiv.org/pdf/2005.11401.pdf" target="_blank">Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks</a></li>
+  <li><a href="https://arxiv.org/pdf/2112.04426.pdf" target="_blank">Improving Language Models by Retrieving from Trillions of Tokens</a></li>
+  <li><a href="https://arxiv.org/pdf/2310.11511.pdf" target="_blank">Self-RAG: Learning to Retrieve</a></li>
+  <li><a href="https://arxiv.org/pdf/2301.12652.pdf" target="_blank">REPLUG: Retrieval-Augmented Black-Box Language Models</a></li>
+</ul>
+
+<p>열심히 읽자!</p>
+
+
+
+    </div>
+
+</article>
+<div class="post-nav">
+<a class="previous" href="/jekyll-theme-yat/programming/2024/03/05/gitignore.html" title=".gitignore 자동 생성하기">.gitignore 자동 생성하기</a><a class="next" href="/jekyll-theme-yat/programming/2024/04/24/git-config.html" title="[Git] 깃 계정 정보 등록/삭제하기">[Git] 깃 계정 정보 등록/삭제하기</a>
+</div>
+<div class="post-related">
+      <div>Related Articles</div>
+      <ul>
+        <li><a class="post-link" href="/jekyll-theme-yat/programming/2023/01/06/Python-CallGraph.html" title="[Git] 깃 계정 정보 등록/삭제하기">[Python] 프로젝트의 호출 그래프(Call Graph) 그리기</a></li>
+<li><a class="post-link" href="/jekyll-theme-yat/data_science/2022/07/30/DS-lectures.html" title="[Git] 깃 계정 정보 등록/삭제하기">데이터 과학 기초 강의 추천</a></li>
+<li><a class="post-link" href="/jekyll-theme-yat/programming/2022/10/10/Cli-commands.html" title="[Git] 깃 계정 정보 등록/삭제하기">내가 필요해서 정리하는 CLI 기본 명령어</a></li>
+<li><a class="post-link" href="/jekyll-theme-yat/data_science/2024/04/18/LLM-papers.html" title="[Git] 깃 계정 정보 등록/삭제하기">[LLM] Foundation Models 논문 모음</a></li>
+</ul>
+    </div>
+<div class="post-comments">  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'https://kongju7.github.io/jekyll-theme-yat/data_science/2024/04/18/LLM-papers.html';
+      this.page.identifier = 'https://kongju7.github.io/jekyll-theme-yat/data_science/2024/04/18/LLM-papers.html';
+    };
+
+    (function() {
+      var d = document, s = d.createElement('script');
+
+      s.src = 'https://kongju7-github-io.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+</div></section>
+</div>
+
+
+  </section>
+  <section class="sidebar" style="margin-left: 15px;">
+    <!-- Get sidebar items --><style type="text/css" media="screen">
+.post-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+</style>
+
+<div class="post-menu">
+  <div class="post-menu-title">TOC</div>
+  <div class="post-menu-content"></div>
+</div>
+
+<script>
+  function generateContent() {
+    var menu = document.querySelector(".post-menu");
+    var menuContent =  menu.querySelector(".post-menu-content");
+    var headings = document.querySelector(".post-content").querySelectorAll("h2, h3, h4, h5, h6");
+
+    // Hide menu when no headings
+    if (headings.length === 0) {
+      return menu.style.display = "none";
+    }
+
+    // Generate post menu
+    var menuHTML = '';
+    for (var i = 0; i < headings.length; i++) {
+      var h = headings[i];
+      menuHTML += (
+        '<li class="h-' + h.tagName.toLowerCase() + '">'
+        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a></li>');
+    }
+
+    menuContent.innerHTML = '<ul>' + menuHTML + '</ul>';
+
+    // The header element
+    var header = document.querySelector('header.site-header');
+
+    function doMenuCollapse(index, over_items) {
+      var items = menuContent.firstChild.children;
+
+      if (over_items == undefined) {
+        over_items = 20;
+      }
+
+      if (items.length < over_items) {
+        return;
+      }
+
+      var activeItem = items[index];
+      var beginItem = activeItem
+      var endItem = activeItem
+      var beginIndex = index;
+      var endIndex = index + 1;
+      while (beginIndex >= 0
+        && !items[beginIndex].classList.contains('h-h2')) {
+        beginIndex -= 1;
+      }
+      while (endIndex < items.length
+        && !items[endIndex].classList.contains('h-h2')) {
+        endIndex += 1;
+      }
+      for (var i = 0; i < beginIndex; i++) {
+        item = items[i]
+        if (!item.classList.contains('h-h2')) {
+          item.style.display = 'none';
+        }
+      }
+      for (var i = beginIndex + 1; i < endIndex; i++) {
+        item = items[i]
+        // if (!item.classList.contains('h-h2')) {
+          item.style.display = '';
+        // }
+      }
+      for (var i = endIndex; i < items.length; i++) {
+        item = items[i]
+        if (!item.classList.contains('h-h2')) {
+          item.style.display = 'none';
+        }
+      }
+    }
+
+    // Init menu collapsed
+    doMenuCollapse(-1);
+
+    // Active the menu item
+    window.addEventListener('scroll', function (event) {
+      var lastActive = menuContent.querySelector('.active');
+      var changed = true;
+      var activeIndex = -1;
+      for (var i = headings.length - 1; i >= 0; i--) {
+        var h = headings[i];
+        var headingRect = h.getBoundingClientRect();
+        var headerRect = header.getBoundingClientRect();
+        var headerTop = Math.floor(headerRect.top);
+        var headerHeight = Math.floor(headerRect.height);
+        var headerHeight = headerTop + headerHeight + 20;
+        if (headingRect.top <= headerHeight) {
+          var id = 'h-' + h.getAttribute('id');
+          var a = menuContent.querySelector('a[href="#' + id  + '"]');
+          var curActive = a.parentNode;
+          if (curActive) {
+            curActive.classList.add('active');
+            activeIndex = i;
+          }
+          if (lastActive == curActive) {
+            changed = false;
+          }
+          break;
+        }
+      }
+      if (changed) {
+        if (lastActive) {
+          lastActive.classList.remove('active');
+        }
+        doMenuCollapse(activeIndex);
+      }
+      event.preventDefault();
+    });
+  }
+  generateContent();
+</script>
+</section>
+</div>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/jekyll-theme-yat/"></data>
+
+  <div class="wrapper">
+    <div class="site-footer-inner">
+<div>Copyright © 2022-2024 Kong Ju</div>
+      <div>Powered by <a title="Jekyll is a simple, blog-aware, static site
+      generator." href="https://jekyllrb.com/">Jekyll</a> &amp; <a title="Yat, yet
+      another theme." href="https://github.com/jeffreytse/jekyll-theme-yat">Yat Theme</a>.</div>
+      <div class="footer-col rss-subscribe">Subscribe <a href="/jekyll-theme-yat/feed.xml">via RSS</a>
+</div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

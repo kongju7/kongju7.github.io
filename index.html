@@ -1,0 +1,4182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-translate-customization" content="108d9124921d80c3-80e20d618ff053c8-g4f02ec6f3dba68b7-c">
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Home | Becoming a Data Scientist</title>
+<meta name="generator" content="Jekyll v4.3.3">
+<meta property="og:title" content="Home">
+<meta name="author" content="Kong Ju">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="Welcome to my blog! Here, I document my experiences and progress as I strive to become a data scientist. You’ll find posts on topics such as data science, Python, and computer science as I navigate this exciting field.">
+<meta property="og:description" content="Welcome to my blog! Here, I document my experiences and progress as I strive to become a data scientist. You’ll find posts on topics such as data science, Python, and computer science as I navigate this exciting field.">
+<link rel="canonical" href="https://kongju7.github.io/jekyll-theme-yat/">
+<meta property="og:url" content="https://kongju7.github.io/jekyll-theme-yat/">
+<meta property="og:site_name" content="Becoming a Data Scientist">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="Home">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","author":{"@type":"Person","name":"Kong Ju"},"description":"Welcome to my blog! Here, I document my experiences and progress as I strive to become a data scientist. You’ll find posts on topics such as data science, Python, and computer science as I navigate this exciting field.","headline":"Home","name":"Becoming a Data Scientist","url":"https://kongju7.github.io/jekyll-theme-yat/"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="shortcut icon" href="">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-noto-sans@0.0.72/index.min.css">
+  <link rel="stylesheet" href="/jekyll-theme-yat/assets/css/main.css">
+  <script src="/jekyll-theme-yat/assets/js/main.js"></script><link type="application/atom+xml" rel="alternate" href="https://kongju7.github.io/jekyll-theme-yat/feed.xml" title="Becoming a Data Scientist">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script>
+<!-- and it's easy to individually load additional languages -->
+<script charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/go.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+// Init highlight js
+document.addEventListener('DOMContentLoaded', function(event) {
+  var els = document.querySelectorAll('pre code')
+
+  function addLangData(block) {
+    var outer = block.parentElement.parentElement.parentElement;
+    var lang = block.getAttribute('data-lang');
+    for (var i = 0; i < outer.classList.length; i++) {
+      var cls = outer.classList[i];
+      if (cls.startsWith('language-')) {
+        lang = cls;
+        break;
+      }
+    }
+    if (!lang) {
+      cls = block.getAttribute('class');
+      lang = cls ? cls.replace('hljs ', '') : '';
+    }
+    if (lang.startsWith('language-')) {
+      lang = lang.substr(9);
+    }
+    block.setAttribute('class', 'hljs ' + lang);
+    block.parentNode.setAttribute('data-lang', lang);
+  }
+
+  function addBadge(block) {
+    var enabled = ('true' || 'true').toLowerCase();
+    if (enabled == 'true') {
+      var pre = block.parentElement;
+      pre.classList.add('badge');
+    }
+  }
+
+  function handle(block) {
+    addLangData(block);
+    addBadge(block)
+    hljs.highlightBlock(block);
+  }
+
+  for (var i = 0; i < els.length; i++) {
+    var el = els[i];
+    handle(el);
+  }
+});
+</script>
+
+<style>
+  /* code language badge */
+  pre.badge::before {
+    content: attr(data-lang);
+    color: #fff;
+    background-color: #ff4e00;
+    padding: 0 .5em;
+    border-radius: 0 2px;
+    text-transform: uppercase;
+    text-align: center;
+    min-width: 32px;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+  }
+
+  /* fix wrong badge display for firefox browser */
+  code > table pre::before {
+    display: none;
+  }
+</style>
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="site-header site-header-transparent" role="banner">
+
+  <div class="wrapper">
+    <div class="site-header-inner">
+<span class="site-brand"><a class="site-brand-inner" rel="author" href="/jekyll-theme-yat/">
+  <img class="site-favicon" title="Becoming a Data Scientist" src="" onerror="this.style.display='none'">
+  Becoming a Data Scientist
+</a>
+</span><nav class="site-nav">
+          <input type="checkbox" id="nav-trigger" class="nav-trigger">
+          <label for="nav-trigger">
+            <span class="menu-icon">
+              <svg viewbox="0 0 18 15" width="18px" height="15px">
+                <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"></path>
+              </svg>
+            </span>
+          </label>
+
+          <div class="trigger">
+<a class="page-link" href="/jekyll-theme-yat/about.html">ABOUT</a><a class="page-link" href="/jekyll-theme-yat/archives.html">ARCHIVES</a><a class="page-link" href="/jekyll-theme-yat/categories.html">CATEGORIES</a><a class="page-link" href="/jekyll-theme-yat/">HOME</a><a class="page-link" href="/jekyll-theme-yat/tags.html">TAGS</a>
+
+
+
+
+
+
+
+
+
+<span class="page-link">
+
+
+
+<div id="google_translate_element" style="display: none;">
+</div>
+
+<span class="ct-language">
+  <ul class="list-unstyled ct-language-dropdown">
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="en">
+          
+          <img src="https://cdn.countryflags.com/thumbs/united-states-of-america/flag-400.png" title="English">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="fr">
+          
+          <img src="https://cdn.countryflags.com/thumbs/france/flag-400.png" title="French">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="zh-CN">
+          
+          <img src="https://cdn.countryflags.com/thumbs/china/flag-400.png" title="Chinese(Simple)">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="ja">
+          
+          <img src="https://cdn.countryflags.com/thumbs/japan/flag-400.png" title="Japanese">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="ko">
+          
+          <img src="https://cdn.countryflags.com/thumbs/south-korea/flag-400.png" title="Korean">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="ru">
+          
+          <img src="https://cdn.countryflags.com/thumbs/russia/flag-400.png" title="Russian">
+          
+        </a>
+      </li>
+    
+  </ul>
+</span>
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en',
+    autoDisplay: false,
+    layout: google.translate.TranslateElement.InlineLayout.VERTICAL
+  }, 'google_translate_element');
+
+  // Links to cross-origin destinations are unsafe
+  var gll = document.getElementsByClassName('goog-logo-link')[0];
+  if (gll) {
+    gll.setAttribute('rel', 'noopener');
+  }
+
+  function restoreLang() {
+    var iframe = document.getElementsByClassName('goog-te-banner-frame')[0];
+    if (!iframe) return;
+
+    var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+    var restore_el = innerDoc.getElementsByTagName("button");
+
+    for (var i = 0; i < restore_el.length; i++) {
+      if (restore_el[i].id.indexOf("restore") >= 0) {
+        restore_el[i].click();
+        var close_el = innerDoc.getElementsByClassName("goog-close-link");
+        close_el[0].click();
+        return;
+      }
+    }
+  }
+
+  function triggerHtmlEvent(element, eventName) {
+    var event;
+    if (document.createEvent) {
+      event = document.createEvent('HTMLEvents');
+      event.initEvent(eventName, true, true);
+      element.dispatchEvent(event);
+    } else {
+      event = document.createEventObject();
+      event.eventType = eventName;
+      element.fireEvent('on' + event.eventType, event);
+    }
+  }
+
+  var googleCombo = document.querySelector("select.goog-te-combo");
+  var langSelect = document.querySelector('.ct-language');
+  langSelect.addEventListener('click', function(event) {
+    if (!event.target) {
+      return;
+    }
+
+    var selected = document.querySelector('.ct-language .ct-language-selected');
+    if (selected) {
+      selected.classList.remove('ct-language-selected');
+    }
+
+    var target = event.target;
+    while (target && target !== langSelect ) {
+      if (target.matches('.lang-select')) {
+        break;
+      }
+      target = target.parentElement;
+    }
+
+    if (target && target.matches('.lang-select')) {
+      var lang = target.getAttribute('data-lang');
+      if (googleCombo.value == lang) {
+        restoreLang();
+      } else {
+        target.parentElement.classList.add('ct-language-selected');
+        googleCombo.value = lang;
+        triggerHtmlEvent(googleCombo, 'change');
+      }
+    }
+
+    event.preventDefault();
+  });
+}
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</span>
+</div>
+        </nav>
+</div>
+  </div>
+</header>
+
+<script>
+  function initHeader() {
+    var lastScrollY = getScrollPos().y;
+    var documentElement = document.documentElement;
+
+    function storeScrollData() {
+      var y = getScrollPos().y;documentElement.setAttribute("data-header-transparent", "");var scrollStatus = "";
+
+      if (y <= 0) {
+        scrollStatus = "top";
+      } else if ((window.innerHeight + y) >= document.body.offsetHeight) {
+        scrollStatus = "bottom";
+      } else {
+        var isScrollDown = (y - lastScrollY > 0) ? true : false;
+        scrollStatus = isScrollDown ? "down" : "up";
+      }
+
+      lastScrollY = y;
+      documentElement.setAttribute("data-scroll-status", scrollStatus);
+    }
+
+    window.addEventListener('scroll', function(e) {
+      storeScrollData();
+    });
+
+    storeScrollData();
+  }
+  document.addEventListener('DOMContentLoaded', initHeader);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="page-banner">
+    <div class="page-banner-img">
+<div style="background-image: url(/jekyll-theme-yat/assets/images/banners/home.jpeg)"></div>
+        <img class="img-placeholder" src="/jekyll-theme-yat/assets/images/banners/home.jpeg">
+</div>
+    <div class="wrapper">
+      <div class="page-banner-inner"><div class="page-banner-default">
+            <h1 class="page-banner-heading">
+              Becoming a Data Scientist
+            </h1>
+            <h2 class="page-banner-subheading">
+              공부하고 성장하기
+            </h2>
+          </div></div>
+    </div>
+  </section><script>
+  function hashLocate(hashValue) {
+    hashValue = hashValue.replace(/^.*#h-/, '');
+    hashValue = decodeURIComponent(hashValue);
+    var element = document.getElementById(hashValue);
+
+    if (!element) {
+      return;
+    }
+
+    var header = document.querySelector('header.site-header');
+    var headerRect = header.getBoundingClientRect();
+    var headerTop = Math.floor(headerRect.top);
+    var headerHeight = Math.floor(headerRect.height);
+    var scrollPos = getScrollPos();
+    var offsetY = element.offsetTop - (headerTop + headerHeight + 20);
+
+    if (offsetY == scrollPos.y) {
+      return;
+    }
+
+    if (headerTop == 0  && offsetY > scrollPos.y) {
+      offsetY += headerHeight + 2;
+    } else if (headerTop < 0  && offsetY < scrollPos.y) {
+      offsetY -= headerHeight - 2;
+    }
+
+    smoothScrollTo(offsetY);
+  }
+
+  // The first event occurred
+  window.addEventListener('load', function(event) {
+    if (window.location.hash) {
+      hashLocate(window.location.hash);
+    }
+  });
+
+  // The first event occurred
+  window.addEventListener('click', function(event) {
+    if (event.target.tagName.toLowerCase() == 'a') {
+      hashLocate(event.target.getAttribute('href'));
+    }
+  });
+</script>
+<div class="theme-toggle">
+  <input type="checkbox" id="theme-switch">
+  <label for="theme-switch">
+    <div class="toggle"></div>
+    <div class="names">
+      <p class="light">Light</p>
+      <p class="dark">Dark</p>
+    </div>
+  </label>
+</div>
+
+
+
+
+<script>
+  (function() {
+    var sw = document.getElementById('theme-switch');
+    var html = document.getElementsByTagName('html')[0];
+    var nightModeOption = ('auto' || 'auto').toLowerCase();
+    var storage = nightModeOption === 'manual'
+        ? localStorage
+        : sessionStorage;
+    var themeData = loadThemeData();
+
+    function saveThemeData(data) {
+      storage.setItem('theme', JSON.stringify(data));
+    }
+
+    function loadThemeData() {
+      var data = storage.getItem('theme');
+      try {
+        data = JSON.parse(data ? data : '');
+      } catch(e) {
+        data = { nightShift: undefined, autoToggleAt: 0 };
+        saveThemeData(data);
+      }
+      return data;
+    }
+
+    function handleThemeToggle(nightShift) {
+      themeData.nightShift = nightShift;
+      saveThemeData(themeData);
+      html.dataset.theme = nightShift ? 'dark' : 'light';
+      setTimeout(function() {
+        sw.checked = nightShift ? true : false;
+      }, 50);
+    }
+
+    function autoThemeToggle() {
+      // Next time point of theme toggle
+      var now = new Date();
+      var toggleAt = new Date();
+      var hours = now.getHours();
+      var nightShift = hours >= 19 || hours <=7;
+
+      if (nightShift) {
+        if (hours > 7) {
+          toggleAt.setDate(toggleAt.getDate() + 1);
+        }
+        toggleAt.setHours(7);
+      } else {
+        toggleAt.setHours(19);
+      }
+
+      toggleAt.setMinutes(0);
+      toggleAt.setSeconds(0);
+      toggleAt.setMilliseconds(0)
+
+      var delay = toggleAt.getTime() - now.getTime();
+
+      // auto toggle theme mode
+      setTimeout(function() {
+        handleThemeToggle(!nightShift);
+      }, delay);
+
+      return {
+        nightShift: nightShift,
+        toggleAt: toggleAt.getTime()
+      };
+    }
+
+    // Listen the theme toggle event
+    sw.addEventListener('change', function(event) {
+      handleThemeToggle(event.target.checked);
+    });
+
+    if (nightModeOption == 'auto') {
+      var data = autoThemeToggle();
+
+      // Toggle theme by local setting
+      if (data.toggleAt > themeData.autoToggleAt) {
+        themeData.autoToggleAt = data.toggleAt;
+        handleThemeToggle(data.nightShift);
+      } else {
+        handleThemeToggle(themeData.nightShift);
+      }
+    } else if (nightModeOption == 'manual') {
+      handleThemeToggle(themeData.nightShift);
+    } else {
+      var nightShift = themeData.nightShift;
+      if (nightShift === undefined) {
+        nightShift = nightModeOption === 'on';
+      }
+      handleThemeToggle(nightShift);
+    }
+  })();
+</script>
+<div id="click-to-top" class="click-to-top">
+  <i class="fa fa-arrow-up"></i>
+</div>
+<script>
+  (function () {
+    const clickToTop = document.getElementById('click-to-top');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        clickToTop.classList.add('show')
+      }else {
+        clickToTop.classList.remove('show')
+      }
+    });
+    clickToTop.addEventListener('click', () => {
+      window.smoothScrollTo(0);
+    });
+  })();
+</script>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="framework">
+  <section class="main">
+
+     <div class="articles">
+  
+
+  
+
+
+  <div class="pagination">
+  <!-- Post list links -->
+  <ul class="post-list">
+<li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/jekyll-theme-yat/programming/2024/04/24/git-config.html">
+          [Git] 깃 계정 정보 등록/삭제하기
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Apr 24, 2024</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 1 min</span>
+      </div>
+      <a class="post-excerpt" href="/jekyll-theme-yat/programming/2024/04/24/git-config.html">
+        <p>
+        git config user.name user.email 등록/삭제하기
+
+오늘은 깃 계정 정보를 등록하거나 삭제하는 방법에 대해서 정리해 보도록 하겠습니다.
+
+1. 깃 설정 확인
+
+먼저 아래의 명령어를 통해서 깃 설정 상태를 확인합니다.
+
+git config --global --list 
+
+
+이 때 위 예제에서 사용한 --global 대신 --local, --system 옵션을 사용할 수도 있습니다.
+
+  --local: 작업 폴더,
+  --global: 전역,
+  --system: 시스템 전체 를 각각 의미합니다.
+
+
+2. 사용자 이름과 이메일 등록
+
+이메일은 깃허브(GitHub) 계정에 등록한 이메일로 작성해 ... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags">
+<a class="post-tag" href="/jekyll-theme-yat/tags.html#git">#git</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#command">#command</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#%EB%AA%85%EB%A0%B9%EC%96%B4">#명령어</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#git%20config">#git config</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#user.name">#user.name</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#user.email">#user.email</a>
+</div>
+    </li>
+<li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/jekyll-theme-yat/data_science/2024/04/18/LLM-papers.html">
+          [LLM] Foundation Models 논문 모음
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Apr 18, 2024</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 9 mins</span>
+      </div>
+      <a class="post-excerpt" href="/jekyll-theme-yat/data_science/2024/04/18/LLM-papers.html">
+        <p>
+        대용량 언어 모델(LLM)
+기반 모델(Foundation Models) 관련 논문 모음
+
+1. 기반 모델
+
+기반 모델 및 응용 분야
+
+  On the Opportunities and Risks of Foundation Models
+  Multimodal Foundation Models: From Specialists to General-Purpose Assistants
+  Large Multimodal Models: Notes on CVPR 2023 Tutorial
+  Towards Generalist Biomedical AI
+  A Comprehensive Survey on Pretrained Foundation... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags">
+<a class="post-tag" href="/jekyll-theme-yat/tags.html#Data%20Science">#Data Science</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#NLP">#NLP</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#LLM">#LLM</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#Large%20Language%20Model">#Large Language Model</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#Foundation%20Models">#Foundation Models</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#paper">#paper</a>
+</div>
+    </li>
+<li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/jekyll-theme-yat/programming/2024/03/05/gitignore.html">
+          .gitignore 자동 생성하기
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Mar 05, 2024</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 4 mins</span>
+      </div>
+      <a class="post-excerpt" href="/jekyll-theme-yat/programming/2024/03/05/gitignore.html">
+        <p>
+        .gitignore 자동 생성하기
+
+.gitignore 파일은 git을 활용한 버전 관리에서 제외할 파일 목록을 정리한 파일로, 
+이 파일을 통해서 해당 파일이 GitHub에 업로드되지 않도록 강제할 수 있습니다.
+
+주로 API key, 개인 정보가 포함된 데이터와 같이 외부로 유출되면 안되는 정보나 가상 환경과 같이 용량이 큰 파일 등이 여기에 포함될 수 있습니다.
+
+.gitignore 파일은 프로젝트별로 각각 수동으로 작성할 수도 있지만, 
+.gitignore 파일을 자동 생성해 주는 사이트를 이용하면 쉽게 만들 수 있습니다.
+
+1. 먼저, gitignore.io사이트에 접속합니다.
+
+
+
+2. 검색창에 깃 커밋... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags">
+<a class="post-tag" href="/jekyll-theme-yat/tags.html#Python">#Python</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#Programming">#Programming</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#git">#git</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#.gitignore">#.gitignore</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#gitignore.io">#gitignore.io</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#toptal.com">#toptal.com</a>
+</div>
+    </li>
+<li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/jekyll-theme-yat/programming/2023/02/09/Python-env.html">
+          [Python] .env 설정 방법
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Feb 09, 2023</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 1 min</span>
+      </div>
+      <a class="post-excerpt" href="/jekyll-theme-yat/programming/2023/02/09/Python-env.html">
+        <p>
+        Python에서 .env 설정 방법
+
+코드를 깃허브 등에 공개할 때 API token을 숨김 처리해야할 때가 있다.
+이 때 .env 파일을 활용하면 된다.
+
+Required Python module : Python-dotenv
+
+.env 파일을 활용하기 위해서는 먼저 Python-dotenv 모듈을 설치해야 된다.
+
+pip install python-dotenv
+
+
+.env
+
+Python-dotenv 모듈의 설치가 끝나면, 작업 폴더에서 .env 파일을 생성한다.
+
+touch .env 
+
+
+그리고 .env 파일을 연다.
+
+open .env 
+
+
+.env 파일 안에 숨김 처리하고 싶은 API token을 아래와 같은... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags">
+<a class="post-tag" href="/jekyll-theme-yat/tags.html#Python">#Python</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#Programming">#Programming</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#Python-dotenv">#Python-dotenv</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#.env">#.env</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#API%20token">#API token</a>
+</div>
+    </li>
+<li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/jekyll-theme-yat/review/2023/02/03/Toss-Conference1.html">
+          [요약] 데이터 사이언티스트의 비즈니스 기여
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Feb 03, 2023</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 2 mins</span>
+      </div>
+      <a class="post-excerpt" href="/jekyll-theme-yat/review/2023/02/03/Toss-Conference1.html">
+        <p>
+        [발표 요약]
+
+[토스ㅣSLASH 22]
+
+Data Scientist는 어떻게 비즈니스에 기여할 수 있을까? (황동현 / 토스)
+
+  
+    url: https://www.youtube.com/watch?v=mKf1kvWXiPY
+  
+  기존 역할: Silo 개별 지원
+  → 데이터 프로덕트 개발: 공통 니즈 반영
+    
+      ‘데이터 프로덕트를 중심으로’ 전략 수립 → CDP 프로덕트 MVP 개발 → 개선
+    
+  
+  1) CVR 예측 모델
+    
+      Conversion Rate: ‘10원 받기’를 클릭해 실제로 10원을 받은 유저만 전환 유저로 정의
+      전환 유저 수 → 성장율 대... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags">
+<a class="post-tag" href="/jekyll-theme-yat/tags.html#Review">#Review</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#Toss">#Toss</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#conference">#conference</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#Data%20Scientist">#Data Scientist</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#Business">#Business</a>
+</div>
+    </li>
+<li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/jekyll-theme-yat/review/2023/02/02/AI-Conference1.html">
+          [요약] 최근 딥러닝 언어모델과 향후 발전 방향
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Feb 02, 2023</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 1 min</span>
+      </div>
+      <a class="post-excerpt" href="/jekyll-theme-yat/review/2023/02/02/AI-Conference1.html">
+        <p>
+        [AI 특강 요약]
+
+[2023 AI연구원 겨울 콜로키움]
+
+딥러닝 언어모델과 확률적 앵무새 (송상헌 / 고려대 언어학과 교수)
+
+  
+    url: https://www.youtube.com/watch?v=P5xb2qyiQRw
+  
+  최근 딥러닝 언어모델: 빈도에 기반하는 기존 코퍼스 언어학과 차이. 적은 빈도의 ‘증폭’과정을 거쳐서 처리 → 성능 크게 개선
+  하지만 여전히, 확률적 앵무새(Stochastic Parrots): 인공지능 언어모델은 자연 언어에 대한 실질적인 이해를 하고 있는 것이 아니라 단순히 확률에 기반하여 단어의 조합을 결과값으로 반환한다는 점에서 확률적 앵무새로 볼 수 있음
+    
+ ... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags">
+<a class="post-tag" href="/jekyll-theme-yat/tags.html#Review">#Review</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#AI">#AI</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#conference">#conference</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#NLP">#NLP</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#Language%20Model">#Language Model</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#%EC%96%B8%EC%96%B4%EB%AA%A8%EB%8D%B8">#언어모델</a>
+</div>
+    </li>
+<li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/jekyll-theme-yat/diary/2023/01/16/Fifth-project-NAL.html">
+          [Diary] 다섯 번째 개인 프로젝트가 끝났다
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Jan 16, 2023</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 1 min</span>
+      </div>
+      <a class="post-excerpt" href="/jekyll-theme-yat/diary/2023/01/16/Fifth-project-NAL.html">
+        <p>
+        지난 주에 다섯 번째 개인 프로젝트가 끝났다.
+
+이번에는 지정 과제가 주어졌다.  
+이진 분류 인공신경망의 순전파까지 Numpy 등을 이용하여 직접 구현하는 과제였다.  
+인공신경망 구조에 대해 정확하게 이해하고 있어야 구현할 수 있는 과제라고 할 수 있다.
+
+지정 과제를 먼저 작성하고, 
+역전파 과정 추가, 은닉층 추가, 은닉층 추가 모델에 지정 데이터 외 새로운 데이터에 적용, 호출 그래프 작성 등의 과정을 추가하는 방식으로 과제를 구성하였다.  
+데이터 탐색 과정과 데이터의 특성(불균형 데이터)에 대한 처리도 추가하였다.
+
+과제 초반에는 지정 데이터에 대한 탐색과 더불어, 기능별로 함수를 분리하고 함수를 하나... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags">
+<a class="post-tag" href="/jekyll-theme-yat/tags.html#Diary">#Diary</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#Python">#Python</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#Data%20Science">#Data Science</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#Neural%20Network">#Neural Network</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#from%20Scratch">#from Scratch</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#%EA%B0%9C%EC%9D%B8%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8">#개인 프로젝트</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#%ED%9A%8C%EA%B3%A0">#회고</a>
+</div>
+    </li>
+<li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/jekyll-theme-yat/programming/2023/01/06/Python-CallGraph.html">
+          [Python] 프로젝트의 호출 그래프(Call Graph) 그리기
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Jan 06, 2023</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 3 mins</span>
+      </div>
+      <a class="post-excerpt" href="/jekyll-theme-yat/programming/2023/01/06/Python-CallGraph.html">
+        <p>
+        호출 그래프 그리기
+
+이번에 개인 프로젝트에서는 이진 분류 인공신경망 함수를 Numpy 등만을 활용해 직접 구현하고,  
+호출 그래프(call graph)를 직접 작성할 일이 생겼습니다.
+
+호출 그래프를 그리는 방법은 크게 2가지를 생각해 볼 수 있습니다.
+
+
+  
+    한 땀 한 땀 정성껏 그린다.
+  1-1. 고전적으로 Microsoft Powerpoint를 이용한다. 
+  1-2. 순서도(flowchart)에 특화된 프로그램(draw.io 등)을 이용한다.
+  
+  
+    파이썬 라이브러리를 이용해 자동화한다. 
+  2-1. pycallgraph 라이브러리를 이용한다. 
+  2-2. project grap... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags">
+<a class="post-tag" href="/jekyll-theme-yat/tags.html#Python">#Python</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#Programming">#Programming</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#Call%20Graph">#Call Graph</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#draw.io">#draw.io</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#graphviz">#graphviz</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#project%20graph">#project graph</a>
+</div>
+    </li>
+<li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/jekyll-theme-yat/programming/2022/12/22/3-Insertion-Sort.html">
+          [Python] 삽입 정렬 특징 및 파이썬 구현
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Dec 22, 2022</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 1 min</span>
+      </div>
+      <a class="post-excerpt" href="/jekyll-theme-yat/programming/2022/12/22/3-Insertion-Sort.html">
+        <p>
+        대표적인 정렬 알고리즘
+
+
+  버블 정렬(Bubble Sort)
+  선택 정렬(Selection Sort)
+  삽입 정렬(Insertion Sort)
+  퀵 정렬(Quick Sort)
+  병합 정렬(Merge Sort))
+
+
+3. 삽입 정렬(Insertion Sort)
+
+1) 삽입 정렬 정의
+
+  삽입하고자 하는 노드와 이미 정렬된 배열과 비교하는 방법
+    
+      노드보다 작은 값을 가진 노드가 나올 때까지 비교를 진행하며, 노드보다 작은 값을 발견하면 작은 값 오른쪽 인덱스에 노드를 삽입
+    
+  
+
+
+2) 삽입 정렬의 특징
+
+
+  장점
+    
+      최선의 경우 시간 복잡도가 O(N)으로, 빠... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags">
+<a class="post-tag" href="/jekyll-theme-yat/tags.html#Python">#Python</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#%ED%8C%8C%EC%9D%B4%EC%8D%AC">#파이썬</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#Insertion%20Sort">#Insertion Sort</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#%EC%82%BD%EC%9E%85%20%EC%A0%95%EB%A0%AC">#삽입 정렬</a>
+</div>
+    </li>
+<li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/jekyll-theme-yat/programming/2022/12/22/2-Selection-Sort.html">
+          [Python] 선택 정렬 특징 및 파이썬 구현
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Dec 22, 2022</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 2 mins</span>
+      </div>
+      <a class="post-excerpt" href="/jekyll-theme-yat/programming/2022/12/22/2-Selection-Sort.html">
+        <p>
+        대표적인 정렬 알고리즘
+
+
+  버블 정렬(Bubble Sort)
+  선택 정렬(Selection Sort)
+  삽입 정렬(Insertion Sort)
+  퀵 정렬(Quick Sort)
+  병합 정렬(Merge Sort))
+
+
+2. 선택 정렬(Selection Sort)
+
+1) 선택 정렬 정의
+
+  배열에 있는 값들 중 최소값을 탐색하여 정렬하는 알고리즘
+    
+      주어진 배열에 있는 값들 중 최소값을 찾고, 해당 최솟값을 배열의 맨 앞 위치와 교환하는 방식으로 진행
+      정렬한 값 이후의 나머지 배열에 대해서도 위의 절차를 반복 진행
+    
+  
+
+
+2) 선택 정렬의 특징
+
+
+  장점
+    
+  ... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags">
+<a class="post-tag" href="/jekyll-theme-yat/tags.html#Python">#Python</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#%ED%8C%8C%EC%9D%B4%EC%8D%AC">#파이썬</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#Selection%20Sort">#Selection Sort</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#%EC%84%A0%ED%83%9D%20%EC%A0%95%EB%A0%AC">#선택 정렬</a>
+</div>
+    </li>
+<li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/jekyll-theme-yat/programming/2022/12/22/1-Bubble-Sort.html">
+          [Python] 버블 정렬 특징 및 파이썬 구현
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Dec 22, 2022</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 1 min</span>
+      </div>
+      <a class="post-excerpt" href="/jekyll-theme-yat/programming/2022/12/22/1-Bubble-Sort.html">
+        <p>
+        대표적인 정렬 알고리즘
+
+
+  버블 정렬(Bubble Sort)
+  선택 정렬(Selection Sort)
+  삽입 정렬(Insertion Sort)
+  퀵 정렬(Quick Sort)
+  병합 정렬(Merge Sort))
+
+
+1. 버블 정렬(Bubble Sort)
+
+1) 버블 정렬 정의
+
+  서로 이웃한 두 원소를 비교하여 정렬하는 알고리즘
+    
+      이웃한 2개의 값을 비교하여 크기가 순서대로 되어 있지 않으면 서로 교환하는 방식으로 진행
+    
+  
+
+
+2) 버블 정렬의 특징
+
+
+  장점
+    
+      구현이 간단
+      안정 정렬(Stable Sort). 즉, 배열에 중복값이 들어 있는 경... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags">
+<a class="post-tag" href="/jekyll-theme-yat/tags.html#Python">#Python</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#%ED%8C%8C%EC%9D%B4%EC%8D%AC">#파이썬</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#Bubble%20Sort">#Bubble Sort</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#%EB%B2%84%EB%B8%94%20%EC%A0%95%EB%A0%AC">#버블 정렬</a>
+</div>
+    </li>
+<li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/jekyll-theme-yat/data_science/2022/11/27/Colab-pro-paid.html">
+          Google Colab Pro 구글 코랩 프로 결제
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Nov 27, 2022</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 2 mins</span>
+      </div>
+      <a class="post-excerpt" href="/jekyll-theme-yat/data_science/2022/11/27/Colab-pro-paid.html">
+        <p>
+        최근에는 딥러닝 모델 학습을 진행하고 있다.
+딥러닝 모델은 머신러닝 부스팅 모델과 비교해, 
+학습에 필요한 데이터의 크기도 클 뿐더러 계산해야 하는 가중치도 많기 때문에 시간이 정말 정말 많이 소요된다.
+
+몇 일 전에는 AutoEncoder 모델의 학습 속도와 성능을 비교할 일이 있었다.
+먼저, 내가 주로 사용하고 있는 맥북에서  
+1) GPU 설정 tensorflow와   
+2) CPU 설정 tensorflow를 각각 이용하여 속도와 성능을 비교하였다.
+
+&lt; 속도와 성능 측정 결과 &gt;  
+1) GPU 설정 tensorflow: 1 epoch 당 약 75초, 100 epoch 후 최종 val_loss =... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags">
+<a class="post-tag" href="/jekyll-theme-yat/tags.html#Data%20Science">#Data Science</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#Google%20Colab%20Pro">#Google Colab Pro</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#Deep%20Learning">#Deep Learning</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#GPU">#GPU</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EA%B3%BC%ED%95%99">#데이터 과학</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#%EA%B5%AC%EA%B8%80%20%EC%BD%94%EB%9E%A9%20%ED%94%84%EB%A1%9C">#구글 코랩 프로</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#%EB%94%A5%EB%9F%AC%EB%8B%9D">#딥러닝</a>
+</div>
+    </li>
+<li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/jekyll-theme-yat/diary/2022/11/07/Third-project-NLP.html">
+          [Diary] 세 번째 개인 프로젝트가 끝났다
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Nov 07, 2022</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 1 min</span>
+      </div>
+      <a class="post-excerpt" href="/jekyll-theme-yat/diary/2022/11/07/Third-project-NLP.html">
+        <p>
+        지난 목요일에 4일 동안 진행한 세 번째 개인 프로젝트가 끝났다.
+
+세 번째 프로젝트에서는  
+네이버 쇼핑 리뷰 데이터를 가지고   
+자연어 처리(Natural Language Process, NLP) 감성 분석을 위한 데이터 파이프라인을 구축하는 과제를 진행하였다.
+
+먼저 쇼핑 리뷰 데이터를 로컬 데이터베이스를 MySQL을 활용해 적재하고, 
+텐서플로우(Tensorflow)를 활용하여 딥러닝 GRU 모델을 적용한 자연어 처리 중에서도 감성 분석(Sentiment Analysis)를 진행했다. 
+새로운 리뷰를 입력 받으면 학습을 진행한 자연어 처리 모델이 결과 값을 반환해주는 방식으로
+API 서비스도 만들었다.  ... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags">
+<a class="post-tag" href="/jekyll-theme-yat/tags.html#Diary">#Diary</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#Python">#Python</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#Data%20Science">#Data Science</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#Data%20Pipeline">#Data Pipeline</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#Tensorflow">#Tensorflow</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#NLP">#NLP</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#%EC%9E%90%EC%97%B0%EC%96%B4%20%EC%B2%98%EB%A6%AC">#자연어 처리</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#%EB%8D%B0%EC%9D%B4%ED%84%B0%20%ED%8C%8C%EC%9D%B4%ED%94%84%EB%9D%BC%EC%9D%B8%20%EA%B5%AC%EC%B6%95">#데이터 파이프라인 구축</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#%EA%B0%9C%EC%9D%B8%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8">#개인 프로젝트</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#%ED%9A%8C%EA%B3%A0">#회고</a>
+</div>
+    </li>
+<li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/jekyll-theme-yat/data_science/2022/11/07/Book-for-DS-1.html">
+          데이터 과학 관련 책 목록(1)
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Nov 07, 2022</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 5 mins</span>
+      </div>
+      <a class="post-excerpt" href="/jekyll-theme-yat/data_science/2022/11/07/Book-for-DS-1.html">
+        <p>
+        저는 박사학위 소지자답게(!) 새로운 분야 공부를 할 때면 항상 책부터 사서 보는 습관이 있는데요,
+공부하고 싶은 내용이 자꾸 늘어나다 보니 데이터 과학 분야 책도 생각보다 많이 쌓였더라구요.
+
+그래서 오늘은 제가 데이터 과학을 본격적으로 공부하기 시작한 후로    
+읽었거나 현재 읽고 있는 책들을 제목만 간략하게 소개하고자 합니다.    
+이 목록에 있는 책들은 관련 전문가에서 추천을 받았거나 제가 서점에서 훑어보고 직접 고른 데이터 과학 분야 책들로,   
+2022년 11월 7일 현재 제가 다 보유하고 있는 책들이기도 합니다.
+
+이 책들 중에는 많은 것을 배우게 되어 좋았던 책도 있고, 별로라고 생각한 책도 일... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags">
+<a class="post-tag" href="/jekyll-theme-yat/tags.html#Data%20Science">#Data Science</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#Book">#Book</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EA%B3%BC%ED%95%99">#데이터 과학</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#%EC%B1%85">#책</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#%EB%8F%84%EC%84%9C">#도서</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#%EC%B6%94%EC%B2%9C">#추천</a>
+</div>
+    </li>
+<li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/jekyll-theme-yat/data_science/2022/11/06/Roadmap-for-DS.html">
+          데이터 과학자가 되기 위한 로드맵
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Nov 06, 2022</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 4 mins</span>
+      </div>
+      <a class="post-excerpt" href="/jekyll-theme-yat/data_science/2022/11/06/Roadmap-for-DS.html">
+        <p>
+        이 글은 GeeksforGeeks의 데이터 과학자 되는 법 - 완벽 로드맵(How to Become Data Scientist – A Complete Roadmap)을 번역 및 편집한 글입니다. 
+(관련된 다른 내용을 부분적으로 추가하기도 하였습니다.)
+
+번역은 데이터 과학 분야에서 통용되는 방식으로 최대한 충실하게 하였으나, 
+각 개념을 표현할 때는 원어(영어)가 그대로 사용되는 경우가 많아 함께 병기하는 방식을 택하였습니다.   
+좀 더 상세한 내용은 원문을 참고해 주세요.
+
+먼저, 데이터 과학자에게는 다음 네 영역에서의 지식이나 능력이 모두 요구됩니다.
+
+
+  
+    도메인 지식(Domain Knowledg... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags">
+<a class="post-tag" href="/jekyll-theme-yat/tags.html#Data%20Science">#Data Science</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#Data%20Scientist">#Data Scientist</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#Roadmap">#Roadmap</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EA%B3%BC%ED%95%99">#데이터 과학</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EA%B3%BC%ED%95%99%EC%9E%90">#데이터 과학자</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#%EB%A1%9C%EB%93%9C%EB%A7%B5">#로드맵</a>
+</div>
+    </li>
+<li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/jekyll-theme-yat/diary/2022/10/28/Jinja.html">
+          [Diary] 내가 필요해서 정리하는 Jinja 템플릿 작성 실패
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Oct 28, 2022</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 1 min</span>
+      </div>
+      <a class="post-excerpt" href="/jekyll-theme-yat/diary/2022/10/28/Jinja.html">
+        <p>
+        오늘 오후에 나는 
+내가 필요해서 간략하게 정리하는 시리즈 중 한 편으로
+파이썬(Python) 진자 템플릿(Jinja Template) 기본 사용법을 신나게 작성했다.
+
+
+
+이렇게 이미지도 찾아 넣고,
+내용도 비교적 상세하게 작성했다.
+
+그런데 작성을 마치고, 깃허브 블로그에 올리려고 했는데 
+계속 실패 메세지가 떴다. 
+처음에는 실패 메세지 아래에 다음과 같은 Annotations이 있어 그 문제인 줄 알았다.
+
+
+
+node.js는 쓴 적도 없는데 대체 어떻게 업데이트를 하라는 것인지 알 길이 없었다. 
+블로그 설정 파일들을 모조리 다 열어 보았는데 main.js 파일만 있지 
+버젼을 설정하는 코드는 아무데도 없... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags">
+<a class="post-tag" href="/jekyll-theme-yat/tags.html#Diary">#Diary</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#Python">#Python</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#Data%20Science">#Data Science</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#Jinja%20template">#Jinja template</a>
+</div>
+    </li>
+<li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/jekyll-theme-yat/programming/2022/10/24/docker.html">
+          내가 필요해서 정리하는 Docker 기본 명령어
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Oct 24, 2022</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 2 mins</span>
+      </div>
+      <a class="post-excerpt" href="/jekyll-theme-yat/programming/2022/10/24/docker.html">
+        <p>
+        내가 필요해서 간략하게 정리하는 Docker에서 사용할 수 있는 기본 명령어입니다.
+
+도커 이미지
+
+
+  도커 허브(Docker Hub)에서 공개된 도커 이미지 검색
+
+
+이미지 이름 구조: [저장소 이름(계정)]/[이미지 이름]: [태그(버젼)]
+
+
+
+  
+    docker image pull {myrepo}/{myimage}:{1.0} : myrepo에 저장된(=myrepo 계정에서 올린) myimage의 1.0 버젼 도커 이미지 내려받기
+  
+  
+    docker image ls : 도커 이미지 목록 확인
+  
+  
+    docker image rm {myrepo}/{myimage}:{1.0} : 로컬 ... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags">
+<a class="post-tag" href="/jekyll-theme-yat/tags.html#Docker">#Docker</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#image">#image</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#container">#container</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#compose">#compose</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#cli">#cli</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#command">#command</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#%EB%8F%84%EC%BB%A4">#도커</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#%EC%9D%B4%EB%AF%B8%EC%A7%80">#이미지</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88">#컨테이너</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#%EB%AA%85%EB%A0%B9%EC%96%B4">#명령어</a>
+</div>
+    </li>
+<li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/jekyll-theme-yat/diary/2022/10/17/airpot.html">
+          [Diary] 에어팟 프로(2세대)가 온다!
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Oct 17, 2022</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 1 min</span>
+      </div>
+      <a class="post-excerpt" href="/jekyll-theme-yat/diary/2022/10/17/airpot.html">
+        <p>
+        친한 언니가 올해 생일선물을 생각해보라고 했을 때,     
+출시될지 말지도 불확실한 상황에서 에어팟 프로(2세대)를 골랐다. 
+생일이 한참 지나도 좋으니 에어팟 프로(2세대)로 꼭 받고 싶다고! 
+언니도 OK해서 에어팟 프로(2세대)가 출시되기만을 손꼽아 기다렸다.
+
+다행히 올해 하반기에 에어팟 프로(2세대) 출시가 확정되었다.
+이번에는 미모티콘도 케이스에 새길 수 있다고 하여,  
+어떤 미모티콘으로 새길지도 미리 정해놓고 국내 출시일만 기다렸다.
+
+국내 출시일은 한참 후에야 확정되었는데, 
+이 때 애플 코리아 홈페이지에서 에어팟 프로(2세대) 출시 일정을 가장 먼저 받아보기 위해
+스크래핑 함수를 써서 탤레그램 ... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags">
+<a class="post-tag" href="/jekyll-theme-yat/tags.html#Diary">#Diary</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#Apple">#Apple</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#AirPods%20Pro(2%EC%84%B8%EB%8C%80)">#AirPods Pro(2세대)</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#%EC%97%90%EC%96%B4%ED%8C%9F%20%ED%94%84%EB%A1%9C%202%EC%84%B8%EB%8C%80">#에어팟 프로 2세대</a>
+</div>
+    </li>
+<li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/jekyll-theme-yat/programming/2022/10/14/git-commands.html">
+          내가 필요해서 정리하는 Git 기본 명령어
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Oct 14, 2022</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 4 mins</span>
+      </div>
+      <a class="post-excerpt" href="/jekyll-theme-yat/programming/2022/10/14/git-commands.html">
+        <p>
+        내가 필요해서 간략하게 정리하는 Git에서 사용할 수 있는 기본 명령어입니다.
+
+새로운 저장소 생성
+
+
+  git init : .git 하위 디렉토리 생성
+    
+      (* 폴더를 새롭게 만든 후, 그 안에서 명령 실행 → 새로운 git저장소 생성)
+    
+  
+  git config --global user.name "&lt;사용자명&gt;" : 깃 환경에서 사용자 이름을 으로 지정
+  git config --global user.email "&lt;사용자이메일명&gt;" : 깃 환경에서 사용자 이메일을 으로 지정
+
+
+저장소 복제/다운로드(clone)
+
+
+  git clone &lt;https:.. UR... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags">
+<a class="post-tag" href="/jekyll-theme-yat/tags.html#git">#git</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#command">#command</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#%EB%AA%85%EB%A0%B9%EC%96%B4">#명령어</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#clone">#clone</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#commit">#commit</a>
+</div>
+    </li>
+<li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/jekyll-theme-yat/data_science/2022/10/12/SQL1.html">
+          내가 필요해서 정리하는 SQL 쿼리 기초(1)
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Oct 12, 2022</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 3 mins</span>
+      </div>
+      <a class="post-excerpt" href="/jekyll-theme-yat/data_science/2022/10/12/SQL1.html">
+        <p>
+        내가 필요해서 간략하게 정리하는 SQL 쿼리의 기초 작성법(1)입니다.
+우선, 1. 테이블 만들기, 2. 행 추가, 삭제, 갱신, 3. 행 조회를 다루도록 하겠습니다.
+[참고] SQLite를 기반으로 작성하였습니다.
+
+1. 테이블 만들기
+
+기본 형식: CREATE TABLE [테이블명] ([변수명] [조건]);
+
+Q. Id, Name, Birthday 변수를 포함하는 [User] 테이블을 만들어라.
+
+CREATE TABLE User (
+    Id    	  INTEGER NOT NULL,
+    Name  	  TEXT NOT NULL,
+    Birthday        DATE,
+    PRIMARY KEY(... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags">
+<a class="post-tag" href="/jekyll-theme-yat/tags.html#SQL">#SQL</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#query">#query</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#%EC%BF%BC%EB%A6%AC">#쿼리</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#%EC%A7%88%EC%9D%98%EB%AC%B8">#질의문</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#SQLite">#SQLite</a>
+</div>
+    </li>
+<li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/jekyll-theme-yat/programming/2022/10/10/Cli-commands.html">
+          내가 필요해서 정리하는 CLI 기본 명령어
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Oct 10, 2022</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 3 mins</span>
+      </div>
+      <a class="post-excerpt" href="/jekyll-theme-yat/programming/2022/10/10/Cli-commands.html">
+        <p>
+        CLI(Command Line Interface)의 기본 명령어
+리눅스(Linux) 기본 명령어로, 
+맥에서는 터미널(terminal)에서 작동하는 명령어입니다.
+
+
+  pwd : 현재의 경로(위치)
+  ls : 현재 폴더 내 파일의 목록 출력
+    
+      ls -a : 모든 파일(숨긴 파일까지) 표시
+      ls -l : 상세 정보 출력
+      ls -la : 모든 파일 + 상세 정보 출력
+      ls -R : 폴더 내 모든 내용 순환적으로 출력(불가피한 경우가 아니라면 쓰지 마세요)
+      ls -r : 정렬 반대로 출력
+      ls -t : 최근 사용을 기준으로 정렬해 출력
+    
+... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags">
+<a class="post-tag" href="/jekyll-theme-yat/tags.html#CLI">#CLI</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#command">#command</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#Linux">#Linux</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#Mac%20terminal">#Mac terminal</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#%EB%A7%A5%20%ED%84%B0%EB%AF%B8%EB%84%90">#맥 터미널</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#%EB%AA%85%EB%A0%B9%EC%96%B4">#명령어</a>
+</div>
+    </li>
+<li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/jekyll-theme-yat/programming/2022/10/06/Macdeletekey.html">
+          내가 필요해서 정리하는 Mac 삭제 단축키
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Oct 06, 2022</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 1 min</span>
+      </div>
+      <a class="post-excerpt" href="/jekyll-theme-yat/programming/2022/10/06/Macdeletekey.html">
+        <p>
+        내가 필요해서 간략하게 정리하는 Mac Delete 관련 단축키입니다.
+
+맥 삭제 단축 키
+
+
+  
+    맥에서 커서 앞글자 지우기 (= 윈도우의 Backspace)
+Delete
+  
+  
+    맥에서 커서 뒷글자 지우기 (= 윈도우의 Delete)
+Fn + Delete
+  
+  
+    맥에서 커서가 위치한 라인 한 줄 삭제하기 (줄단위 삭제)
+Command + Delete
+  
+
+
+맥에서 단어 삭제하기 (띄어쓰기 기준)
+
+
+  
+    커서 앞 단어 한 단어씩 삭제하기
+Option + Delete
+  
+  
+    커서 뒷 단어 한 단어씩 삭제하기
+Fn + Option + Delete
+  
+
+
+덧붙이는 말:... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags">
+<a class="post-tag" href="/jekyll-theme-yat/tags.html#Mac">#Mac</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#shortcuts">#shortcuts</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#%EB%A7%A5">#맥</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#%EB%8B%A8%EC%B6%95%ED%82%A4">#단축키</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#Delete">#Delete</a>
+</div>
+    </li>
+<li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/jekyll-theme-yat/data_science/2022/09/21/pandas.html">
+          [Python] 내가 필요해서 정리하는 Pandas 기본 함수
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Sep 21, 2022</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 4 mins</span>
+      </div>
+      <a class="post-excerpt" href="/jekyll-theme-yat/data_science/2022/09/21/pandas.html">
+        <p>
+        내가 필요해서 간략하게 정리하는 파이썬(Python) 판다스(Pandas) 라이브러리의 기본 함수 및 명령어입니다.
+
+파일 불러오기 및 저장
+
+
+  pd.read_csv("파일명") : csv 파일 불러오기
+    
+      pd.read_table : tsv 파일 불러오기
+      pd.read_excel() : 엑셀 파일 불러오기
+      pd.read_sql() : 쿼리 불러오기
+      pd.read_json : json 파일 불러오기
+      pd.read_html : html 파일 불러오기
+      pd.read_clipboard() : 클립보드에 있는 내용 불러오기
+      pd.DataF... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags">
+<a class="post-tag" href="/jekyll-theme-yat/tags.html#Python">#Python</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#Data%20Science">#Data Science</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#Pandas%20Cheat%20Sheet">#Pandas Cheat Sheet</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#Command">#Command</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#Method">#Method</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#Function">#Function</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#%ED%8C%8C%EC%9D%B4%EC%8D%AC">#파이썬</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#%ED%8C%90%EB%8B%A4%EC%8A%A4">#판다스</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC">#라이브러리</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#%ED%95%A8%EC%88%98">#함수</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#%EB%AA%85%EB%A0%B9%EC%96%B4">#명령어</a>
+</div>
+    </li>
+<li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/jekyll-theme-yat/diary/2022/09/14/kaggle-75th.html">
+          [Diary] 캐글 75위 달성!!
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Sep 14, 2022</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 1 min</span>
+      </div>
+      <a class="post-excerpt" href="/jekyll-theme-yat/diary/2022/09/14/kaggle-75th.html">
+        <p>
+        앙상블 모델 중에서 부스팅 기법을 사용하여 분류 문제를 풀고
+캐글에 제출하는 과제를 진행했다.
+
+Pipe랑 GridSearchCV를 묶어서 주요 하이퍼파라미터의 최적값을 찾아내고,
+XGBoosting 문서를 참고하여 
+일부 하이퍼파라미터를 계속 수정하는 방식으로 학습을 진행했다.
+
+여러 가지 변경을 시도하였는데 점수가 생각보다 잘 안올라가더라.
+일단 제출하고 다시 생각하자 싶어서 
+Kaggle API를 통해 제출하고 결과를 확인하는데 75위가 나왔다. 
+어제 Random Forest 기법을 활용했을 때보다 거의 90% 가까이 등수가 올라 기뻤다.
+
+
+
+동기들이 내가 제출한 코드를 보고 따라하면 등수는 금방 떨어지겠... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags">
+<a class="post-tag" href="/jekyll-theme-yat/tags.html#Diary">#Diary</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#Python">#Python</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#Data%20Science">#Data Science</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#%EA%B3%B5%EB%B6%80">#공부</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#Kaggle">#Kaggle</a>
+</div>
+    </li>
+<li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/jekyll-theme-yat/diary/2022/08/31/First-project.html">
+          [Diary] 첫번째 개인 프로젝트가 끝났다
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Aug 31, 2022</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 1 min</span>
+      </div>
+      <a class="post-excerpt" href="/jekyll-theme-yat/diary/2022/08/31/First-project.html">
+        <p>
+        지난 월요일에 부트캠프에서 진행하는 첫번째 개인 프로젝트가 끝났다.
+
+첫 번째 개인 프로젝트는 4일 동안, 
+캐글(Kaggle)의 Video Game Sales 파일을 약간 변형한 파일을 가지고
+다음 분기에 출시할 게임에 대한 제언을 목표로 분석을 진행하고
+분석 결과에 대한 영상을 8분 안에 찍는 것이었다.
+
+분석 과정에서 1) 연도별 게임 트렌드, 2) 지역별 선호 장르, 3) 출고량 높은 게임 분석 등을 포함하는 것이
+개인 프로젝트의 목적이었는데..
+
+결과를 정리하고,
+주요 내용을 8분 안에 정리하려다보니
+반드시 포함되어야 하는 분석의 내용은 모두 포함하였으나 
+추가로 실시한 K-Means Clustering ... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags">
+<a class="post-tag" href="/jekyll-theme-yat/tags.html#Diary">#Diary</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#Python">#Python</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#Data%20Science">#Data Science</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#%EA%B0%9C%EC%9D%B8%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8">#개인 프로젝트</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#%ED%9A%8C%EA%B3%A0">#회고</a>
+</div>
+    </li>
+<li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/jekyll-theme-yat/data_science/2022/08/16/Bayes.html">
+          베이지안 통계(1)
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Aug 16, 2022</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 3 mins</span>
+      </div>
+      <a class="post-excerpt" href="/jekyll-theme-yat/data_science/2022/08/16/Bayes.html">
+        <p>
+        
+  확률(probability) : 유한한 집합에서의 비율
+  
+    조건부 확률: 조건에 따른 확률 
+– 예: 한 응답자가 은행원일 때, 여성일 확률 P(여성|은행원)   
+– 모든 은행원을 골라낸다. 이 중 여성의 비율을 구한다.
+
+    
+      [중요] 조건부 확률은 교환 가능하지 않다.
+      한 응답자가 은행원일 때 여성일 확률과 한 응답자가 여성일 때 은행원일 확률은 같지 않음.
+      P(여성|은행원) != P(은행원|여성)
+    
+  
+
+
+베이즈 정리
+
+
+  베이즈 정리 P(A|B) = P(A)*P(B|A) / P(B)
+    
+      
+        사건 B가 발생함으로써(사건... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags">
+<a class="post-tag" href="/jekyll-theme-yat/tags.html#Bayes">#Bayes</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#%ED%86%B5%EA%B3%84">#통계</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#%EB%B2%A0%EC%9D%B4%EC%A6%88_%EC%A0%95%EB%A6%AC">#베이즈_정리</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#%EC%A1%B0%EA%B1%B4%EB%B6%80%ED%99%95%EB%A5%A0">#조건부확률</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#Python">#Python</a>
+</div>
+    </li>
+<li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/jekyll-theme-yat/diary/2022/08/10/Bootcamp.html">
+          [Diary] 공부하면 할수록 재미있다
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Aug 10, 2022</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 2 mins</span>
+      </div>
+      <a class="post-excerpt" href="/jekyll-theme-yat/diary/2022/08/10/Bootcamp.html">
+        <p>
+        최근 부트캠프 과정을 시작했다.
+
+전직을 계획하기 전부터 데이터에 대한 통계적 분석을 주된 연구 방법으로 계속 사용해 왔었기 때문에,
+빅데이터를 다를 수 있는 도구인 Python만 어느 정도 익히면 될 것이라는 생각이었다.
+(물론 그것은 완전히 잘못된 생각이었다.
+  Python을 어느 정도 하려고 하면 컴퓨터 공학도 어느 정도 기반이 있어야 하고,
+  실무에서 관련해서 사용하는 기술도 알아야 하기 때문에 넓은 영역의 지식을 계속해서 함양해 나아가야 한다.
+  그 과정에서 등불을 들고 제 앞 길을 비춰 함께 걸어가주고 계신 시니어 개발자 레드님께 압도적 감사!!)
+
+그동안 공부한 내용을 바탕으로
+부트캠프에서 제시하... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags">
+<a class="post-tag" href="/jekyll-theme-yat/tags.html#Diary">#Diary</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#Python">#Python</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#Data%20Science">#Data Science</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#%EB%B9%85%EB%8D%B0%EC%9D%B4%ED%84%B0">#빅데이터</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#%EA%B3%B5%EB%B6%80">#공부</a>
+</div>
+    </li>
+<li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/jekyll-theme-yat/diary/2022/07/31/study.html">
+          [Diary] 공부할게 정말 정말 많다
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Jul 31, 2022</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 1 min</span>
+      </div>
+      <a class="post-excerpt" href="/jekyll-theme-yat/diary/2022/07/31/study.html">
+        <p>
+        태풍이 지나가던다더니 하루종일 비가 왔다.
+오전에는 평가 의견서 제출할게 있어서 빨리 써서 보내놓고는
+하루 종일 책상 앞에 앉아서 딥러닝 강의를 듣고, 책도 읽었다.
+
+개발 = Error와의 전쟁
+
+온라인 강의 선생님이 설명하는 데로 코드를 똑같이 작성하였는데도,
+안되는 경우도 많고 (매번 대체 왜왜!하며 머리를 감싼다…)
+Error는 정말 시도 때도 없이 나온다.
+우스개 소리로 개발 과정은 Error에 대처하는게 반 이상이라는 말이 괜한 말이 아닌 것 같다.
+
+오전에 3D rendering 한 번 해보려다가
+오류가 있는 것 같아 (나중에 알고 보니 오류가 아니었음 ㅠㅠ)
+VSCode에서 Jupyter notebo... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags">
+<a class="post-tag" href="/jekyll-theme-yat/tags.html#Diary">#Diary</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#Python">#Python</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#Data%20Science">#Data Science</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#%EA%B3%B5%EB%B6%80">#공부</a>
+</div>
+    </li>
+<li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/jekyll-theme-yat/data_science/2022/07/30/DS-lectures.html">
+          데이터 과학 기초 강의 추천
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Jul 30, 2022</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 2 mins</span>
+      </div>
+      <a class="post-excerpt" href="/jekyll-theme-yat/data_science/2022/07/30/DS-lectures.html">
+        <p>
+        Special Thanks To 제 2탄! 
+데이터 과학 분야 기초 강의 추천 겸 감사의 인사를 써봅니다.
+
+성장에 큰 도움 주시고 계신 온라인 강의 선생님들
+
+Data Scientist로 성장하는 과정에서 큰 도움 주고 계신 온라인 강의 선생님들.
+선생님들은 제가 제자인 줄도 모르고 계시겠죠? 
+(오렌지색을 칠해진 선생님 이름 클릭하면 해당 강좌로 연결됩니다.)
+
+
+  
+    생활코딩 : 기초 개념 잡는 데에는 이만한 곳이 없습니다. 데이터 분야나 개발 분야 공부하다가 모르는 개념 나오면 여기부터 둘러봅니다.
+  
+  
+    코딩애플 : 정말 귀에 쏙쏙 들어오는 설명. 특히, 딥러닝 강의는 정말 최고예요! 데... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags">
+<a class="post-tag" href="/jekyll-theme-yat/tags.html#%EA%B0%90%EC%82%AC">#감사</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#Python">#Python</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#Data%20Science">#Data Science</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#%EC%98%A8%EB%9D%BC%EC%9D%B8%20%EA%B0%95%EC%9D%98">#온라인 강의</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#%EC%B6%94%EC%B2%9C">#추천</a>
+</div>
+    </li>
+<li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/jekyll-theme-yat/diary/2022/07/30/ASpecial_thanks(1).html">
+          [Diary] Special Thanks To
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Jul 30, 2022</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 1 min</span>
+      </div>
+      <a class="post-excerpt" href="/jekyll-theme-yat/diary/2022/07/30/ASpecial_thanks(1).html">
+        <p>
+        개발자(?) 블로그를 개설한 김에 
+박사논문에도 싣지 못했던 Special Thanks To를 적어보고자 합니다.
+(About에 장비 제공으로 넣어달라는 준의 요청에 대한 응답이기도 합니다.)
+
+내 인생의 동반자, 레드
+
+벌써 함께 한지도 만 8년이 다 되어가는 내 인생의 동반자, 레드.
+처음 만났을 때는 주니어 개발자였는데, 어느새 여기저기서 찾는 시니어 개발자가 되었네.
+
+내가 공부하는 있는 부분이나 고민하고 있는 부분에 대해 잘 들어주고,
+여러가지 새로운 시도를 해 볼 수 있도록 계속해서 자극을 주는 점 정말 감사해.
+
+비록 니가 사고 싶었던 것이 분명하지만
+생일선물로 큰 모니터도 선물해줘서 고마워.
+데이터 ... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags">
+<a class="post-tag" href="/jekyll-theme-yat/tags.html#%EA%B0%90%EC%82%AC">#감사</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#%EB%82%B4%20%EC%82%AC%EB%9E%8C">#내 사람</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#Diary">#Diary</a>
+</div>
+    </li>
+<li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/jekyll-theme-yat/programming/2022/07/27/Python-requirements.html">
+          [Python] requirements.txt로 라이브러리 한 번에 설치하기
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Jul 27, 2022</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 2 mins</span>
+      </div>
+      <a class="post-excerpt" href="/jekyll-theme-yat/programming/2022/07/27/Python-requirements.html">
+        <p>
+        파이썬을 이용하다보면 다른 훌륭한 개발자들이 미리 만들어놓은 라이브러리를 자주(항상) 사용하게 된다.
+수행하는 프로젝트에 따라서 사용하는 라이브러리가 여러 개인 경우가 많은데, 
+이 때 pip과 라이브러리 목록을 담은 txt 파일 하나면 필요한 라이브러리를 한 번에 설치할 수 있다.
+
+pip list
+
+우선 내 컴퓨터에 어떤 라이브러리가 설치되어 있는지 확인해보자.
+
+터미널에서 pip list를 입력하면 다음과 같이 pip으로 설치된 모든 라이브러리가 나온다.
+
+$ pip list
+Package                                           Version
+-----------------... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags">
+<a class="post-tag" href="/jekyll-theme-yat/tags.html#Python">#Python</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#Programming">#Programming</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#pip">#pip</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#requirements.txt">#requirements.txt</a>
+</div>
+    </li>
+<li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/jekyll-theme-yat/programming/2022/07/27/Mac-shortcuts.html">
+          내가 필요해서 정리하는 Mac 단축키 기초
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Jul 27, 2022</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 2 mins</span>
+      </div>
+      <a class="post-excerpt" href="/jekyll-theme-yat/programming/2022/07/27/Mac-shortcuts.html">
+        <p>
+        오래된 Windows 사용자이자,
+데이터 분석 프로그래밍을 위해서 Mac에 새롭게 적응해 가고 있는 상황에서
+내가 필요해서 정리하는 Mac 단축키 (shortcut)입니다.
+
+Mac 보조키 기호
+⌘ [command 또는 cmd]  
+⌥ [option 또는 alt]  
+^ [control 또는 ctrl]
+⇧ [shift]
+⇪ [caps lock]
+fn 
+
+
+Windows와 Mac에서 가장 차이가 나는 부분이
+control과 command입니다.
+
+Windows에서 단축키로 control을 쓰는 작업을
+Mac에서는 대부분 command를 사용하기 때문이죠.
+이것만 익숙해져도 반은 먹고 들어갑니다!
+
+맥 단축키
+
+제가 ... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags">
+<a class="post-tag" href="/jekyll-theme-yat/tags.html#Mac">#Mac</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#shortcuts">#shortcuts</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#%EB%A7%A5">#맥</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#%EB%8B%A8%EC%B6%95%ED%82%A4">#단축키</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#Programming">#Programming</a>
+</div>
+    </li>
+<li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/jekyll-theme-yat/programming/2022/07/26/Markdown.html">
+          내가 필요해서 정리하는 Markdown 기초
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Jul 26, 2022</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 2 mins</span>
+      </div>
+      <a class="post-excerpt" href="/jekyll-theme-yat/programming/2022/07/26/Markdown.html">
+        <p>
+        1. 제목 (Headings)
+
+Header는 #의 개수에 따라서 ‘H1’(#1개)에서 ‘H6’(#6개)까지 지원합니다.
+#이 1개인 경우가 가장 크고, #의 개수가 늘어날 때마다 크기가 작아집니다.   
+목차를 생성하는 경우에는 같은 크기의 제목에 동일한 들여쓰기(indentation)이 생성됩니다.
+
+# H1 제목
+## H2 제목
+### H3 제목
+#### H4 제목
+##### H5 제목
+###### H6 제목  
+
+
+2. 줄 바꿈 (New line)
+
+줄 바꿈은 2가지 방식을 활용할 수 있습니다.
+
+  기본 줄 바꿈: 문장의 마지막에 공백( )을 두 번 입력합니다.
+  새로운 문단 생성: Enter키를 두 번... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags">
+<a class="post-tag" href="/jekyll-theme-yat/tags.html#Markdown">#Markdown</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#Programming">#Programming</a>
+</div>
+    </li>
+<li>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 class="post-title">
+        <a class="post-link" href="/jekyll-theme-yat/diary/2022/07/26/Hello-Blog.html">
+          [Diary] 블로그 개설과 테마 적용
+        </a>
+      </h2>
+      <div class="post-meta">
+        <span class="post-date"><i class="fa fa-calendar"></i> Jul 26, 2022</span>
+        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 1 min</span>
+      </div>
+      <a class="post-excerpt" href="/jekyll-theme-yat/diary/2022/07/26/Hello-Blog.html">
+        <p>
+        어제 Jekyll 기본형을 적용한 Github Blog를 처음 개설했다.
+Blog를 꾸준하게 작성해 본 적도 없을 뿐더러,
+그마저도 대부분 상용 Blog를 이용했던 터라 
+첫 번째 글을 작성하고, about.md 수정하는 것만도 쉬운 일이 아니었다.
+
+Jekyall Yat theme 적용
+
+오늘은 블로그를 꾸며보기 위해 이것저것 검색해보다가 
+Jekyll theme 적용이 가능하다는 것을 알게 되었고,
+고심(!) 끝에 Jekyll Yat theme을 선택해 적용했다.
+
+블로그 제목도 바꾸고, 
+배경 사진도 바꾸려고 여러가지 시도를 해보았는데 
+아직까지는 되는 것보다 안되는게 훨씬 많은 상황이다;;;; 
+(정말 눈물... <span class="read_more">Read More</span>
+        </p>
+      </a>
+      <div class="post-tags">
+<a class="post-tag" href="/jekyll-theme-yat/tags.html#github">#github</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#blog">#blog</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#jekyll%20yat%20theme">#jekyll yat theme</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#Diary">#Diary</a>
+</div>
+    </li>
+</ul>
+
+  <!-- Pagination links -->
+</div>
+</div>
+
+
+  </section>
+  <section class="sidebar" style="margin-left: 15px;">
+    <!-- Get sidebar items -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="common-list">
+  <ul>
+    <li>
+      <a href="/jekyll-theme-yat/index.html">
+        All<span>34</span>
+      </a>
+    </li>
+
+    
+      <li>
+        <a href="/jekyll-theme-yat/categories.html#h-Data_Science">
+          Data_Science <span>8</span>
+        </a>
+      </li>
+    
+      <li>
+        <a href="/jekyll-theme-yat/categories.html#h-Diary">
+          Diary <span>10</span>
+        </a>
+      </li>
+    
+      <li>
+        <a href="/jekyll-theme-yat/categories.html#h-Programming">
+          Programming <span>14</span>
+        </a>
+      </li>
+    
+      <li>
+        <a href="/jekyll-theme-yat/categories.html#h-Review">
+          Review <span>2</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+</section>
+</div>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/jekyll-theme-yat/"></data>
+
+  <div class="wrapper">
+    <div class="site-footer-inner">
+<div>Copyright © 2022-2024 Kong Ju</div>
+      <div>Powered by <a title="Jekyll is a simple, blog-aware, static site
+      generator." href="https://jekyllrb.com/">Jekyll</a> &amp; <a title="Yat, yet
+      another theme." href="https://github.com/jeffreytse/jekyll-theme-yat">Yat Theme</a>.</div>
+      <div class="footer-col rss-subscribe">Subscribe <a href="/jekyll-theme-yat/feed.xml">via RSS</a>
+</div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

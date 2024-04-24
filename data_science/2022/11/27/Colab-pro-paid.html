@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-translate-customization" content="108d9124921d80c3-80e20d618ff053c8-g4f02ec6f3dba68b7-c">
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Google Colab Pro 구글 코랩 프로 결제 | Becoming a Data Scientist</title>
+<meta name="generator" content="Jekyll v4.3.3">
+<meta property="og:title" content="Google Colab Pro 구글 코랩 프로 결제">
+<meta name="author" content="Kong Ju">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="최근에는 딥러닝 모델 학습을 진행하고 있다. 딥러닝 모델은 머신러닝 부스팅 모델과 비교해, 학습에 필요한 데이터의 크기도 클 뿐더러 계산해야 하는 가중치도 많기 때문에 시간이 정말 정말 많이 소요된다. 몇 일 전에는 AutoEncoder 모델의 학습 속도와 성능을 비교할 일이 있었다. 먼저, 내가 주로 사용하고 있는 맥북에서 1) GPU 설정 tensorflow와 2) CPU 설정 tensorflow를 각각 이용하여 속도와 성능을 비교하였다. &lt; 속도와 성능 측정 결과 &gt; 1) GPU 설정 tensorflow: 1 epoch 당 약 75초, 100 epoch 후 최종 val_loss = 0.4550 2) CPU 설정 tensorflow: 1 epoch 당 약 100초, 100 epoch 후 최종 val_loss = 0.4740 확실히 GPU을 사용한 모델이 속도도 빠르고, 성능도 잘 나오는 것을 확인할 수 있었다. (‘역시, 딥러닝 모델에는 GPU가 꼭 필요하군!’) 그 후에 구글 코랩 GPU 가속을 사용하면 더 빠르게 학습이 될 것이라고 이야기한 분이 계셔서 그동안 (매번 필요한 라이브러리를 새로 설치해야 된다는 불편함 때문에) 별로 사용하지 않던 3) 구글 코랩(Colab) 기본형(GPU 가속 사용)으로 동일한 모델을 돌려보게 되었다. 결과는 그야말로 충격적. 3) 구글 기본형(GPU 가속 사용): 1 epoch 당 약 8초, 100 epoch 후 최종 val_loss = 0.4580 라는 결과가 나왔다. 속도는 내 맥북보다 거의 10배 빠르고, 성능도 비슷하게 나오는 것이 아닌가! 그동안 이용하는게 약간 불편하다는 이유로 로컬에서만 딥러닝 모델 학습을 진행하고 하염없이 기다리던 내가 후회스러운 순간이었다. 딥러닝 모델 학습에는 고용량의 GPU가 필수적이라는 생각이 들었고, 느린 맥북을 붙잡고 기다리느니 구글 코랩을 적극적으로 활용하는게 좋겠다는 생각이 들었다. 그래서 오늘! 당장 맥북을 바꾸거나 고용량 GPU를 탑재할 수는 없으니, 구글 코랩을 적극적으로 이용하는게 더 현실적이겠다는 생각이 들어 고민하다가 구글 코랩 프로를 결제했다. 코랩 프로는 무료 버젼의 GPU(k80)보다 더 좋은 T4, P100 등의 GPU를 제공하고, 무료 RAM(12.72GB)보다 향상된 RAM(25.51GB)을 제공한다. 또한 더 긴 런타임을 제공해줌으로써 다시 런타임에 연결하는 노력을 줄여준다는 장점이 있다. 구독 방법은 간단하다. 구글 코랩 프로 결제 사이트에서 결제 버튼을 누르고, 해외에서 사용 가능한 신용카드(VISA, Master 등) 정보만 입력하면 바로 이용할 수 있다. $9.99/월로 표기되어 있지만, 세금이 약간 추가되기 때문에 실제 결제 금액은 $10.62이 되었다. 구글에서 제공한 구글 코랩 프로 최대한 활용하기를 살펴보면, 메뉴 - 런타임 &gt; 런타임 유형 변경에서 GPU 가속기와 고용량 RAM을 선택한 후 이용하면 된다! 만약 구글 코랩 프로 결제를 고민하면서 이 글을 보고 있는 분이 계시다면, 머신러닝 부스팅 모델 정도를 활용하고 있는 상황이라면 굳이 프로까지는 필요없을 것 같다. 하지만 딥러닝 모델을 활용하고 있고 딥러닝 모델 학습 속도 때문에 고민하고 계신 분이라면 코랩 프로를 결제하고 GPU 가속을 적극적으로 사용하는게 더 낫지 않을까 싶다. 우리의 시간은 소중하니까요!">
+<meta property="og:description" content="최근에는 딥러닝 모델 학습을 진행하고 있다. 딥러닝 모델은 머신러닝 부스팅 모델과 비교해, 학습에 필요한 데이터의 크기도 클 뿐더러 계산해야 하는 가중치도 많기 때문에 시간이 정말 정말 많이 소요된다. 몇 일 전에는 AutoEncoder 모델의 학습 속도와 성능을 비교할 일이 있었다. 먼저, 내가 주로 사용하고 있는 맥북에서 1) GPU 설정 tensorflow와 2) CPU 설정 tensorflow를 각각 이용하여 속도와 성능을 비교하였다. &lt; 속도와 성능 측정 결과 &gt; 1) GPU 설정 tensorflow: 1 epoch 당 약 75초, 100 epoch 후 최종 val_loss = 0.4550 2) CPU 설정 tensorflow: 1 epoch 당 약 100초, 100 epoch 후 최종 val_loss = 0.4740 확실히 GPU을 사용한 모델이 속도도 빠르고, 성능도 잘 나오는 것을 확인할 수 있었다. (‘역시, 딥러닝 모델에는 GPU가 꼭 필요하군!’) 그 후에 구글 코랩 GPU 가속을 사용하면 더 빠르게 학습이 될 것이라고 이야기한 분이 계셔서 그동안 (매번 필요한 라이브러리를 새로 설치해야 된다는 불편함 때문에) 별로 사용하지 않던 3) 구글 코랩(Colab) 기본형(GPU 가속 사용)으로 동일한 모델을 돌려보게 되었다. 결과는 그야말로 충격적. 3) 구글 기본형(GPU 가속 사용): 1 epoch 당 약 8초, 100 epoch 후 최종 val_loss = 0.4580 라는 결과가 나왔다. 속도는 내 맥북보다 거의 10배 빠르고, 성능도 비슷하게 나오는 것이 아닌가! 그동안 이용하는게 약간 불편하다는 이유로 로컬에서만 딥러닝 모델 학습을 진행하고 하염없이 기다리던 내가 후회스러운 순간이었다. 딥러닝 모델 학습에는 고용량의 GPU가 필수적이라는 생각이 들었고, 느린 맥북을 붙잡고 기다리느니 구글 코랩을 적극적으로 활용하는게 좋겠다는 생각이 들었다. 그래서 오늘! 당장 맥북을 바꾸거나 고용량 GPU를 탑재할 수는 없으니, 구글 코랩을 적극적으로 이용하는게 더 현실적이겠다는 생각이 들어 고민하다가 구글 코랩 프로를 결제했다. 코랩 프로는 무료 버젼의 GPU(k80)보다 더 좋은 T4, P100 등의 GPU를 제공하고, 무료 RAM(12.72GB)보다 향상된 RAM(25.51GB)을 제공한다. 또한 더 긴 런타임을 제공해줌으로써 다시 런타임에 연결하는 노력을 줄여준다는 장점이 있다. 구독 방법은 간단하다. 구글 코랩 프로 결제 사이트에서 결제 버튼을 누르고, 해외에서 사용 가능한 신용카드(VISA, Master 등) 정보만 입력하면 바로 이용할 수 있다. $9.99/월로 표기되어 있지만, 세금이 약간 추가되기 때문에 실제 결제 금액은 $10.62이 되었다. 구글에서 제공한 구글 코랩 프로 최대한 활용하기를 살펴보면, 메뉴 - 런타임 &gt; 런타임 유형 변경에서 GPU 가속기와 고용량 RAM을 선택한 후 이용하면 된다! 만약 구글 코랩 프로 결제를 고민하면서 이 글을 보고 있는 분이 계시다면, 머신러닝 부스팅 모델 정도를 활용하고 있는 상황이라면 굳이 프로까지는 필요없을 것 같다. 하지만 딥러닝 모델을 활용하고 있고 딥러닝 모델 학습 속도 때문에 고민하고 계신 분이라면 코랩 프로를 결제하고 GPU 가속을 적극적으로 사용하는게 더 낫지 않을까 싶다. 우리의 시간은 소중하니까요!">
+<link rel="canonical" href="https://kongju7.github.io/jekyll-theme-yat/data_science/2022/11/27/Colab-pro-paid.html">
+<meta property="og:url" content="https://kongju7.github.io/jekyll-theme-yat/data_science/2022/11/27/Colab-pro-paid.html">
+<meta property="og:site_name" content="Becoming a Data Scientist">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2022-11-27T00:00:00+00:00">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="Google Colab Pro 구글 코랩 프로 결제">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Kong Ju"},"dateModified":"2022-11-27T00:00:00+00:00","datePublished":"2022-11-27T00:00:00+00:00","description":"최근에는 딥러닝 모델 학습을 진행하고 있다. 딥러닝 모델은 머신러닝 부스팅 모델과 비교해, 학습에 필요한 데이터의 크기도 클 뿐더러 계산해야 하는 가중치도 많기 때문에 시간이 정말 정말 많이 소요된다. 몇 일 전에는 AutoEncoder 모델의 학습 속도와 성능을 비교할 일이 있었다. 먼저, 내가 주로 사용하고 있는 맥북에서 1) GPU 설정 tensorflow와 2) CPU 설정 tensorflow를 각각 이용하여 속도와 성능을 비교하였다. &lt; 속도와 성능 측정 결과 &gt; 1) GPU 설정 tensorflow: 1 epoch 당 약 75초, 100 epoch 후 최종 val_loss = 0.4550 2) CPU 설정 tensorflow: 1 epoch 당 약 100초, 100 epoch 후 최종 val_loss = 0.4740 확실히 GPU을 사용한 모델이 속도도 빠르고, 성능도 잘 나오는 것을 확인할 수 있었다. (‘역시, 딥러닝 모델에는 GPU가 꼭 필요하군!’) 그 후에 구글 코랩 GPU 가속을 사용하면 더 빠르게 학습이 될 것이라고 이야기한 분이 계셔서 그동안 (매번 필요한 라이브러리를 새로 설치해야 된다는 불편함 때문에) 별로 사용하지 않던 3) 구글 코랩(Colab) 기본형(GPU 가속 사용)으로 동일한 모델을 돌려보게 되었다. 결과는 그야말로 충격적. 3) 구글 기본형(GPU 가속 사용): 1 epoch 당 약 8초, 100 epoch 후 최종 val_loss = 0.4580 라는 결과가 나왔다. 속도는 내 맥북보다 거의 10배 빠르고, 성능도 비슷하게 나오는 것이 아닌가! 그동안 이용하는게 약간 불편하다는 이유로 로컬에서만 딥러닝 모델 학습을 진행하고 하염없이 기다리던 내가 후회스러운 순간이었다. 딥러닝 모델 학습에는 고용량의 GPU가 필수적이라는 생각이 들었고, 느린 맥북을 붙잡고 기다리느니 구글 코랩을 적극적으로 활용하는게 좋겠다는 생각이 들었다. 그래서 오늘! 당장 맥북을 바꾸거나 고용량 GPU를 탑재할 수는 없으니, 구글 코랩을 적극적으로 이용하는게 더 현실적이겠다는 생각이 들어 고민하다가 구글 코랩 프로를 결제했다. 코랩 프로는 무료 버젼의 GPU(k80)보다 더 좋은 T4, P100 등의 GPU를 제공하고, 무료 RAM(12.72GB)보다 향상된 RAM(25.51GB)을 제공한다. 또한 더 긴 런타임을 제공해줌으로써 다시 런타임에 연결하는 노력을 줄여준다는 장점이 있다. 구독 방법은 간단하다. 구글 코랩 프로 결제 사이트에서 결제 버튼을 누르고, 해외에서 사용 가능한 신용카드(VISA, Master 등) 정보만 입력하면 바로 이용할 수 있다. $9.99/월로 표기되어 있지만, 세금이 약간 추가되기 때문에 실제 결제 금액은 $10.62이 되었다. 구글에서 제공한 구글 코랩 프로 최대한 활용하기를 살펴보면, 메뉴 - 런타임 &gt; 런타임 유형 변경에서 GPU 가속기와 고용량 RAM을 선택한 후 이용하면 된다! 만약 구글 코랩 프로 결제를 고민하면서 이 글을 보고 있는 분이 계시다면, 머신러닝 부스팅 모델 정도를 활용하고 있는 상황이라면 굳이 프로까지는 필요없을 것 같다. 하지만 딥러닝 모델을 활용하고 있고 딥러닝 모델 학습 속도 때문에 고민하고 계신 분이라면 코랩 프로를 결제하고 GPU 가속을 적극적으로 사용하는게 더 낫지 않을까 싶다. 우리의 시간은 소중하니까요!","headline":"Google Colab Pro 구글 코랩 프로 결제","mainEntityOfPage":{"@type":"WebPage","@id":"https://kongju7.github.io/jekyll-theme-yat/data_science/2022/11/27/Colab-pro-paid.html"},"url":"https://kongju7.github.io/jekyll-theme-yat/data_science/2022/11/27/Colab-pro-paid.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="shortcut icon" href="">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-noto-sans@0.0.72/index.min.css">
+  <link rel="stylesheet" href="/jekyll-theme-yat/assets/css/main.css">
+  <script src="/jekyll-theme-yat/assets/js/main.js"></script><link type="application/atom+xml" rel="alternate" href="https://kongju7.github.io/jekyll-theme-yat/feed.xml" title="Becoming a Data Scientist">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script>
+<!-- and it's easy to individually load additional languages -->
+<script charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/go.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+// Init highlight js
+document.addEventListener('DOMContentLoaded', function(event) {
+  var els = document.querySelectorAll('pre code')
+
+  function addLangData(block) {
+    var outer = block.parentElement.parentElement.parentElement;
+    var lang = block.getAttribute('data-lang');
+    for (var i = 0; i < outer.classList.length; i++) {
+      var cls = outer.classList[i];
+      if (cls.startsWith('language-')) {
+        lang = cls;
+        break;
+      }
+    }
+    if (!lang) {
+      cls = block.getAttribute('class');
+      lang = cls ? cls.replace('hljs ', '') : '';
+    }
+    if (lang.startsWith('language-')) {
+      lang = lang.substr(9);
+    }
+    block.setAttribute('class', 'hljs ' + lang);
+    block.parentNode.setAttribute('data-lang', lang);
+  }
+
+  function addBadge(block) {
+    var enabled = ('true' || 'true').toLowerCase();
+    if (enabled == 'true') {
+      var pre = block.parentElement;
+      pre.classList.add('badge');
+    }
+  }
+
+  function handle(block) {
+    addLangData(block);
+    addBadge(block)
+    hljs.highlightBlock(block);
+  }
+
+  for (var i = 0; i < els.length; i++) {
+    var el = els[i];
+    handle(el);
+  }
+});
+</script>
+
+<style>
+  /* code language badge */
+  pre.badge::before {
+    content: attr(data-lang);
+    color: #fff;
+    background-color: #ff4e00;
+    padding: 0 .5em;
+    border-radius: 0 2px;
+    text-transform: uppercase;
+    text-align: center;
+    min-width: 32px;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+  }
+
+  /* fix wrong badge display for firefox browser */
+  code > table pre::before {
+    display: none;
+  }
+</style>
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="site-header " role="banner">
+
+  <div class="wrapper">
+    <div class="site-header-inner">
+<span class="site-brand"><a class="site-brand-inner" rel="author" href="/jekyll-theme-yat/">
+  <img class="site-favicon" title="Becoming a Data Scientist" src="" onerror="this.style.display='none'">
+  Becoming a Data Scientist
+</a>
+</span><nav class="site-nav">
+          <input type="checkbox" id="nav-trigger" class="nav-trigger">
+          <label for="nav-trigger">
+            <span class="menu-icon">
+              <svg viewbox="0 0 18 15" width="18px" height="15px">
+                <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"></path>
+              </svg>
+            </span>
+          </label>
+
+          <div class="trigger">
+<a class="page-link" href="/jekyll-theme-yat/about.html">ABOUT</a><a class="page-link" href="/jekyll-theme-yat/archives.html">ARCHIVES</a><a class="page-link" href="/jekyll-theme-yat/categories.html">CATEGORIES</a><a class="page-link" href="/jekyll-theme-yat/">HOME</a><a class="page-link" href="/jekyll-theme-yat/tags.html">TAGS</a>
+
+
+
+
+
+
+
+
+
+<span class="page-link">
+
+
+
+<div id="google_translate_element" style="display: none;">
+</div>
+
+<span class="ct-language">
+  <ul class="list-unstyled ct-language-dropdown">
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="en">
+          
+          <img src="https://cdn.countryflags.com/thumbs/united-states-of-america/flag-400.png" title="English">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="fr">
+          
+          <img src="https://cdn.countryflags.com/thumbs/france/flag-400.png" title="French">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="zh-CN">
+          
+          <img src="https://cdn.countryflags.com/thumbs/china/flag-400.png" title="Chinese(Simple)">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="ja">
+          
+          <img src="https://cdn.countryflags.com/thumbs/japan/flag-400.png" title="Japanese">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="ko">
+          
+          <img src="https://cdn.countryflags.com/thumbs/south-korea/flag-400.png" title="Korean">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="ru">
+          
+          <img src="https://cdn.countryflags.com/thumbs/russia/flag-400.png" title="Russian">
+          
+        </a>
+      </li>
+    
+  </ul>
+</span>
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en',
+    autoDisplay: false,
+    layout: google.translate.TranslateElement.InlineLayout.VERTICAL
+  }, 'google_translate_element');
+
+  // Links to cross-origin destinations are unsafe
+  var gll = document.getElementsByClassName('goog-logo-link')[0];
+  if (gll) {
+    gll.setAttribute('rel', 'noopener');
+  }
+
+  function restoreLang() {
+    var iframe = document.getElementsByClassName('goog-te-banner-frame')[0];
+    if (!iframe) return;
+
+    var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+    var restore_el = innerDoc.getElementsByTagName("button");
+
+    for (var i = 0; i < restore_el.length; i++) {
+      if (restore_el[i].id.indexOf("restore") >= 0) {
+        restore_el[i].click();
+        var close_el = innerDoc.getElementsByClassName("goog-close-link");
+        close_el[0].click();
+        return;
+      }
+    }
+  }
+
+  function triggerHtmlEvent(element, eventName) {
+    var event;
+    if (document.createEvent) {
+      event = document.createEvent('HTMLEvents');
+      event.initEvent(eventName, true, true);
+      element.dispatchEvent(event);
+    } else {
+      event = document.createEventObject();
+      event.eventType = eventName;
+      element.fireEvent('on' + event.eventType, event);
+    }
+  }
+
+  var googleCombo = document.querySelector("select.goog-te-combo");
+  var langSelect = document.querySelector('.ct-language');
+  langSelect.addEventListener('click', function(event) {
+    if (!event.target) {
+      return;
+    }
+
+    var selected = document.querySelector('.ct-language .ct-language-selected');
+    if (selected) {
+      selected.classList.remove('ct-language-selected');
+    }
+
+    var target = event.target;
+    while (target && target !== langSelect ) {
+      if (target.matches('.lang-select')) {
+        break;
+      }
+      target = target.parentElement;
+    }
+
+    if (target && target.matches('.lang-select')) {
+      var lang = target.getAttribute('data-lang');
+      if (googleCombo.value == lang) {
+        restoreLang();
+      } else {
+        target.parentElement.classList.add('ct-language-selected');
+        googleCombo.value = lang;
+        triggerHtmlEvent(googleCombo, 'change');
+      }
+    }
+
+    event.preventDefault();
+  });
+}
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</span>
+</div>
+        </nav>
+</div>
+  </div>
+</header>
+
+<script>
+  function initHeader() {
+    var lastScrollY = getScrollPos().y;
+    var documentElement = document.documentElement;
+
+    function storeScrollData() {
+      var y = getScrollPos().y;var scrollStatus = "";
+
+      if (y <= 0) {
+        scrollStatus = "top";
+      } else if ((window.innerHeight + y) >= document.body.offsetHeight) {
+        scrollStatus = "bottom";
+      } else {
+        var isScrollDown = (y - lastScrollY > 0) ? true : false;
+        scrollStatus = isScrollDown ? "down" : "up";
+      }
+
+      lastScrollY = y;
+      documentElement.setAttribute("data-scroll-status", scrollStatus);
+    }
+
+    window.addEventListener('scroll', function(e) {
+      storeScrollData();
+    });
+
+    storeScrollData();
+  }
+  document.addEventListener('DOMContentLoaded', initHeader);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  function hashLocate(hashValue) {
+    hashValue = hashValue.replace(/^.*#h-/, '');
+    hashValue = decodeURIComponent(hashValue);
+    var element = document.getElementById(hashValue);
+
+    if (!element) {
+      return;
+    }
+
+    var header = document.querySelector('header.site-header');
+    var headerRect = header.getBoundingClientRect();
+    var headerTop = Math.floor(headerRect.top);
+    var headerHeight = Math.floor(headerRect.height);
+    var scrollPos = getScrollPos();
+    var offsetY = element.offsetTop - (headerTop + headerHeight + 20);
+
+    if (offsetY == scrollPos.y) {
+      return;
+    }
+
+    if (headerTop == 0  && offsetY > scrollPos.y) {
+      offsetY += headerHeight + 2;
+    } else if (headerTop < 0  && offsetY < scrollPos.y) {
+      offsetY -= headerHeight - 2;
+    }
+
+    smoothScrollTo(offsetY);
+  }
+
+  // The first event occurred
+  window.addEventListener('load', function(event) {
+    if (window.location.hash) {
+      hashLocate(window.location.hash);
+    }
+  });
+
+  // The first event occurred
+  window.addEventListener('click', function(event) {
+    if (event.target.tagName.toLowerCase() == 'a') {
+      hashLocate(event.target.getAttribute('href'));
+    }
+  });
+</script>
+<div class="theme-toggle">
+  <input type="checkbox" id="theme-switch">
+  <label for="theme-switch">
+    <div class="toggle"></div>
+    <div class="names">
+      <p class="light">Light</p>
+      <p class="dark">Dark</p>
+    </div>
+  </label>
+</div>
+
+
+
+
+<script>
+  (function() {
+    var sw = document.getElementById('theme-switch');
+    var html = document.getElementsByTagName('html')[0];
+    var nightModeOption = ('auto' || 'auto').toLowerCase();
+    var storage = nightModeOption === 'manual'
+        ? localStorage
+        : sessionStorage;
+    var themeData = loadThemeData();
+
+    function saveThemeData(data) {
+      storage.setItem('theme', JSON.stringify(data));
+    }
+
+    function loadThemeData() {
+      var data = storage.getItem('theme');
+      try {
+        data = JSON.parse(data ? data : '');
+      } catch(e) {
+        data = { nightShift: undefined, autoToggleAt: 0 };
+        saveThemeData(data);
+      }
+      return data;
+    }
+
+    function handleThemeToggle(nightShift) {
+      themeData.nightShift = nightShift;
+      saveThemeData(themeData);
+      html.dataset.theme = nightShift ? 'dark' : 'light';
+      setTimeout(function() {
+        sw.checked = nightShift ? true : false;
+      }, 50);
+    }
+
+    function autoThemeToggle() {
+      // Next time point of theme toggle
+      var now = new Date();
+      var toggleAt = new Date();
+      var hours = now.getHours();
+      var nightShift = hours >= 19 || hours <=7;
+
+      if (nightShift) {
+        if (hours > 7) {
+          toggleAt.setDate(toggleAt.getDate() + 1);
+        }
+        toggleAt.setHours(7);
+      } else {
+        toggleAt.setHours(19);
+      }
+
+      toggleAt.setMinutes(0);
+      toggleAt.setSeconds(0);
+      toggleAt.setMilliseconds(0)
+
+      var delay = toggleAt.getTime() - now.getTime();
+
+      // auto toggle theme mode
+      setTimeout(function() {
+        handleThemeToggle(!nightShift);
+      }, delay);
+
+      return {
+        nightShift: nightShift,
+        toggleAt: toggleAt.getTime()
+      };
+    }
+
+    // Listen the theme toggle event
+    sw.addEventListener('change', function(event) {
+      handleThemeToggle(event.target.checked);
+    });
+
+    if (nightModeOption == 'auto') {
+      var data = autoThemeToggle();
+
+      // Toggle theme by local setting
+      if (data.toggleAt > themeData.autoToggleAt) {
+        themeData.autoToggleAt = data.toggleAt;
+        handleThemeToggle(data.nightShift);
+      } else {
+        handleThemeToggle(themeData.nightShift);
+      }
+    } else if (nightModeOption == 'manual') {
+      handleThemeToggle(themeData.nightShift);
+    } else {
+      var nightShift = themeData.nightShift;
+      if (nightShift === undefined) {
+        nightShift = nightModeOption === 'on';
+      }
+      handleThemeToggle(nightShift);
+    }
+  })();
+</script>
+<div id="click-to-top" class="click-to-top">
+  <i class="fa fa-arrow-up"></i>
+</div>
+<script>
+  (function () {
+    const clickToTop = document.getElementById('click-to-top');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        clickToTop.classList.add('show')
+      }else {
+        clickToTop.classList.remove('show')
+      }
+    });
+    clickToTop.addEventListener('click', () => {
+      window.smoothScrollTo(0);
+    });
+  })();
+</script>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="framework">
+  <section class="main">
+
+     <div class="post">
+  <section>
+
+
+
+
+
+
+
+
+
+<header class="post-header">
+  <h1 class="post-title p-name" itemprop="name headline">Google Colab Pro 구글 코랩 프로 결제</h1>
+  <h2 class="post-subtitle">딥러닝 모델 학습에는 GPU가 꼭 필요해요</h2>
+
+  <p class="post-meta">
+    <time class="dt-published" datetime="2022-11-27T00:00:00+00:00" itemprop="datePublished"><i class="fa fa-calendar"></i> Nov 27, 2022
+    </time>
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 2 mins</span>
+  </p>
+<div class="post-tags">
+<a class="post-tag" href="/jekyll-theme-yat/tags.html#Data%20Science">#Data Science</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#Google%20Colab%20Pro">#Google Colab Pro</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#Deep%20Learning">#Deep Learning</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#GPU">#GPU</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#%EB%8D%B0%EC%9D%B4%ED%84%B0%20%EA%B3%BC%ED%95%99">#데이터 과학</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#%EA%B5%AC%EA%B8%80%20%EC%BD%94%EB%9E%A9%20%ED%94%84%EB%A1%9C">#구글 코랩 프로</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#%EB%94%A5%EB%9F%AC%EB%8B%9D">#딥러닝</a>
+</div></header>
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+    <div class="post-content e-content" itemprop="articleBody">
+
+      <p>최근에는 딥러닝 모델 학습을 진행하고 있다.<br>
+딥러닝 모델은 머신러닝 부스팅 모델과 비교해, <br>
+학습에 필요한 데이터의 크기도 클 뿐더러 계산해야 하는 가중치도 많기 때문에 시간이 정말 정말 많이 소요된다.</p>
+
+<p>몇 일 전에는 AutoEncoder 모델의 학습 속도와 성능을 비교할 일이 있었다.
+먼저, 내가 주로 사용하고 있는 맥북에서  <br>
+1) GPU 설정 tensorflow와   <br>
+2) CPU 설정 tensorflow를 각각 이용하여 속도와 성능을 비교하였다.</p>
+
+<p>&lt; 속도와 성능 측정 결과 &gt;  <br>
+<code class="language-plaintext highlighter-rouge">1) GPU 설정 tensorflow: 1 epoch 당 약 75초, 100 epoch 후 최종 val_loss = 0.4550</code><br>
+<code class="language-plaintext highlighter-rouge">2) CPU 설정 tensorflow: 1 epoch 당 약 100초, 100 epoch 후 최종 val_loss = 0.4740</code></p>
+
+<p>확실히 GPU을 사용한 모델이 속도도 빠르고, 성능도 잘 나오는 것을 확인할 수 있었다. 
+(‘역시, 딥러닝 모델에는 GPU가 꼭 필요하군!’)</p>
+
+<p>그 후에 구글 코랩 GPU 가속을 사용하면 더 빠르게 학습이 될 것이라고 이야기한 분이 계셔서<br>
+그동안 (매번 필요한 라이브러리를 새로 설치해야 된다는 불편함 때문에) 별로 사용하지 않던<br>
+3) 구글 코랩(Colab) 기본형(GPU 가속 사용)으로 동일한 모델을 돌려보게 되었다. <br>
+결과는 그야말로 충격적.</p>
+
+<p><code class="language-plaintext highlighter-rouge">3) 구글 기본형(GPU 가속 사용): 1 epoch 당 약 8초, 100 epoch 후 최종 val_loss = 0.4580</code><br>
+라는 결과가 나왔다.   <br>
+속도는 내 맥북보다 거의 10배 빠르고, 성능도 비슷하게 나오는 것이 아닌가!   <br>
+그동안 이용하는게 약간 불편하다는 이유로 로컬에서만 딥러닝 모델 학습을 진행하고 하염없이 기다리던 내가 후회스러운 순간이었다.</p>
+
+<p>딥러닝 모델 학습에는 고용량의 GPU가 필수적이라는 생각이 들었고, <br>
+느린 맥북을 붙잡고 기다리느니 구글 코랩을 적극적으로 활용하는게 좋겠다는 생각이 들었다.</p>
+
+<p>그래서 오늘!  <br>
+당장 맥북을 바꾸거나 고용량 GPU를 탑재할 수는 없으니,
+구글 코랩을 적극적으로 이용하는게 더 현실적이겠다는 생각이 들어       <br>
+고민하다가 구글 코랩 프로를 결제했다.</p>
+
+<p><img src="/assets/images/google_colab_plan.png" alt="Google Colab Plan" title="Google Colab Plan"></p>
+
+<p>코랩 프로는 무료 버젼의 GPU(k80)보다 더 좋은 T4, P100 등의 GPU를 제공하고,<br>
+무료 RAM(12.72GB)보다 향상된 RAM(25.51GB)을 제공한다. <br>
+또한 더 긴 런타임을 제공해줌으로써 다시 런타임에 연결하는 노력을 줄여준다는 장점이 있다.</p>
+
+<p>구독 방법은 간단하다. 
+<a href="https://colab.research.google.com/signup" target="_blank">구글 코랩 프로 결제 사이트</a>에서<br>
+결제 버튼을 누르고, 해외에서 사용 가능한 신용카드(VISA, Master 등) 정보만 입력하면 바로 이용할 수 있다.  <br>
+<strong>$9.99/월</strong>로 표기되어 있지만, 세금이 약간 추가되기 때문에 실제 결제 금액은 <strong>$10.62</strong>이 되었다.</p>
+
+<p>구글에서 제공한 <a href="https://colab.research.google.com/notebooks/pro.ipynb" target="_blank">구글 코랩 프로 최대한 활용하기</a>를 살펴보면, 
+메뉴 - 런타임 &gt; 런타임 유형 변경에서 <strong>GPU 가속기</strong>와 <strong>고용량 RAM</strong>을 선택한 후 이용하면 된다!</p>
+
+<p>만약 구글 코랩 프로 결제를 고민하면서 이 글을 보고 있는 분이 계시다면,  <br>
+머신러닝 부스팅 모델 정도를 활용하고 있는 상황이라면 굳이 프로까지는 필요없을 것 같다. 
+하지만 딥러닝 모델을 활용하고 있고 딥러닝 모델 학습 속도 때문에 고민하고 계신 분이라면 <br>
+코랩 프로를 결제하고 GPU 가속을 적극적으로 사용하는게 더 낫지 않을까 싶다.<br>
+우리의 시간은 소중하니까요!</p>
+
+
+
+    </div>
+
+</article>
+<div class="post-nav">
+<a class="previous" href="/jekyll-theme-yat/diary/2022/11/07/Third-project-NLP.html" title="[Diary] 세 번째 개인 프로젝트가 끝났다">[Diary] 세 번째 개인 프로젝트가 끝났다...</a><a class="next" href="/jekyll-theme-yat/programming/2022/12/22/1-Bubble-Sort.html" title="[Python] 버블 정렬 특징 및 파이썬 구현">[Python] 버블 정렬 특징 및 파이썬...</a>
+</div>
+<div class="post-related">
+      <div>Related Articles</div>
+      <ul>
+        <li><a class="post-link" href="/jekyll-theme-yat/diary/2022/09/14/kaggle-75th.html" title="[Python] 버블 정렬 특징 및 파이썬 구현">[Diary] 캐글 75위 달성!!</a></li>
+<li><a class="post-link" href="/jekyll-theme-yat/programming/2022/10/24/docker.html" title="[Python] 버블 정렬 특징 및 파이썬 구현">내가 필요해서 정리하는 Docker 기본 명령어</a></li>
+<li><a class="post-link" href="/jekyll-theme-yat/data_science/2022/07/30/DS-lectures.html" title="[Python] 버블 정렬 특징 및 파이썬 구현">데이터 과학 기초 강의 추천</a></li>
+<li><a class="post-link" href="/jekyll-theme-yat/diary/2022/10/17/airpot.html" title="[Python] 버블 정렬 특징 및 파이썬 구현">[Diary] 에어팟 프로(2세대)가 온다!</a></li>
+</ul>
+    </div>
+<div class="post-comments">  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'https://kongju7.github.io/jekyll-theme-yat/data_science/2022/11/27/Colab-pro-paid.html';
+      this.page.identifier = 'https://kongju7.github.io/jekyll-theme-yat/data_science/2022/11/27/Colab-pro-paid.html';
+    };
+
+    (function() {
+      var d = document, s = d.createElement('script');
+
+      s.src = 'https://kongju7-github-io.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+</div></section>
+</div>
+
+
+  </section>
+  <section class="sidebar" style="margin-left: 15px;">
+    <!-- Get sidebar items --><style type="text/css" media="screen">
+.post-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+</style>
+
+<div class="post-menu">
+  <div class="post-menu-title">TOC</div>
+  <div class="post-menu-content"></div>
+</div>
+
+<script>
+  function generateContent() {
+    var menu = document.querySelector(".post-menu");
+    var menuContent =  menu.querySelector(".post-menu-content");
+    var headings = document.querySelector(".post-content").querySelectorAll("h2, h3, h4, h5, h6");
+
+    // Hide menu when no headings
+    if (headings.length === 0) {
+      return menu.style.display = "none";
+    }
+
+    // Generate post menu
+    var menuHTML = '';
+    for (var i = 0; i < headings.length; i++) {
+      var h = headings[i];
+      menuHTML += (
+        '<li class="h-' + h.tagName.toLowerCase() + '">'
+        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a></li>');
+    }
+
+    menuContent.innerHTML = '<ul>' + menuHTML + '</ul>';
+
+    // The header element
+    var header = document.querySelector('header.site-header');
+
+    function doMenuCollapse(index, over_items) {
+      var items = menuContent.firstChild.children;
+
+      if (over_items == undefined) {
+        over_items = 20;
+      }
+
+      if (items.length < over_items) {
+        return;
+      }
+
+      var activeItem = items[index];
+      var beginItem = activeItem
+      var endItem = activeItem
+      var beginIndex = index;
+      var endIndex = index + 1;
+      while (beginIndex >= 0
+        && !items[beginIndex].classList.contains('h-h2')) {
+        beginIndex -= 1;
+      }
+      while (endIndex < items.length
+        && !items[endIndex].classList.contains('h-h2')) {
+        endIndex += 1;
+      }
+      for (var i = 0; i < beginIndex; i++) {
+        item = items[i]
+        if (!item.classList.contains('h-h2')) {
+          item.style.display = 'none';
+        }
+      }
+      for (var i = beginIndex + 1; i < endIndex; i++) {
+        item = items[i]
+        // if (!item.classList.contains('h-h2')) {
+          item.style.display = '';
+        // }
+      }
+      for (var i = endIndex; i < items.length; i++) {
+        item = items[i]
+        if (!item.classList.contains('h-h2')) {
+          item.style.display = 'none';
+        }
+      }
+    }
+
+    // Init menu collapsed
+    doMenuCollapse(-1);
+
+    // Active the menu item
+    window.addEventListener('scroll', function (event) {
+      var lastActive = menuContent.querySelector('.active');
+      var changed = true;
+      var activeIndex = -1;
+      for (var i = headings.length - 1; i >= 0; i--) {
+        var h = headings[i];
+        var headingRect = h.getBoundingClientRect();
+        var headerRect = header.getBoundingClientRect();
+        var headerTop = Math.floor(headerRect.top);
+        var headerHeight = Math.floor(headerRect.height);
+        var headerHeight = headerTop + headerHeight + 20;
+        if (headingRect.top <= headerHeight) {
+          var id = 'h-' + h.getAttribute('id');
+          var a = menuContent.querySelector('a[href="#' + id  + '"]');
+          var curActive = a.parentNode;
+          if (curActive) {
+            curActive.classList.add('active');
+            activeIndex = i;
+          }
+          if (lastActive == curActive) {
+            changed = false;
+          }
+          break;
+        }
+      }
+      if (changed) {
+        if (lastActive) {
+          lastActive.classList.remove('active');
+        }
+        doMenuCollapse(activeIndex);
+      }
+      event.preventDefault();
+    });
+  }
+  generateContent();
+</script>
+</section>
+</div>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/jekyll-theme-yat/"></data>
+
+  <div class="wrapper">
+    <div class="site-footer-inner">
+<div>Copyright © 2022-2024 Kong Ju</div>
+      <div>Powered by <a title="Jekyll is a simple, blog-aware, static site
+      generator." href="https://jekyllrb.com/">Jekyll</a> &amp; <a title="Yat, yet
+      another theme." href="https://github.com/jeffreytse/jekyll-theme-yat">Yat Theme</a>.</div>
+      <div class="footer-col rss-subscribe">Subscribe <a href="/jekyll-theme-yat/feed.xml">via RSS</a>
+</div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

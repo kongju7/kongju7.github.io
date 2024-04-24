@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-translate-customization" content="108d9124921d80c3-80e20d618ff053c8-g4f02ec6f3dba68b7-c">
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>내가 필요해서 정리하는 Docker 기본 명령어 | Becoming a Data Scientist</title>
+<meta name="generator" content="Jekyll v4.3.3">
+<meta property="og:title" content="내가 필요해서 정리하는 Docker 기본 명령어">
+<meta name="author" content="Kong Ju">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="내가 필요해서 간략하게 정리하는 Docker에서 사용할 수 있는 기본 명령어입니다. 도커 이미지 도커 허브(Docker Hub)에서 공개된 도커 이미지 검색 이미지 이름 구조: [저장소 이름(계정)]/[이미지 이름]: [태그(버젼)] docker image pull {myrepo}/{myimage}:{1.0} : myrepo에 저장된(=myrepo 계정에서 올린) myimage의 1.0 버젼 도커 이미지 내려받기 docker image ls : 도커 이미지 목록 확인 docker image rm {myrepo}/{myimage}:{1.0} : 로컬 컴퓨터에 저장된 myrepo/myimage 1.0 버젼의 도커 이미지 삭제 = docker rmi {myrepo}/{myimage}:{1.0}">
+<meta property="og:description" content="내가 필요해서 간략하게 정리하는 Docker에서 사용할 수 있는 기본 명령어입니다. 도커 이미지 도커 허브(Docker Hub)에서 공개된 도커 이미지 검색 이미지 이름 구조: [저장소 이름(계정)]/[이미지 이름]: [태그(버젼)] docker image pull {myrepo}/{myimage}:{1.0} : myrepo에 저장된(=myrepo 계정에서 올린) myimage의 1.0 버젼 도커 이미지 내려받기 docker image ls : 도커 이미지 목록 확인 docker image rm {myrepo}/{myimage}:{1.0} : 로컬 컴퓨터에 저장된 myrepo/myimage 1.0 버젼의 도커 이미지 삭제 = docker rmi {myrepo}/{myimage}:{1.0}">
+<link rel="canonical" href="https://kongju7.github.io/jekyll-theme-yat/programming/2022/10/24/docker.html">
+<meta property="og:url" content="https://kongju7.github.io/jekyll-theme-yat/programming/2022/10/24/docker.html">
+<meta property="og:site_name" content="Becoming a Data Scientist">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2022-10-24T00:00:00+00:00">
+<meta name="twitter:card" content="summary">
+<meta property="twitter:title" content="내가 필요해서 정리하는 Docker 기본 명령어">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Kong Ju"},"dateModified":"2022-10-24T00:00:00+00:00","datePublished":"2022-10-24T00:00:00+00:00","description":"내가 필요해서 간략하게 정리하는 Docker에서 사용할 수 있는 기본 명령어입니다. 도커 이미지 도커 허브(Docker Hub)에서 공개된 도커 이미지 검색 이미지 이름 구조: [저장소 이름(계정)]/[이미지 이름]: [태그(버젼)] docker image pull {myrepo}/{myimage}:{1.0} : myrepo에 저장된(=myrepo 계정에서 올린) myimage의 1.0 버젼 도커 이미지 내려받기 docker image ls : 도커 이미지 목록 확인 docker image rm {myrepo}/{myimage}:{1.0} : 로컬 컴퓨터에 저장된 myrepo/myimage 1.0 버젼의 도커 이미지 삭제 = docker rmi {myrepo}/{myimage}:{1.0}","headline":"내가 필요해서 정리하는 Docker 기본 명령어","mainEntityOfPage":{"@type":"WebPage","@id":"https://kongju7.github.io/jekyll-theme-yat/programming/2022/10/24/docker.html"},"url":"https://kongju7.github.io/jekyll-theme-yat/programming/2022/10/24/docker.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="shortcut icon" href="">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-noto-sans@0.0.72/index.min.css">
+  <link rel="stylesheet" href="/jekyll-theme-yat/assets/css/main.css">
+  <script src="/jekyll-theme-yat/assets/js/main.js"></script><link type="application/atom+xml" rel="alternate" href="https://kongju7.github.io/jekyll-theme-yat/feed.xml" title="Becoming a Data Scientist">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script>
+<!-- and it's easy to individually load additional languages -->
+<script charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/languages/go.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+// Init highlight js
+document.addEventListener('DOMContentLoaded', function(event) {
+  var els = document.querySelectorAll('pre code')
+
+  function addLangData(block) {
+    var outer = block.parentElement.parentElement.parentElement;
+    var lang = block.getAttribute('data-lang');
+    for (var i = 0; i < outer.classList.length; i++) {
+      var cls = outer.classList[i];
+      if (cls.startsWith('language-')) {
+        lang = cls;
+        break;
+      }
+    }
+    if (!lang) {
+      cls = block.getAttribute('class');
+      lang = cls ? cls.replace('hljs ', '') : '';
+    }
+    if (lang.startsWith('language-')) {
+      lang = lang.substr(9);
+    }
+    block.setAttribute('class', 'hljs ' + lang);
+    block.parentNode.setAttribute('data-lang', lang);
+  }
+
+  function addBadge(block) {
+    var enabled = ('true' || 'true').toLowerCase();
+    if (enabled == 'true') {
+      var pre = block.parentElement;
+      pre.classList.add('badge');
+    }
+  }
+
+  function handle(block) {
+    addLangData(block);
+    addBadge(block)
+    hljs.highlightBlock(block);
+  }
+
+  for (var i = 0; i < els.length; i++) {
+    var el = els[i];
+    handle(el);
+  }
+});
+</script>
+
+<style>
+  /* code language badge */
+  pre.badge::before {
+    content: attr(data-lang);
+    color: #fff;
+    background-color: #ff4e00;
+    padding: 0 .5em;
+    border-radius: 0 2px;
+    text-transform: uppercase;
+    text-align: center;
+    min-width: 32px;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+  }
+
+  /* fix wrong badge display for firefox browser */
+  code > table pre::before {
+    display: none;
+  }
+</style>
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="site-header " role="banner">
+
+  <div class="wrapper">
+    <div class="site-header-inner">
+<span class="site-brand"><a class="site-brand-inner" rel="author" href="/jekyll-theme-yat/">
+  <img class="site-favicon" title="Becoming a Data Scientist" src="" onerror="this.style.display='none'">
+  Becoming a Data Scientist
+</a>
+</span><nav class="site-nav">
+          <input type="checkbox" id="nav-trigger" class="nav-trigger">
+          <label for="nav-trigger">
+            <span class="menu-icon">
+              <svg viewbox="0 0 18 15" width="18px" height="15px">
+                <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"></path>
+              </svg>
+            </span>
+          </label>
+
+          <div class="trigger">
+<a class="page-link" href="/jekyll-theme-yat/about.html">ABOUT</a><a class="page-link" href="/jekyll-theme-yat/archives.html">ARCHIVES</a><a class="page-link" href="/jekyll-theme-yat/categories.html">CATEGORIES</a><a class="page-link" href="/jekyll-theme-yat/">HOME</a><a class="page-link" href="/jekyll-theme-yat/tags.html">TAGS</a>
+
+
+
+
+
+
+
+
+
+<span class="page-link">
+
+
+
+<div id="google_translate_element" style="display: none;">
+</div>
+
+<span class="ct-language">
+  <ul class="list-unstyled ct-language-dropdown">
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="en">
+          
+          <img src="https://cdn.countryflags.com/thumbs/united-states-of-america/flag-400.png" title="English">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="fr">
+          
+          <img src="https://cdn.countryflags.com/thumbs/france/flag-400.png" title="French">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="zh-CN">
+          
+          <img src="https://cdn.countryflags.com/thumbs/china/flag-400.png" title="Chinese(Simple)">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="ja">
+          
+          <img src="https://cdn.countryflags.com/thumbs/japan/flag-400.png" title="Japanese">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="ko">
+          
+          <img src="https://cdn.countryflags.com/thumbs/south-korea/flag-400.png" title="Korean">
+          
+        </a>
+      </li>
+    
+      <li>
+        <a href="#" class="lang-select" data-lang="ru">
+          
+          <img src="https://cdn.countryflags.com/thumbs/russia/flag-400.png" title="Russian">
+          
+        </a>
+      </li>
+    
+  </ul>
+</span>
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en',
+    autoDisplay: false,
+    layout: google.translate.TranslateElement.InlineLayout.VERTICAL
+  }, 'google_translate_element');
+
+  // Links to cross-origin destinations are unsafe
+  var gll = document.getElementsByClassName('goog-logo-link')[0];
+  if (gll) {
+    gll.setAttribute('rel', 'noopener');
+  }
+
+  function restoreLang() {
+    var iframe = document.getElementsByClassName('goog-te-banner-frame')[0];
+    if (!iframe) return;
+
+    var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+    var restore_el = innerDoc.getElementsByTagName("button");
+
+    for (var i = 0; i < restore_el.length; i++) {
+      if (restore_el[i].id.indexOf("restore") >= 0) {
+        restore_el[i].click();
+        var close_el = innerDoc.getElementsByClassName("goog-close-link");
+        close_el[0].click();
+        return;
+      }
+    }
+  }
+
+  function triggerHtmlEvent(element, eventName) {
+    var event;
+    if (document.createEvent) {
+      event = document.createEvent('HTMLEvents');
+      event.initEvent(eventName, true, true);
+      element.dispatchEvent(event);
+    } else {
+      event = document.createEventObject();
+      event.eventType = eventName;
+      element.fireEvent('on' + event.eventType, event);
+    }
+  }
+
+  var googleCombo = document.querySelector("select.goog-te-combo");
+  var langSelect = document.querySelector('.ct-language');
+  langSelect.addEventListener('click', function(event) {
+    if (!event.target) {
+      return;
+    }
+
+    var selected = document.querySelector('.ct-language .ct-language-selected');
+    if (selected) {
+      selected.classList.remove('ct-language-selected');
+    }
+
+    var target = event.target;
+    while (target && target !== langSelect ) {
+      if (target.matches('.lang-select')) {
+        break;
+      }
+      target = target.parentElement;
+    }
+
+    if (target && target.matches('.lang-select')) {
+      var lang = target.getAttribute('data-lang');
+      if (googleCombo.value == lang) {
+        restoreLang();
+      } else {
+        target.parentElement.classList.add('ct-language-selected');
+        googleCombo.value = lang;
+        triggerHtmlEvent(googleCombo, 'change');
+      }
+    }
+
+    event.preventDefault();
+  });
+}
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</span>
+</div>
+        </nav>
+</div>
+  </div>
+</header>
+
+<script>
+  function initHeader() {
+    var lastScrollY = getScrollPos().y;
+    var documentElement = document.documentElement;
+
+    function storeScrollData() {
+      var y = getScrollPos().y;var scrollStatus = "";
+
+      if (y <= 0) {
+        scrollStatus = "top";
+      } else if ((window.innerHeight + y) >= document.body.offsetHeight) {
+        scrollStatus = "bottom";
+      } else {
+        var isScrollDown = (y - lastScrollY > 0) ? true : false;
+        scrollStatus = isScrollDown ? "down" : "up";
+      }
+
+      lastScrollY = y;
+      documentElement.setAttribute("data-scroll-status", scrollStatus);
+    }
+
+    window.addEventListener('scroll', function(e) {
+      storeScrollData();
+    });
+
+    storeScrollData();
+  }
+  document.addEventListener('DOMContentLoaded', initHeader);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  function hashLocate(hashValue) {
+    hashValue = hashValue.replace(/^.*#h-/, '');
+    hashValue = decodeURIComponent(hashValue);
+    var element = document.getElementById(hashValue);
+
+    if (!element) {
+      return;
+    }
+
+    var header = document.querySelector('header.site-header');
+    var headerRect = header.getBoundingClientRect();
+    var headerTop = Math.floor(headerRect.top);
+    var headerHeight = Math.floor(headerRect.height);
+    var scrollPos = getScrollPos();
+    var offsetY = element.offsetTop - (headerTop + headerHeight + 20);
+
+    if (offsetY == scrollPos.y) {
+      return;
+    }
+
+    if (headerTop == 0  && offsetY > scrollPos.y) {
+      offsetY += headerHeight + 2;
+    } else if (headerTop < 0  && offsetY < scrollPos.y) {
+      offsetY -= headerHeight - 2;
+    }
+
+    smoothScrollTo(offsetY);
+  }
+
+  // The first event occurred
+  window.addEventListener('load', function(event) {
+    if (window.location.hash) {
+      hashLocate(window.location.hash);
+    }
+  });
+
+  // The first event occurred
+  window.addEventListener('click', function(event) {
+    if (event.target.tagName.toLowerCase() == 'a') {
+      hashLocate(event.target.getAttribute('href'));
+    }
+  });
+</script>
+<div class="theme-toggle">
+  <input type="checkbox" id="theme-switch">
+  <label for="theme-switch">
+    <div class="toggle"></div>
+    <div class="names">
+      <p class="light">Light</p>
+      <p class="dark">Dark</p>
+    </div>
+  </label>
+</div>
+
+
+
+
+<script>
+  (function() {
+    var sw = document.getElementById('theme-switch');
+    var html = document.getElementsByTagName('html')[0];
+    var nightModeOption = ('auto' || 'auto').toLowerCase();
+    var storage = nightModeOption === 'manual'
+        ? localStorage
+        : sessionStorage;
+    var themeData = loadThemeData();
+
+    function saveThemeData(data) {
+      storage.setItem('theme', JSON.stringify(data));
+    }
+
+    function loadThemeData() {
+      var data = storage.getItem('theme');
+      try {
+        data = JSON.parse(data ? data : '');
+      } catch(e) {
+        data = { nightShift: undefined, autoToggleAt: 0 };
+        saveThemeData(data);
+      }
+      return data;
+    }
+
+    function handleThemeToggle(nightShift) {
+      themeData.nightShift = nightShift;
+      saveThemeData(themeData);
+      html.dataset.theme = nightShift ? 'dark' : 'light';
+      setTimeout(function() {
+        sw.checked = nightShift ? true : false;
+      }, 50);
+    }
+
+    function autoThemeToggle() {
+      // Next time point of theme toggle
+      var now = new Date();
+      var toggleAt = new Date();
+      var hours = now.getHours();
+      var nightShift = hours >= 19 || hours <=7;
+
+      if (nightShift) {
+        if (hours > 7) {
+          toggleAt.setDate(toggleAt.getDate() + 1);
+        }
+        toggleAt.setHours(7);
+      } else {
+        toggleAt.setHours(19);
+      }
+
+      toggleAt.setMinutes(0);
+      toggleAt.setSeconds(0);
+      toggleAt.setMilliseconds(0)
+
+      var delay = toggleAt.getTime() - now.getTime();
+
+      // auto toggle theme mode
+      setTimeout(function() {
+        handleThemeToggle(!nightShift);
+      }, delay);
+
+      return {
+        nightShift: nightShift,
+        toggleAt: toggleAt.getTime()
+      };
+    }
+
+    // Listen the theme toggle event
+    sw.addEventListener('change', function(event) {
+      handleThemeToggle(event.target.checked);
+    });
+
+    if (nightModeOption == 'auto') {
+      var data = autoThemeToggle();
+
+      // Toggle theme by local setting
+      if (data.toggleAt > themeData.autoToggleAt) {
+        themeData.autoToggleAt = data.toggleAt;
+        handleThemeToggle(data.nightShift);
+      } else {
+        handleThemeToggle(themeData.nightShift);
+      }
+    } else if (nightModeOption == 'manual') {
+      handleThemeToggle(themeData.nightShift);
+    } else {
+      var nightShift = themeData.nightShift;
+      if (nightShift === undefined) {
+        nightShift = nightModeOption === 'on';
+      }
+      handleThemeToggle(nightShift);
+    }
+  })();
+</script>
+<div id="click-to-top" class="click-to-top">
+  <i class="fa fa-arrow-up"></i>
+</div>
+<script>
+  (function () {
+    const clickToTop = document.getElementById('click-to-top');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        clickToTop.classList.add('show')
+      }else {
+        clickToTop.classList.remove('show')
+      }
+    });
+    clickToTop.addEventListener('click', () => {
+      window.smoothScrollTo(0);
+    });
+  })();
+</script>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="framework">
+  <section class="main">
+
+     <div class="post">
+  <section>
+
+
+
+
+
+
+
+
+
+<header class="post-header">
+  <h1 class="post-title p-name" itemprop="name headline">내가 필요해서 정리하는 Docker 기본 명령어</h1>
+  <h2 class="post-subtitle">Docker 초보자를 위한 cli commands</h2>
+
+  <p class="post-meta">
+    <time class="dt-published" datetime="2022-10-24T00:00:00+00:00" itemprop="datePublished"><i class="fa fa-calendar"></i> Oct 24, 2022
+    </time>
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 2 mins</span>
+  </p>
+<div class="post-tags">
+<a class="post-tag" href="/jekyll-theme-yat/tags.html#Docker">#Docker</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#image">#image</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#container">#container</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#compose">#compose</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#cli">#cli</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#command">#command</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#%EB%8F%84%EC%BB%A4">#도커</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#%EC%9D%B4%EB%AF%B8%EC%A7%80">#이미지</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#%EC%BB%A8%ED%85%8C%EC%9D%B4%EB%84%88">#컨테이너</a><a class="post-tag" href="/jekyll-theme-yat/tags.html#%EB%AA%85%EB%A0%B9%EC%96%B4">#명령어</a>
+</div></header>
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+    <div class="post-content e-content" itemprop="articleBody">
+
+      <p>내가 필요해서 간략하게 정리하는 <strong>Docker에서 사용할 수 있는 기본 명령어</strong>입니다.</p>
+
+<h2 id="도커-이미지">도커 이미지</h2>
+
+<ul>
+  <li>
+<a href="https://hub.docker.com/" target="_blank">도커 허브(Docker Hub)</a>에서 공개된 도커 이미지 검색</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>이미지 이름 구조: [저장소 이름(계정)]/[이미지 이름]: [태그(버젼)]
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">docker image pull {myrepo}/{myimage}:{1.0}</code> : myrepo에 저장된(=myrepo 계정에서 올린) myimage의 1.0 버젼 도커 이미지 내려받기</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">docker image ls</code> : 도커 이미지 목록 확인</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">docker image rm {myrepo}/{myimage}:{1.0}</code> : 로컬 컴퓨터에 저장된 myrepo/myimage 1.0 버젼의 도커 이미지 삭제 
+= <code class="language-plaintext highlighter-rouge">docker rmi {myrepo}/{myimage}:{1.0}</code></p>
+  </li>
+</ul>
+
+<h2 id="도커-컨테이너">도커 컨테이너</h2>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">docker -v</code> : 도커 버젼 확인</p>
+  </li>
+  <li>
+<code class="language-plaintext highlighter-rouge">docker container run [OPTIONS] {myrepo}/{myimage}:{1.0}</code> : myrepo/myimage 1.0 버젼의 도커 컨테이너 생성(= 도커 이미지 실행)
+    <ul>
+      <li>[OPTIONS] <code class="language-plaintext highlighter-rouge">--name {myDocker}</code>: myDocker라는 이름 부여</li>
+      <li>
+<code class="language-plaintext highlighter-rouge">-p {5000}:{80}</code> : [호스트의 포트]:[컨테이너의 포트] 바인딩</li>
+      <li>
+<code class="language-plaintext highlighter-rouge">-i -t</code> : 컨테이너와 상호(interactive) 입출력. 즉, 컨테이너 내부로 진입 가능.</li>
+      <li>
+<code class="language-plaintext highlighter-rouge">-rm</code> : 컨테이너 일회성 실행. 즉, 컨테이너 종료될 때 컨테이너와 관련된 리소스 모두 제거</li>
+      <li>예: <code class="language-plaintext highlighter-rouge">docker container run --name ibm_mongo --rm -p 5000:80 ibmcom/mongodb:latest</code>
+</li>
+    </ul>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">docker exec -it {ibm_mongo} /bin/bash</code> : 컨테이너 내부 진입</p>
+  </li>
+  <li>
+<code class="language-plaintext highlighter-rouge">docker container ps</code> : 도커 컨테이너 목록 확인
+    <ul>
+      <li>[OPTIONS] <code class="language-plaintext highlighter-rouge">-a</code> : 정지된 컨테이너까지 모두 확인</li>
+    </ul>
+  </li>
+  <li>
+<code class="language-plaintext highlighter-rouge">docker rename {myDocker} {myDocker2}</code> : myDocker인 도커 컨테이너의 이름을 myDocker2로 변경</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">docker stop {myDocker2}</code> : myDocker2 도커 컨테이너 정지</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">docker rm {myDocker2}</code> : myDocker2 도커 컨테이너 삭제</li>
+</ul>
+
+<h2 id="도커-이미지-생성-및-배포">도커 이미지 생성 및 배포</h2>
+
+<ul>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">docker build -t {myimage}:{3.0}</code> : 현재 경로의 도커파일(Dockerfile)로 myimage 3.0 이미지 생성</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">docker commit [OPTIONS] container {myimage}:{3.5}</code> : 현재 컨테이너를 myimage 3.5 이미지로 생성</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">docker image push {myrepo}/{myimage}:{latest}</code> : myrepo에 myimage의 2.0 버젼 올리기</p>
+  </li>
+</ul>
+
+<h2 id="도커-컴포즈-두-컨테이너-연결">도커 컴포즈: 두 컨테이너 연결</h2>
+
+<ul>
+  <li>1단계: 현재 경로에 <code class="language-plaintext highlighter-rouge">docker-compose.yml</code> 파일 생성
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>(작성 예)
+version: '3'
+servies: 
+node: 
+  image: circleci/node:latest
+  ports: 
+    - "2000: 2000"
+  links: 
+    - mongo:node 
+mongo: 
+  image: ibmcom/mongodb:latest
+</code></pre></div>    </div>
+  </li>
+  <li>2단계: <code class="language-plaintext highlighter-rouge">docker compose up -d</code>를 실행하여 현재 경로의 <code class="language-plaintext highlighter-rouge">docker-compose.yml</code> 파일을 읽어 컨테이너 생성</li>
+  <li>3단계: 인터넷 브라우져에서 localhost:2000에서 연결 확인</li>
+</ul>
+
+<h3 id="덧붙이는-말-혹시-오류가-있다면-제보-주세요">덧붙이는 말: 혹시 오류가 있다면 제보 주세요!</h3>
+
+
+
+    </div>
+
+</article>
+<div class="post-nav">
+<a class="previous" href="/jekyll-theme-yat/diary/2022/10/17/airpot.html" title="[Diary] 에어팟 프로(2세대)가 온다!">[Diary] 에어팟 프로(2세대)가 온다!</a><a class="next" href="/jekyll-theme-yat/diary/2022/10/28/Jinja.html" title="[Diary] 내가 필요해서 정리하는 Jinja 템플릿 작성 실패">[Diary] 내가 필요해서 정리하는 Jinja 템플릿...</a>
+</div>
+<div class="post-related">
+      <div>Related Articles</div>
+      <ul>
+        <li><a class="post-link" href="/jekyll-theme-yat/programming/2022/12/22/2-Selection-Sort.html" title="[Diary] 내가 필요해서 정리하는 Jinja 템플릿 작성 실패">[Python] 선택 정렬 특징 및 파이썬 구현</a></li>
+<li><a class="post-link" href="/jekyll-theme-yat/programming/2022/10/06/Macdeletekey.html" title="[Diary] 내가 필요해서 정리하는 Jinja 템플릿 작성 실패">내가 필요해서 정리하는 Mac 삭제 단축키</a></li>
+<li><a class="post-link" href="/jekyll-theme-yat/data_science/2022/11/07/Book-for-DS-1.html" title="[Diary] 내가 필요해서 정리하는 Jinja 템플릿 작성 실패">데이터 과학 관련 책 목록(1)</a></li>
+<li><a class="post-link" href="/jekyll-theme-yat/programming/2024/04/24/git-config.html" title="[Diary] 내가 필요해서 정리하는 Jinja 템플릿 작성 실패">[Git] 깃 계정 정보 등록/삭제하기</a></li>
+</ul>
+    </div>
+<div class="post-comments">  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'https://kongju7.github.io/jekyll-theme-yat/programming/2022/10/24/docker.html';
+      this.page.identifier = 'https://kongju7.github.io/jekyll-theme-yat/programming/2022/10/24/docker.html';
+    };
+
+    (function() {
+      var d = document, s = d.createElement('script');
+
+      s.src = 'https://kongju7-github-io.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+</div></section>
+</div>
+
+
+  </section>
+  <section class="sidebar" style="margin-left: 15px;">
+    <!-- Get sidebar items --><style type="text/css" media="screen">
+.post-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+</style>
+
+<div class="post-menu">
+  <div class="post-menu-title">TOC</div>
+  <div class="post-menu-content"></div>
+</div>
+
+<script>
+  function generateContent() {
+    var menu = document.querySelector(".post-menu");
+    var menuContent =  menu.querySelector(".post-menu-content");
+    var headings = document.querySelector(".post-content").querySelectorAll("h2, h3, h4, h5, h6");
+
+    // Hide menu when no headings
+    if (headings.length === 0) {
+      return menu.style.display = "none";
+    }
+
+    // Generate post menu
+    var menuHTML = '';
+    for (var i = 0; i < headings.length; i++) {
+      var h = headings[i];
+      menuHTML += (
+        '<li class="h-' + h.tagName.toLowerCase() + '">'
+        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a></li>');
+    }
+
+    menuContent.innerHTML = '<ul>' + menuHTML + '</ul>';
+
+    // The header element
+    var header = document.querySelector('header.site-header');
+
+    function doMenuCollapse(index, over_items) {
+      var items = menuContent.firstChild.children;
+
+      if (over_items == undefined) {
+        over_items = 20;
+      }
+
+      if (items.length < over_items) {
+        return;
+      }
+
+      var activeItem = items[index];
+      var beginItem = activeItem
+      var endItem = activeItem
+      var beginIndex = index;
+      var endIndex = index + 1;
+      while (beginIndex >= 0
+        && !items[beginIndex].classList.contains('h-h2')) {
+        beginIndex -= 1;
+      }
+      while (endIndex < items.length
+        && !items[endIndex].classList.contains('h-h2')) {
+        endIndex += 1;
+      }
+      for (var i = 0; i < beginIndex; i++) {
+        item = items[i]
+        if (!item.classList.contains('h-h2')) {
+          item.style.display = 'none';
+        }
+      }
+      for (var i = beginIndex + 1; i < endIndex; i++) {
+        item = items[i]
+        // if (!item.classList.contains('h-h2')) {
+          item.style.display = '';
+        // }
+      }
+      for (var i = endIndex; i < items.length; i++) {
+        item = items[i]
+        if (!item.classList.contains('h-h2')) {
+          item.style.display = 'none';
+        }
+      }
+    }
+
+    // Init menu collapsed
+    doMenuCollapse(-1);
+
+    // Active the menu item
+    window.addEventListener('scroll', function (event) {
+      var lastActive = menuContent.querySelector('.active');
+      var changed = true;
+      var activeIndex = -1;
+      for (var i = headings.length - 1; i >= 0; i--) {
+        var h = headings[i];
+        var headingRect = h.getBoundingClientRect();
+        var headerRect = header.getBoundingClientRect();
+        var headerTop = Math.floor(headerRect.top);
+        var headerHeight = Math.floor(headerRect.height);
+        var headerHeight = headerTop + headerHeight + 20;
+        if (headingRect.top <= headerHeight) {
+          var id = 'h-' + h.getAttribute('id');
+          var a = menuContent.querySelector('a[href="#' + id  + '"]');
+          var curActive = a.parentNode;
+          if (curActive) {
+            curActive.classList.add('active');
+            activeIndex = i;
+          }
+          if (lastActive == curActive) {
+            changed = false;
+          }
+          break;
+        }
+      }
+      if (changed) {
+        if (lastActive) {
+          lastActive.classList.remove('active');
+        }
+        doMenuCollapse(activeIndex);
+      }
+      event.preventDefault();
+    });
+  }
+  generateContent();
+</script>
+</section>
+</div>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/jekyll-theme-yat/"></data>
+
+  <div class="wrapper">
+    <div class="site-footer-inner">
+<div>Copyright © 2022-2024 Kong Ju</div>
+      <div>Powered by <a title="Jekyll is a simple, blog-aware, static site
+      generator." href="https://jekyllrb.com/">Jekyll</a> &amp; <a title="Yat, yet
+      another theme." href="https://github.com/jeffreytse/jekyll-theme-yat">Yat Theme</a>.</div>
+      <div class="footer-col rss-subscribe">Subscribe <a href="/jekyll-theme-yat/feed.xml">via RSS</a>
+</div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
