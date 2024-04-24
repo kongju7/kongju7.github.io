@@ -15,7 +15,7 @@ tags: [git, command, 명령어, git config, user.name, user.email]
   
 먼저 아래의 명령어를 통해서 깃 설정 상태를 확인합니다.   
   
-```
+```Shell
 git config --global --list 
 ```
 
@@ -32,7 +32,7 @@ git config --global --list
 참고로 [GitHub > Settings > Emails](https://github.com/settings/emails){:target="_blank"}에서 복수의 이메일을 등록할 수 있으니,  
 사용 개발 환경이나 용도에 따라서 이메일을 구분해 사용하는 것도 좋습니다.  
   
-```
+```Shell
 git config --global user.name "{이름}"
 git config --global user.email "{이메일}"
 ```
@@ -42,7 +42,7 @@ git config --global user.email "{이메일}"
   
 `--unset` 명령어를 사용하면 저장된 사용자 이름과 이메일을 삭제할 수 있습니다. 
 
-```
+```Shell
 git config --global --unset user.name
 git config --global --unset user.email
 ```
@@ -52,7 +52,7 @@ git config --global --unset user.email
   
 저장된 자격 증명 헬퍼까지 삭제하게 되면, 깃 푸쉬를 통해 원격 저장소에 접근할 때마다 수동으로 사용자 이름과 비밀번호를 입력해야 합니다.
   
-```
+```Shell
 git config --global --unset credential.helper
 ```
   
